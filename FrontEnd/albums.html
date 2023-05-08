@@ -24,9 +24,11 @@
   <!-- Scrollbar Custom CSS -->
   <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
   <!-- Tweaks for older IEs-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
     media="screen">
+
   <!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
@@ -36,16 +38,15 @@
 <body class="main-layout contineer_page">
   <!-- loader  -->
   <div class="loader_bg">
-    <div class="loader"><img src="images/loading.gif" alt="#" /></div>
+    <div class="loader"><img src="images/loadMusic.gif" alt="#" /></div>
   </div>
   <!-- end loader -->
   <!-- header -->
   <header>
     <!-- header inner -->
-
     <div class="header">
       <div class="container">
-        <div class="row d-flex align-items-center">
+        <div class="row d-flex justify-content-end align-items-center">
           <div class="col-xl-2 col-lg-2 col-md-2 col-sm-3 col logo_section">
             <div class="full">
               <div class="center-desk">
@@ -56,7 +57,6 @@
             </div>
           </div>
           <div class="col-xl-10 col-lg-10 col-md-10 col-sm-9">
-
             <div class="menu-area">
               <div class="limit-box">
                 <nav class="main-menu ">
@@ -79,98 +79,137 @@
       </div>
     </div>
     <!-- end header inner -->
-
     <!-- end header -->
-
   </header>
-
-
   <div class="backgro_mh">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
           <div class="heding">
-            <h2>Gallery</h2>
+            <h2>Albums</h2>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-
-  <div id="gallery" class="Gallery">
+  <section class="album-catagory section-padding-100-0">
     <div class="container">
-      <div class="row display_boxflex">
-        <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
-          <div class="row">
-            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 margi_bott">
-              <div class="Gallery_img">
-                <figure><img src="images/Gallery1.jpg" alt="#" /></figure>
-              </div>
-              <div class="hover_box">
-
-                <ul class="icon_hu">
-                  <h3>Music night</h3>
-                  <li><a href="#"><img src="icon/h.png" alt="#" /></a></li>
-                  <li><a href="#"><img src="icon/h.png" alt="#" /></a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 margi_bott">
-              <div class="Gallery_img">
-                <figure><img src="images/Gallery2.jpg" alt="#" /></figure>
-              </div>
-              <div class="hover_box">
-
-                <ul class="icon_hu">
-                  <h3>Music night</h3>
-                  <li><a href="#"><img src="icon/h.png" alt="#" /></a></li>
-                  <li><a href="#"><img src="icon/h.png" alt="#" /></a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 margi_bott1">
-              <div class="Gallery_img">
-                <figure><img src="images/Gallery3.jpg" alt="#" /></figure>
-              </div>
-              <div class="hover_box">
-
-                <ul class="icon_hu">
-                  <h3>Music night</h3>
-                  <li><a href="#"><img src="icon/h.png" alt="#" /></a></li>
-                  <li><a href="#"><img src="icon/h.png" alt="#" /></a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-              <div class="Gallery_img">
-                <figure><img src="images/Gallery4.jpg" alt="#" /></figure>
-              </div>
-              <div class="hover_box">
-
-                <ul class="icon_hu">
-                  <h3>Music night</h3>
-                  <li><a href="#"><img src="icon/h.png" alt="#" /></a></li>
-                  <li><a href="#"><img src="icon/h.png" alt="#" /></a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
-          <div class="Gallery_text">
-            <div class="titlepage">
-              <h2>Gallery</h2>
-            </div>
-            <p>It is a long established fact that a reader will be distracted by the readable content of a page when
-              looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of
-              letters, as opposed to usin</p>
-            <a href="Javascript:void(0)">Read More</a>
-          </div>
+      <div class="row">
+        <div class="col-12">
+          <ul class="categories">
+            <li class="category-item">All</li>
+            <li class="category-item">Pop</li>
+            <li class="category-item">Jazz</li>
+            <li class="category-item">Rock</li>
+            <li class="category-item">Electronic</li>
+            <li class="category-item">Soul music</li>
+          </ul>
         </div>
       </div>
+      <div class="row oneMusic-albums">
+
+        <div class="col-lg-3 col-sm-3 col-md-3 col-lg-2 ">
+          <div class="single-album">
+            <img src="./images/Album1.png" alt="">
+            <div class="album-info">
+              <a href="#">
+                <h2>Cry</h2>
+              </a>
+              <p>Heavenly</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-sm-3 col-md-3 col-lg-2  ">
+          <div class="single-album">
+            <img src="./images/Album2.png" alt="">
+            <div class="album-info">
+              <a href="#">
+                <h2>Wiped Out!</h2>
+              </a>
+              <p>Daddy Issues</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-sm-3 col-md-3 col-lg-2">
+          <div class="single-album">
+            <img src="./images/Album3.png" alt="">
+            <div class="album-info">
+              <a href="#">
+                <h2>Born To Die</h2>
+              </a>
+              <p>Summertime Sadness</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-sm-3 col-md-3 col-lg-2">
+          <div class="single-album">
+            <img src="./images/Album4.jpg" alt="">
+            <div class="album-info">
+              <a href="#">
+                <h2>Vacations</h2>
+              </a>
+              <p>Telephone</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-sm-3 col-md-3 col-lg-2 ">
+          <div class="single-album">
+            <img src="./images/Album1.png" alt="">
+            <div class="album-info">
+              <a href="#">
+                <h2>Cry</h2>
+              </a>
+              <p>Heavenly</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-sm-3 col-md-3 col-lg-2  ">
+          <div class="single-album">
+            <img src="./images/Album2.png" alt="">
+            <div class="album-info">
+              <a href="#">
+                <h2>Wiped Out!</h2>
+              </a>
+              <p>Daddy Issues</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-sm-3 col-md-3 col-lg-2">
+          <div class="single-album">
+            <img src="./images/Album3.png" alt="">
+            <div class="album-info">
+              <a href="#">
+                <h2>Born To Die</h2>
+              </a>
+              <p>Summertime Sadness</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-sm-3 col-md-3 col-lg-2">
+          <div class="single-album">
+            <img src="./images/Album4.jpg" alt="">
+            <div class="album-info">
+              <a href="#">
+                <h2>Vacations</h2>
+              </a>
+              <p>Telephone</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
-  </div>
+  </section>
+
+
 
   <!-- end Gallery -->
 
@@ -211,7 +250,7 @@
           </div>
           <div class="col-md-12 border_top">
             <form class="news">
-              <h3>Newsletter</h3>
+              <h3>Subcribe to our new Newsletter</h3>
               <input class="newslatter" placeholder="ENTER YOUR MAIL" type="text" name=" ENTER YOUR MAIL">
               <button class="submit">Subscribe</button>
             </form>
@@ -246,14 +285,6 @@
               </div>
             </div>
           </div>
-
-        </div>
-
-      </div>
-      <div class="container">
-        <div class="copyright">
-
-          <p>Copyright 2019 All Right Reserved By <a href="https://html.design/">Free html Templates</a></p>
         </div>
       </div>
     </div>
