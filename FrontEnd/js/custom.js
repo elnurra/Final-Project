@@ -428,3 +428,7 @@ $(document).ready(function () {
     $("#myCarousel").carousel("next");
   });
 });
+
+$(".last_manu").click(function () {
+  $(".header-search").toggle("display: inline-block");
+});

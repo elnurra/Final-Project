@@ -603,6 +603,8 @@ nav.main-menu {
 }
 .header-search {
   padding: 3px 0px;
+  border-width: 5px;
+  border-color: #0ed02b;
 }
 .header-search form {
   position: relative;
@@ -1325,6 +1327,7 @@ p {
 }
 .categories {
   margin-bottom: 20px;
+  padding: 0;
 }
 
 .category-item {

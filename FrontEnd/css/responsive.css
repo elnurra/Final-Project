@@ -244,6 +244,13 @@
   .hover_box {
     width: 87.5%;
   }
+  .mean-last {
+    display: none;
+  }
+  .header-search {
+    display: block;
+    width: 100% !important;
+  }
   .last_manu {
     display: none;
   }
@@ -303,6 +310,10 @@
 @media (max-width: 575px) {
   .menu-area {
     float: inherit;
+  }
+  .header-search {
+    display: block !important;
+    width: 100%;
   }
   .slider-section {
     padding-top: 130px;

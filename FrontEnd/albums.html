@@ -14,7 +14,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
   <!-- fevicon -->
-  <link rel="icon" href="images/fevicon.png" type="image/gif" />
+  <link rel="icon" href="images/music_icon.png" type="image/gif" />
   <!-- bootstrap css -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <!-- style css -->
@@ -25,7 +25,6 @@
   <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
   <!-- Tweaks for older IEs-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
     media="screen">
 
@@ -44,39 +43,42 @@
   <!-- header -->
   <header>
     <!-- header inner -->
-    <div class="header">
-      <div class="container">
-        <div class="row d-flex justify-content-end align-items-center">
-          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-3 col logo_section">
-            <div class="full">
-              <div class="center-desk">
-                <div class="logo">
-                  <a href="index.html"><img src="images/cover.png" alt="#" /></a>
+    <div class="header-top">
+      <div class="header">
+        <div class="container">
+          <div class="row d-flex align-items-center">
+            <div class="col-xl-2 col-lg-2 col-md-2 col-sm-3 col logo_section">
+              <div class="full">
+                <div class="center-desk">
+                  <div class="logo">
+                    <a href="index.html"><img src="images/cover.png" alt="#" /></a>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="col-xl-10 col-lg-10 col-md-10 col-sm-9">
-            <div class="menu-area">
-              <div class="limit-box">
-                <nav class="main-menu ">
-                  <ul class="menu-area-main">
-                    <li> <a href="index.html">Home</a> </li>
-                    <li class="active"> <a href="albums.html">Albums</a> </li>
-                    <li> <a href="concerts.html">Events </a> </li>
-                    <li> <a href="about.html">About</a> </li>
-                    <li> <a href="contact.html">Contact</a> </li>
-                    <li> <a href="contact.html">Login</a> </li>
-                    <li> <a class="last_manu" href="#"><img src="images/search_icon.png" alt="#" /></a> </li>
+            <div class="col-xl-10 col-lg-10 col-md-10 col-sm-9">
+              <div class="menu-area">
+                <div class="limit-box">
+                  <nav class="main-menu ">
+                    <ul class="menu-area-main">
+                      <li> <a href="index.html">Home</a> </li>
+                      <li class="active"> <a href="albums.html">Albums</a> </li>
+                      <li> <a href="concerts.html">Events </a> </li>
+                      <li> <a href="about.html">About</a> </li>
+                      <li> <a href="contact.html">Contact</a> </li>
+                      <li> <a href="login.html">Login</a> </li>
+                      <li> <a class="last_manu" href="#"><img src="images/search_icon.png" alt="#" /></a> </li>
+                      <input class="header-search" placeholder="Search:" style="display: none;" type="text">
+                    </ul>
+                  </nav>
 
-                  </ul>
-                </nav>
-
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+
     </div>
     <!-- end header inner -->
     <!-- end header -->
@@ -114,7 +116,7 @@
             <img src="./images/Album1.png" alt="">
             <div class="album-info">
               <a href="#">
-                <h2>Cry</h2>
+                <h2>Cigarettes after Sex</h2>
               </a>
               <p>Heavenly</p>
             </div>
@@ -126,7 +128,7 @@
             <img src="./images/Album2.png" alt="">
             <div class="album-info">
               <a href="#">
-                <h2>Wiped Out!</h2>
+                <h2>The neighborhood </h2>
               </a>
               <p>Daddy Issues</p>
             </div>
@@ -157,53 +159,6 @@
           </div>
         </div>
 
-        <div class="col-lg-3 col-sm-3 col-md-3 col-lg-2 ">
-          <div class="single-album">
-            <img src="./images/Album1.png" alt="">
-            <div class="album-info">
-              <a href="#">
-                <h2>Cry</h2>
-              </a>
-              <p>Heavenly</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-sm-3 col-md-3 col-lg-2  ">
-          <div class="single-album">
-            <img src="./images/Album2.png" alt="">
-            <div class="album-info">
-              <a href="#">
-                <h2>Wiped Out!</h2>
-              </a>
-              <p>Daddy Issues</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-sm-3 col-md-3 col-lg-2">
-          <div class="single-album">
-            <img src="./images/Album3.png" alt="">
-            <div class="album-info">
-              <a href="#">
-                <h2>Born To Die</h2>
-              </a>
-              <p>Summertime Sadness</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-sm-3 col-md-3 col-lg-2">
-          <div class="single-album">
-            <img src="./images/Album4.jpg" alt="">
-            <div class="album-info">
-              <a href="#">
-                <h2>Vacations</h2>
-              </a>
-              <p>Telephone</p>
-            </div>
-          </div>
-        </div>
 
       </div>
     </div>
@@ -277,10 +232,12 @@
               </div>
               <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 ">
                 <ul class="social_link">
-                  <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                  <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                  <li><a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
-                  <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                  <ul class="social_link">
+                    <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                  </ul>
                 </ul>
               </div>
             </div>
