@@ -5,11 +5,375 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Musicman</title>
+    <link rel="icon" href="images/music_icon.png" type="image/gif" />
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- style css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Responsive-->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+    <!-- Tweaks for older IEs-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
+        media="screen">
 </head>
 
 <body>
+    <!-- loader  -->
+    <div class="loader_bg">
+        <div class="loader"><img src="images/loadMusic.gif" alt="#" /></div>
+    </div>
+    <!-- end loader -->
 
+    <!-- header -->
+    <header>
+        <!-- header inner -->
+        <div class="header-top">
+            <div class="header">
+                <div class="container">
+                    <div class="row d-flex align-items-center">
+                        <div class="col-xl-2 col-lg-2 col-md-2 col-sm-3 col logo_section">
+                            <div class="full">
+                                <div class="center-desk">
+                                    <div class="logo">
+                                        <a href="index.html"><img src="images/cover.png" alt="#" /></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-10 col-lg-10 col-md-10 col-sm-9 " style="min-height: 100%;">
+                            <div class="menu-area">
+                                <div class="limit-box">
+                                    <nav class="main-menu ">
+                                        <ul class="menu-area-main">
+                                            <li> <a href="index.html">Home</a> </li>
+                                            <li> <a href="albums.html">Albums</a> </li>
+                                            <li> <a href="events.html">Events </a> </li>
+                                            <li> <a href="about.html">About</a> </li>
+                                            <li> <a href="contact.html">Contact</a> </li>
+                                            <li> <a href="login.html">Login</a> </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end header inner -->
+
+            <!-- end header -->
+        </div>
+    </header>
+
+
+    <main>
+        <section id="album-detail">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="album-data">
+                            <div class="album-img">
+                                <img src="./images/Album2.png">
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="album-data">
+                            <div class="album-title">
+                                <h1>Wiped OUT!</h1>
+                            </div>
+                            <ul class="album-details">
+                                <li class="album-artist">
+                                    <div class="album-items">
+                                        <h4>Artist:</h4>
+                                        <p>The Neighborhood</p>
+                                    </div>
+                                </li>
+                                <li class="album-genre">
+                                    <div class="album-items">
+                                        <h4>Genre:</h4>
+                                        <p>Hip Hop</p>
+                                    </div>
+                                </li>
+                                <li class="album-release">
+                                    <div class="album-items">
+                                        <h4>Release Date:</h4>
+                                        <p>27 May 2017</p>
+                                    </div>
+                                </li>
+                                <li class="album-label">
+                                    <div class="album-items">
+                                        <h4>Label </h4>
+                                        <p>Apple Music</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="album-songs">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                        <div id="player">
+                            <audio id="audio" src=""></audio>
+                            <div id="controls">
+                                <button id="prev"><i class="fa-solid fa-caret-left"></i></button>
+                                <button id="play-pause"><i class="fa-solid fa-play"></i></i></button>
+                                <button id="next"><i class="fa-solid fa-caret-right"></i></i></button>
+                                <input type="range" id="volume" min="0" max="1" step="0.1" value="1">
+                            </div>
+                            <div id="progress-bar">
+                                <div class="progress"></div>
+                            </div>
+                            <div id="time">
+                                <span id="current-time">0:00</span>
+                                <span id="duration">0:00</span>
+                            </div>
+                            <div id="playlist">
+
+                                <ul id="songs">
+                                    <li data-src="./songs/The Neighbourhood - The Beach.mp3"
+                                        class="songs-item active-song">
+                                        <p>Tutu Remix - Camilo Ft. Shakira, Pedro Capó</p>
+                                        <span class="heart"><i class="fa-regular fa-heart"></i></span>
+                                    </li>
+                                    <li data-src="https://www.playurbanomp3.com/Canciones/Don%20Omar/05.%20Don%20Omar%20-%20Aunque%20Te%20Fuiste%20(WwW.PlayUrbano.Com).mp3"
+                                        class="songs-item">
+                                        <p>Aunque Te Fuiste - Don Omar</p>
+                                        <span class="heart"><i class="fa-regular fa-heart"></i></span>
+                                    </li>
+                                    <li data-src="https://www.playurbanomp3.com/Canciones/Don%20Omar/Don%20Omar,%20Rakim%20&%20Ken-Y%20-%20Si%20La%20Ves%20(WwW.PlayUrbano.Com).mp3"
+                                        class="songs-item">
+                                        <p> Si La Vez - Don Omar Ft. RKM Y Ken-Y</p>
+                                        <span class="heart"><i class="fa-regular fa-heart"></i></span>
+                                    </li>
+                                    <li data-src="https://www.playurbanomp3.com/Canciones/Don%20Omar/Don%20Omar,%20Wisin%20&%20Yandel%20-%20My%20Space%20(WwW.PlayUrbano.Com).mp3"
+                                        class="songs-item">
+                                        <p>My Space - Don Omar Ft. Wisin Y Yandel</p>
+                                        <span class="heart"><i class="fa-regular fa-heart"></i></span>
+                                    </li>
+                                    <li data-src="https://www.playurbanomp3.com/Canciones/Don%20Omar/Don%20Omar%20-%20Angelito%20Vuela%20(WwW.PlayUrbano.Com).mp3"
+                                        class="songs-item">
+                                        <p>Angelito Vuela - Don Omar</p>
+                                        <span class="heart"><i class="fa-regular fa-heart"></i></span>
+                                    </li>
+                                    <li data-src="https://www.playurbanomp3.com/Canciones/Don%20Omar/Don%20Omar%20-%20Luna%20(WwW.PlayUrbano.Com).mp3"
+                                        class="songs-item">
+                                        <p>Luna - Don Omar</p>
+                                        <span class="heart"><i class="fa-regular fa-heart"></i></span>
+                                    </li>
+                                    <li data-src="https://www.playurbanomp3.com/Canciones/Don%20Omar/Don%20Omar%20-%20Pobre%20diabla%20(WwW.PlayUrbano.Com).mp3"
+                                        class="songs-item">
+                                        <p>Pobre Diabla - Don Omar</p>
+                                        <span class="heart"><i class="fa-regular fa-heart"></i></span>
+                                    </li>
+                                    <li data-src="https://www.playurbanomp3.com/Canciones/Don%20Omar/Don%20Omar%20Ft.%20Aventura%20-%20Ella%20y%20Yo%20(WwW.PlayUrbano.Com).mp3"
+                                        class="songs-item">
+                                        <p>Ella y Yo - Don Omar Ft. Aventura</p>
+                                        <span class="heart"><i class="fa-regular fa-heart"></i></span>
+                                    </li>
+                                    <li data-src="https://www.playurbanomp3.com/Canciones/Don%20Omar/Don%20Omar%20Ft.%20Daddy%20Yankee,%20Wisin%20y%20Yandel%20-%20Mayor%20Que%20Yo%203%20(WwW.PlayUrbano.Com).mp3"
+                                        class="songs-item">
+                                        <p>Mayor Que Yo 3 - Don Omar Ft. Daddy Yankee, Wisin Y Yandel</p>
+                                        <span class="heart"><i class="fa-regular fa-heart"></i></span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="album-forms">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-5 col-md-6 col-12 pb-4">
+                        <h1 class="comment-list">Comments</h1>
+                        <div class="comment mt-4 text-justify float-left">
+                            <img src="./images/avatar1.jpg" alt="" class="rounded-circle" width="40" height="40">
+                            <h4>Jhon Doe</h4>
+                            <span>- 20 October, 2018</span>
+                            <br>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus numquam assumenda hic
+                                aliquam vero sequi velit molestias doloremque molestiae dicta?</p>
+                            <div class="reply-form">
+                                <button class="reply-to">
+                                    Reply
+                                    <i class="fa-solid fa-reply"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="text-justify darker mt-4 float-right">
+                            <img src="./images/avatar2.jpg" alt="" class="rounded-circle" width="40" height="40">
+                            <h4>Rob Simpson</h4>
+                            <span>- 20 October, 2018</span>
+                            <br>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus numquam assumenda hic
+                                aliquam vero sequi velit molestias doloremque molestiae dicta?</p>
+                            <div class="reply-form">
+                                <button class="reply-to">
+                                    Reply
+                                    <i class="fa-solid fa-reply"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="comment mt-4 text-justify">
+                            <img src="images/avatar1.jpg" alt="" class="rounded-circle" width="40" height="40">
+                            <h4>Jhon Doe</h4>
+                            <span>- 20 October, 2018</span>
+                            <br>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus numquam assumenda hic
+                                aliquam vero sequi velit molestias doloremque molestiae dicta?</p>
+                            <div class="reply-form">
+                                <button class="reply-to">
+                                    Reply
+                                    <i class="fa-solid fa-reply"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="darker mt-4 text-justify">
+                            <img src="./images/avatar2.jpg" alt="" class="rounded-circle" width="40" height="40">
+                            <h4>Rob Simpson</h4>
+                            <span>- 20 October, 2018</span>
+                            <br>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus numquam assumenda hic
+                                aliquam vero sequi velit molestias doloremque molestiae dicta?</p>
+                            <div class="reply-form">
+                                <button class="reply-to">
+                                    Reply
+                                    <i class="fa-solid fa-reply"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-5 col-sm-4 offset-md-1 offset-sm-1 col-12 mt-4">
+                        <form id="algin-form">
+                            <div class="form-group">
+                                <h4 class="comment-title">Leave a comment</h4>
+                                <label for="message">Message</label>
+                                <textarea name="msg" id="" msg cols="30" rows="5" class="form-control"
+                                    style="background-color: black;"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <p class="text-secondary">If you have a <a href="#" class="alert-link">gravatar
+                                        account</a> your address will be used to display your profile picture.</p>
+                            </div>
+                            <div class="form-inline">
+                                <input type="checkbox" name="check" id="checkbx" class="mr-1">
+                                <label for="subscribe">Subscribe me to the newlettter</label>
+                            </div>
+                            <div class="form-group">
+                                <button type="button" id="post" class="btn">Post Comment</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <!--  footer -->
+    <footer>
+        <div class="footer ">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <form class="contact_bg">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="titlepage">
+                                        <h2>Contact us</h2>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <input class="contactus" placeholder="Your Name" type="text" name="Your Name">
+                                    </div>
+                                    <div class="col-md-12">
+                                        <input class="contactus" placeholder="Your Email" type="text" name="Your Email">
+                                    </div>
+                                    <div class="col-md-12">
+                                        <input class="contactus" placeholder="Your Phone" type="text" name="Your Phone">
+                                    </div>
+                                    <div class="col-md-12">
+                                        <textarea class="textarea" placeholder="Message" type="text"
+                                            name="Message"></textarea>
+                                    </div>
+                                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                        <button class="send">Send</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                    <div class="col-md-12 border_top">
+                        <form class="news">
+                            <h3>Newsletter</h3>
+                            <input class="newslatter" placeholder="ENTER YOUR MAIL" type="text" name=" ENTER YOUR MAIL">
+                            <button class="submit">Subscribe</button>
+                        </form>
+                    </div>
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 ">
+                        <div class="row">
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 ">
+                                <div class="address">
+                                    <ul class="loca">
+                                        <li>
+                                            <a href="#"><img src="icon/loc.png" alt="#" /></a>Locations
+
+                                        <li>
+
+                                            <a href="#"><img src="icon/call.png" alt="#" /></a>+12586954775
+                                        </li>
+                                        <li>
+                                            <a href="#"><img src="icon/email.png" alt="#" /></a>demo@gmail.com
+                                        </li>
+                                    </ul>
+
+
+                                </div>
+                            </div>
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 ">
+                                <ul class="social_link">
+                                    <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                    <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></i></a></li>
+                                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- end footer -->
+    <!-- Javascript files-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.0.0.min.js"></script>
+    <script src="js/plugin.js"></script>
+    <!-- sidebar -->
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
 </body>
 
 </html>

@@ -421,6 +421,9 @@
   .hover_box {
     width: 92.5%;
   }
+  .event-subtitle {
+    padding: 0;
+  }
 }
 @media (max-width: 374px) {
   .hover_box {
