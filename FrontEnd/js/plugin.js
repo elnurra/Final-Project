@@ -13494,11 +13494,6 @@ http://www.gnu.org/licenses/gpl.html
           var n = e && e.SlideShow;
           n && n.stop();
         },
-      }),
-      e(t).on("visibilitychange", function () {
-        var n = e.fancybox.getInstance(),
-          o = n && n.SlideShow;
-        o && o.isActive && (t.hidden ? o.clear() : o.set());
       });
   })(document, window.jQuery || jQuery),
   (function (t, e) {
