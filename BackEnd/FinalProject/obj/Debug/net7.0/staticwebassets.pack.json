@@ -1,0 +1,301 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\FinalProject.bundle.scp.css",
+      "PackagePath": "staticwebassets\\FinalProject.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\css\\animate.min.css",
+      "PackagePath": "staticwebassets\\css\\animate.min.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\css\\jquery-ui.css",
+      "PackagePath": "staticwebassets\\css\\jquery-ui.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\css\\jquery.mCustomScrollbar.min.css",
+      "PackagePath": "staticwebassets\\css\\jquery.mCustomScrollbar.min.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\css\\login.css",
+      "PackagePath": "staticwebassets\\css\\login.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\css\\meanmenu.css",
+      "PackagePath": "staticwebassets\\css\\meanmenu.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\css\\nice-select.css",
+      "PackagePath": "staticwebassets\\css\\nice-select.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\css\\normalize.css",
+      "PackagePath": "staticwebassets\\css\\normalize.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\css\\owl.carousel.min.css",
+      "PackagePath": "staticwebassets\\css\\owl.carousel.min.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\css\\responsive.css",
+      "PackagePath": "staticwebassets\\css\\responsive.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\css\\slick.css",
+      "PackagePath": "staticwebassets\\css\\slick.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\css\\style.css",
+      "PackagePath": "staticwebassets\\css\\style.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\icon\\call.png",
+      "PackagePath": "staticwebassets\\icon\\call.png"
+    },
+    {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\icon\\email.png",
+      "PackagePath": "staticwebassets\\icon\\email.png"
+    },
+    {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\icon\\fb.png",
+      "PackagePath": "staticwebassets\\icon\\fb.png"
+    },
+    {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\icon\\h.png",
+      "PackagePath": "staticwebassets\\icon\\h.png"
+    },
+    {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\icon\\instagram.png",
+      "PackagePath": "staticwebassets\\icon\\instagram.png"
+    },
+    {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\icon\\lin(2).png",
+      "PackagePath": "staticwebassets\\icon\\lin(2).png"
+    },
+    {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\icon\\loc.png",
+      "PackagePath": "staticwebassets\\icon\\loc.png"
+    },
+    {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\icon\\tw.png",
+      "PackagePath": "staticwebassets\\icon\\tw.png"
+    },
+    {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\images\\3840.webp",
+      "PackagePath": "staticwebassets\\images\\3840.webp"
+    },
+    {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\images\\Album1.png",
+      "PackagePath": "staticwebassets\\images\\Album1.png"
+    },
+    {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\images\\Album2.png",
+      "PackagePath": "staticwebassets\\images\\Album2.png"
+    },
+    {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\images\\Album3.png",
+      "PackagePath": "staticwebassets\\images\\Album3.png"
+    },
+    {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\images\\Album4.jpg",
+      "PackagePath": "staticwebassets\\images\\Album4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\images\\Album5.jpg",
+      "PackagePath": "staticwebassets\\images\\Album5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\images\\Album6.jpg",
+      "PackagePath": "staticwebassets\\images\\Album6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\images\\Album7.jpg",
+      "PackagePath": "staticwebassets\\images\\Album7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\images\\about.png",
+      "PackagePath": "staticwebassets\\images\\about.png"
+    },
+    {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\images\\about2.jpg",
+      "PackagePath": "staticwebassets\\images\\about2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\images\\about_bg.jpg",
+      "PackagePath": "staticwebassets\\images\\about_bg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\images\\avatar1.jpg",
+      "PackagePath": "staticwebassets\\images\\avatar1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\images\\avatar2.jpg",
+      "PackagePath": "staticwebassets\\images\\avatar2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\images\\banner2.jpg",
+      "PackagePath": "staticwebassets\\images\\banner2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\images\\comment-section.jpg",
+      "PackagePath": "staticwebassets\\images\\comment-section.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\images\\comment.jpg",
+      "PackagePath": "staticwebassets\\images\\comment.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\images\\cover.png",
+      "PackagePath": "staticwebassets\\images\\cover.png"
+    },
+    {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\images\\event-detail.jpg",
+      "PackagePath": "staticwebassets\\images\\event-detail.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\images\\event1.jpg",
+      "PackagePath": "staticwebassets\\images\\event1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\images\\event2.jpg",
+      "PackagePath": "staticwebassets\\images\\event2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\images\\event3.png",
+      "PackagePath": "staticwebassets\\images\\event3.png"
+    },
+    {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\images\\gallery1.jpg",
+      "PackagePath": "staticwebassets\\images\\gallery1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\images\\gallery2.jpg",
+      "PackagePath": "staticwebassets\\images\\gallery2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\images\\gallery3.jpg",
+      "PackagePath": "staticwebassets\\images\\gallery3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\images\\gallery4.jpg",
+      "PackagePath": "staticwebassets\\images\\gallery4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\images\\loadMusic.gif",
+      "PackagePath": "staticwebassets\\images\\loadMusic.gif"
+    },
+    {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\images\\login2.jpg",
+      "PackagePath": "staticwebassets\\images\\login2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\images\\login3.jpg",
+      "PackagePath": "staticwebassets\\images\\login3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\images\\login4.jpg",
+      "PackagePath": "staticwebassets\\images\\login4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\images\\loginImage.jpg",
+      "PackagePath": "staticwebassets\\images\\loginImage.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\images\\male-avatar-profile-icon-of-smiling-caucasian-man-vector.webp",
+      "PackagePath": "staticwebassets\\images\\male-avatar-profile-icon-of-smiling-caucasian-man-vector.webp"
+    },
+    {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\images\\music_icon.png",
+      "PackagePath": "staticwebassets\\images\\music_icon.png"
+    },
+    {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\images\\profile.png",
+      "PackagePath": "staticwebassets\\images\\profile.png"
+    },
+    {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\images\\search_icon.png",
+      "PackagePath": "staticwebassets\\images\\search_icon.png"
+    },
+    {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\images\\search_icon2.png",
+      "PackagePath": "staticwebassets\\images\\search_icon2.png"
+    },
+    {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\images\\slider1.jpg",
+      "PackagePath": "staticwebassets\\images\\slider1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\images\\slider2.jpg",
+      "PackagePath": "staticwebassets\\images\\slider2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\images\\slider3.jpg",
+      "PackagePath": "staticwebassets\\images\\slider3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\images\\up.jpg",
+      "PackagePath": "staticwebassets\\images\\up.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\js\\audiopure.js",
+      "PackagePath": "staticwebassets\\js\\audiopure.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\js\\custom.js",
+      "PackagePath": "staticwebassets\\js\\custom.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\js\\event-date.js",
+      "PackagePath": "staticwebassets\\js\\event-date.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\js\\jquery-3.0.0.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery-3.0.0.min.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\js\\jquery.mCustomScrollbar.concat.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.mCustomScrollbar.concat.min.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\js\\jquery.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\js\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\js\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\js\\plugin.js",
+      "PackagePath": "staticwebassets\\js\\plugin.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\js\\popper.min.js",
+      "PackagePath": "staticwebassets\\js\\popper.min.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\songs\\The Neighbourhood - The Beach.mp3",
+      "PackagePath": "staticwebassets\\songs\\The Neighbourhood - The Beach.mp3"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.FinalProject.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.FinalProject.props",
+      "PackagePath": "build\\FinalProject.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.FinalProject.props",
+      "PackagePath": "buildMultiTargeting\\FinalProject.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.FinalProject.props",
+      "PackagePath": "buildTransitive\\FinalProject.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

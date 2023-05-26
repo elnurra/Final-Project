@@ -16,7 +16,7 @@
   <!-- fevicon -->
   <link rel="icon" href="images/music_icon.png" type="image/gif" />
   <!-- bootstrap css -->
-  <link rel="stylesheet" href="css/bootstrap.min.css">
+
   <!-- style css -->
   <link rel="stylesheet" href="css/style.css">
   <!-- Responsive-->
@@ -89,14 +89,32 @@
 
       <div class="carousel-inner">
 
-        <div class="carousel-item active" data-bs-interval="100000000">
-          <img src="images/slider1.jpg" class="img-fluid" alt="...">
+        <div class="carousel-item active" data-bs-interval="1000000">
+          <img class="img-fluid slider-image" src="images/slider1.jpg" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h2 class="slider-title">The Neighboorhood</h2>
+            <p class="slider-description">The Neighborhood is an alternative rock band known for their captivating
+              melodies, introspective lyrics, and unique blend of indie, R&B, and pop elements.</p>
+          </div>
         </div>
-        <div class="carousel-item" data-bs-interval="10000">
-          <img src="images/slider2.jpg" class="img-fluid" alt="...">
+        <div class="carousel-item" data-bs-interval="1000000">
+          <img class="img-fluid slider-image" src="images/slider2.jpg" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h2 class="slider-title">The Cigarettes After Sex</h2>
+            <p class="slider-description">Cigarettes After Sex is a dream-pop band acclaimed for their atmospheric
+              soundscapes, hauntingly intimate
+              lyrics, and ethereal vocals, creating a mesmerizing musical experience.</p>
+          </div>
         </div>
-        <div class="carousel-item" data-bs-interval="10000">
-          <img src="images/slider3.jpg" class="img-fluid" alt="...">
+        <div class="carousel-item" data-bs-interval="1000000">
+          <img class="img-fluid slider-image" src="images/slider3.jpg" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h2 class="slider-title">Arctic Monkeys</h2>
+            <p class="slider-description">Arctic Monkeys are famous for their breakout album "Whatever People Say I Am,
+              That's What I'm Not," which
+              became the fastest-selling debut album in British music history and propelled them to global recognition.
+            </p>
+          </div>
         </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
@@ -168,9 +186,7 @@
   <!-- end upcoming -->
 
   <!-- Gallery -->
-
-
-  <div id="gallery" class="Gallery">
+  <section id="gallery" class="Gallery">
     <div class="container">
       <div class="row display_boxflex">
         <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
@@ -178,53 +194,48 @@
             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 margi_bott">
               <div class="Gallery_img">
                 <figure><img src="images/Gallery1.jpg" alt="#" /></figure>
-              </div>
-              <div class="hover_box">
-
-                <ul class="icon_hu">
-                  <h3>Music night</h3>
-                  <li><a href="#"><img src="icon/h.png" alt="#" /></a></li>
-                  <li><a href="#"><img src="icon/h.png" alt="#" /></a></li>
-                </ul>
+                <div class="hover_box">
+                  <ul class="icon_hu">
+                    <h3>Solo</h3>
+                  </ul>
+                </div>
               </div>
             </div>
             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 margi_bott">
               <div class="Gallery_img">
                 <figure><img src="images/Gallery2.jpg" alt="#" /></figure>
-              </div>
-              <div class="hover_box">
+                <div class="hover_box">
 
-                <ul class="icon_hu">
-                  <h3>Music night</h3>
-                  <li><a href="#"><img src="icon/h.png" alt="#" /></a></li>
-                  <li><a href="#"><img src="icon/h.png" alt="#" /></a></li>
-                </ul>
+                  <ul class="icon_hu">
+                    <h3>Hip Hop</h3>
+                  </ul>
+                </div>
               </div>
             </div>
             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 margi_bott1">
               <div class="Gallery_img">
                 <figure><img src="images/Gallery3.jpg" alt="#" /></figure>
-              </div>
-              <div class="hover_box">
+                <div class="hover_box">
 
-                <ul class="icon_hu">
-                  <h3>Music night</h3>
-                  <li><a href="#"><img src="icon/h.png" alt="#" /></a></li>
-                  <li><a href="#"><img src="icon/h.png" alt="#" /></a></li>
-                </ul>
+                  <ul class="icon_hu">
+                    <h3>Electronic</h3>
+
+
+                  </ul>
+                </div>
               </div>
             </div>
             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
               <div class="Gallery_img">
                 <figure><img src="images/Gallery4.jpg" alt="#" /></figure>
-              </div>
-              <div class="hover_box">
+                <div class="hover_box">
 
-                <ul class="icon_hu">
-                  <h3>Music night</h3>
-                  <li><a href="#"><img src="icon/h.png" alt="#" /></a></li>
-                  <li><a href="#"><img src="icon/h.png" alt="#" /></a></li>
-                </ul>
+                  <ul class="icon_hu">
+                    <h3>Soul</h3>
+
+
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
@@ -242,12 +253,8 @@
         </div>
       </div>
     </div>
-  </div>
-
+  </section>
   <!-- end Gallery -->
-
-
-
 
   <!--  footer -->
   <footer>
@@ -326,7 +333,6 @@
   <!-- end footer -->
   <!-- Javascript files-->
   <script src="js/jquery.min.js"></script>
-  <script src="js/popper.min.js"></script>
   <script src="js/jquery-3.0.0.min.js"></script>
   <script src="js/plugin.js"></script>
   <!-- sidebar -->

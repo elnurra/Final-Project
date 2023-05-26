@@ -1087,6 +1087,15 @@ nav.main-menu {
 .slider_section {
   padding-top: 268px;
 }
+.slider-title {
+  text-align: center;
+  font-size: 30px;
+}
+.slider-description {
+  text-align: center;
+  font-size: 30px;
+  font-family: "PT Sans Narrow", sans-serif;
+}
 .black_nolmal {
   font-weight: normal;
   color: #000;
@@ -1359,12 +1368,12 @@ p {
 }
 
 .hover_box {
+  position: absolute;
   background: #0ed02bbf;
   display: flex;
   justify-content: center;
-  position: absolute;
   top: 0;
-  width: 92.5%;
+  width: 100%;
   box-sizing: border-box;
   float: left;
   height: 100%;
@@ -1962,6 +1971,17 @@ ul.album-details li p {
 }
 #album-songs h1 {
   color: white;
+}
+
+.album-name {
+  margin-top: 10px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-align: center;
+}
+.album-song {
+  display: block;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
 }
 
 /* ---------------------*/

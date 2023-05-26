@@ -1,0 +1,160 @@
+﻿@model List<Slider>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<section id="slider" class="slider-section">
+
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+        <div class="carousel-inner">
+            @foreach (Slider item in Model)
+            {
+                <div class="carousel-item active" data-bs-interval="10000">
+                    <img class="img-fluid slider-image" src="~/images/@item.ImageUrl" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h2 class="slider-title">@item.Title</h2>
+                        <p class="slider-description">
+                            @item.Description
+                        </p>
+                    </div>
+                </div>
+            }
+           
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+            <i class="fa-solid fa-circle-chevron-left"></i>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+            <i class="fa-solid fa-circle-chevron-right"></i>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</section>
+
+
+<!-- about  -->
+<section id="about" class="about">
+    <div class="container">
+        <div class="row display_boxflex">
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                <div class="about-box">
+                    <h2>About Us</h2>
+                    <p>
+                        Welcome to our site where you will find the best songs and music in your favorite genres! Our music
+                        collection is represented by works from the most talented artists and bands that give us an unforgettable
+                        musical experience. We constantly update our collection so that you can always enjoy the freshest and most
+                        relevant tracks.
+                    </p>
+                </div>
+                <a href="#" class="continue">Read More</a>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                <div class="about-box">
+                    <figure><img src="~/images/about2.jpg" alt="#" /></figure>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+<!-- end abouts -->
+<!-- upcoming -->
+<section id="upcoming" class="upcoming">
+    <div class="container-fluid padding_left3">
+        <div class="row display_boxflex">
+            <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12">
+                <div class="box_text">
+                    <div class="titlepage">
+                        <h2>Upcoming Songs</h2>
+                    </div>
+                    <p>
+                        On our site you can find not only songs in your favorite genres, but also get acquainted with new talents
+                        and interesting projects. Here you will find reviews of new products and recommendations so that you never
+                        miss important releases. We guarantee high sound quality and a simple interface so you can enjoy music
+                        without distractions and ads. With our site, you can create your own playlist, set up personalized
+                        recommendations, and enjoy your favorite songs anytime, anywhere.
+                    </p>
+                    <a href="#" class="continue">Read More</a>
+                </div>
+            </div>
+
+            <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12 border_right">
+                <div class="upcomimg">
+                    <figure><img src="~/images/up.jpg" alt="#" /></figure>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end upcoming -->
+<!-- Gallery -->
+<section id="gallery" class="Gallery">
+    <div class="container">
+        <div class="row display_boxflex">
+            <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 margi_bott">
+                        <div class="Gallery_img">
+                            <figure><img src="~/images/Gallery1.jpg" alt="#" /></figure>
+                            <div class="hover_box">
+                                <ul class="icon_hu">
+                                    <li><h3>Solo</h3></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 margi_bott">
+                        <div class="Gallery_img">
+                            <figure><img src="~/images/Gallery2.jpg" alt="#" /></figure>
+                            <div class="hover_box">
+
+                                <ul class="icon_hu">
+                                    <li><h3>Hip Hop</h3></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 margi_bott1">
+                        <div class="Gallery_img">
+                            <figure><img src="~/images/Gallery3.jpg" alt="#" /></figure>
+                            <div class="hover_box">
+
+                                <ul class="icon_hu">
+                                    <li> <h3>Electronic</h3></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                        <div class="Gallery_img">
+                            <figure><img src="~/images/Gallery4.jpg" alt="#" /></figure>
+                            <div class="hover_box">
+
+                                <ul class="icon_hu">
+                                    <li> <h3>Soul</h3></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                <div class="Gallery_text">
+                    <div class="titlepage">
+                        <h2>Albums</h2>
+                    </div>
+                    <p>
+                        We also offer a convenient search by genre, year, artist and other criteria so you can quickly find the
+                        music you need. We guarantee high quality sound and no ads so you can fully immerse yourself in the world
+                        of music. Join our community of music connoisseurs and enjoy the best music!
+                    </p>
+                </div>
+                <a href="#" class="continue">Read More</a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end Gallery -->
+
