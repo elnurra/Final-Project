@@ -93,6 +93,18 @@
       "PackagePath": "staticwebassets\\images\\Album1.png"
     },
     {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\images\\Album10.png",
+      "PackagePath": "staticwebassets\\images\\Album10.png"
+    },
+    {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\images\\Album11.png",
+      "PackagePath": "staticwebassets\\images\\Album11.png"
+    },
+    {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\images\\Album12.jpg",
+      "PackagePath": "staticwebassets\\images\\Album12.jpg"
+    },
+    {
       "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\images\\Album2.png",
       "PackagePath": "staticwebassets\\images\\Album2.png"
     },
@@ -115,6 +127,14 @@
     {
       "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\images\\Album7.jpg",
       "PackagePath": "staticwebassets\\images\\Album7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\images\\Album8.jpg",
+      "PackagePath": "staticwebassets\\images\\Album8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\images\\Album9.png",
+      "PackagePath": "staticwebassets\\images\\Album9.png"
     },
     {
       "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\images\\about.png",

@@ -39,7 +39,6 @@ a {
   outline: none !important;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
@@ -120,7 +119,6 @@ a,
   outline: none !important;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
@@ -390,9 +388,7 @@ nav.main-menu {
 .right_cart_section .cart_icons {
   padding: 18px 0 0;
 }
-.main-menu ul > li nth:child(5) a {
-  padding-right: 0px;
-}
+
 .right_cart_section ul li {
   float: left;
   font-size: 17px;
@@ -964,9 +960,7 @@ nav.main-menu {
   vertical-align: middle;
   margin: 6px 0px;
 }
-.main-menu ul > li:nth-child (6) {
-  padding-right: 0px;
-}
+
 .nav > li {
   position: inherit;
   display: inline-block;
@@ -1344,6 +1338,9 @@ nav.main-menu {
   text-align: center;
   font-size: 30px;
   color: #0ed02b;
+}
+.genre-item{
+
 }
 .single-album-item h5,
 p {
@@ -1774,7 +1771,7 @@ ul.album-details {
 }
 .album-items h4,
 p {
-  margin: 0 px;
+  margin: 0;
   padding: 10px;
 }
 ul.album-details li {
@@ -1798,7 +1795,15 @@ ul.album-details li p {
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     text-align: center;
 }
+.categories a{
+    text-decoration:none;
+    color:black;
+}
+.categories li :hover{
+    text-decoration: none;
+    color: #0ed02b;
 
+}
 .album-song {
     display: block;
     font-family: Verdana, Geneva, Tahoma, sans-serif;

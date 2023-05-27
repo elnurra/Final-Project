@@ -22,12 +22,12 @@
             <div class="col-12">
                 <ul class="categories">
                     <li>Genres: </li>
-                    <li class="category-item">All</li>
+                    <li class="category-item"><a href="" data-id="all">All</a></li>
                     @foreach (Genre item in Model.Genres)
                     {
-                        <li class="category-item">@item.Name</li>
+                        <li class="category-item"> <a class="album" href="" data-id="@item.Name.ToLower()">@item.Name</a></li>
                     }
-                    <li class="category-item"><a class="last_manu" href="#"><img src="~/images/search_icon.png" alt="#"></a></li>
+                    <li class="category-item"><i class="last_manu" href="#"><img src="~/images/search_icon.png" alt="#"></i></li>
                     <li class="category-item"><input class="header-search" placeholder="Search:" style="display: none;" type="text"></li>
 
                 </ul>
@@ -36,18 +36,21 @@
         <div class="row oneMusic-albums">
             @foreach (Album item in Model.Albums)
             {
-            <div class="col-lg-3 col-sm-3 col-md-3 col-lg-2 ">
-                <div class="single-album">
-                    <img src="./images/@item.ImageUrl" alt="">
-                    <div class="album-info">
-                        <a href="#">
-                            <h2 class="album-name">@item.Artist.Name</h2>
-                        </a>
-                        <p class="album-song">@item.Name</p>
+
+                <div class="col-lg-3 col-sm-3 col-md-3 col-lg-2 ">
+                    <div class="genre-item" data-id="@item.Genre.Name.ToLower()">
+                        <div class="single-album">
+                            <img src="~/images/@item.ImageUrl" alt="">
+                            <div class="album-info">
+                                <a asp-action="Detail" asp-route-id="@item.Id">
+                                    <h2 class="album-name">@item.Artist.Name</h2>
+                                </a>
+                                <p class="album-song">@item.Name</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-                
+
             }
 
 

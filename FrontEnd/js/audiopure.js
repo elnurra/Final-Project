@@ -17,7 +17,7 @@ let currentSong = 0;
 
 chooseRandom.addEventListener("click", () => {
   let randValue = Math.floor(Math.random() * maxValue);
-  audio.src = playlist.children[randValue].getAttribute("data-src");
+  audio.src = playlist.children[randValue].getAttribute("src");
   audio.play();
   playPause.innerHTML = '<i class="fa-solid fa-pause"></i>';
   audio.play();
@@ -31,7 +31,7 @@ function getRandomInt(max) {
 playlist.addEventListener("click", (e) => {
   if (e.target.tagName === "LI") {
     currentSong = Array.from(playlist.children).indexOf(e.target);
-    audio.src = e.target.getAttribute("data-src");
+    audio.src = e.target.getAttribute("src");
     playPause.innerHTML = '<i class="fa-solid fa-pause"></i>';
     audio.play();
     setActiveSong(currentSong);
@@ -43,7 +43,7 @@ playlist.addEventListener("click", (e) => {
 
 playPause.addEventListener("click", () => {
   if (audio.paused) {
-    audio.src = playlist.children[currentSong].getAttribute("data-src");
+    audio.src = playlist.children[currentSong].getAttribute("src");
     audio.play();
     setActiveSong(currentSong);
     playPause.innerHTML = '<i class="fa-solid fa-pause"></i>';
@@ -58,7 +58,7 @@ prev.addEventListener("click", () => {
   if (currentSong < 0) {
     currentSong = playlist.children.length - 1;
   }
-  audio.src = playlist.children[currentSong].getAttribute("data-src");
+  audio.src = playlist.children[currentSong].getAttribute("src");
   audio.play();
   setActiveSong(currentSong);
 });
@@ -68,7 +68,7 @@ next.addEventListener("click", () => {
   if (currentSong === playlist.children.length) {
     currentSong = 0;
   }
-  audio.src = playlist.children[currentSong].getAttribute("data-src");
+  audio.src = playlist.children[currentSong].getAttribute("src");
   audio.play();
   setActiveSong(currentSong);
 });
@@ -103,7 +103,7 @@ audio.addEventListener("ended", (e) => {
   } else {
     currentSong++;
   }
-  audio.src = playlist.children[currentSong].getAttribute("data-src");
+  audio.src = playlist.children[currentSong].getAttribute("src");
   audio.play();
   setActiveSong(currentSong);
 });

@@ -419,3 +419,34 @@ $(document).ready(function () {
 });
 
 // Set the date we're counting down to
+
+$(document).on('click', '.categories li a', function (e) {
+    e.preventDefault();
+    let genre = $(this).attr('data-id');
+    let albums = $('.genre-item');
+    console.log(albums);
+
+    albums.each(function () {
+        if (genre == $(this).attr('data-id')) {
+            $(this).parent().fadeIn();
+        }
+        else {
+            $(this).parent().hide();
+        }
+    })
+    if (genre == 'all') {
+       albums.parent().fadeIn();
+    }
+})
+$(document).on('click', 'ul li', function () {
+    $(this).siblings('.active').removeClass('active');
+    $(this).addClass('active');
+    let dataId = $(this).attr('data-id');
+    $(this).parent().next().children('p.active').removeClass('active');
+
+    $(this).parent().next().children('p').each(function () {
+        if (dataId == $(this).attr('data-id')) {
+            $(this).addClass('active')
+        }
+    })
+})

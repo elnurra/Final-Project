@@ -7,9 +7,5 @@ namespace FinalProject.Models
         public string Name { get; set; } = null!;
         public List<Album> Albums { get; set; } = null!;
         
-
-        
-
-
     }
 }
