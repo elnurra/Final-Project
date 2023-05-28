@@ -284,62 +284,126 @@
         <section id="page-forms">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-5 col-md-6 col-12 pb-4">
+                    <div class=" col-sm-5 col-md-6 col-12 pb-4">
                         <h1 class="comment-title">Comments</h1>
-                        <div class="comment mt-4 text-justify float-left">
-                            <img src="./images/avatar1.jpg" alt="" class="rounded-circle" width="40" height="40">
-                            <h4>Jhon Doe</h4>
-                            <span>- 20 October, 2018</span>
-                            <br>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus numquam assumenda hic
-                                aliquam vero sequi velit molestias doloremque molestiae dicta?</p>
-                            <div class="reply-form">
-                                <button class="reply-to">
-                                    Reply
-                                    <i class="fa-solid fa-reply"></i>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="text-justify darker mt-4 float-right">
-                            <img src="./images/avatar2.jpg" alt="" class="rounded-circle" width="40" height="40">
-                            <h4>Rob Simpson</h4>
-                            <span>- 20 October, 2018</span>
-                            <br>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus numquam assumenda hic
-                                aliquam vero sequi velit molestias doloremque molestiae dicta?</p>
-                            <div class="reply-form">
-                                <button class="reply-to">
-                                    Reply
-                                    <i class="fa-solid fa-reply"></i>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="comment mt-4 text-justify">
-                            <img src="images/avatar1.jpg" alt="" class="rounded-circle" width="40" height="40">
-                            <h4>Jhon Doe</h4>
-                            <span>- 20 October, 2018</span>
-                            <br>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus numquam assumenda hic
-                                aliquam vero sequi velit molestias doloremque molestiae dicta?</p>
-                            <div class="reply-form">
-                                <button class="reply-to">
-                                    Reply
-                                    <i class="fa-solid fa-reply"></i>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="darker mt-4 text-justify">
-                            <img src="./images/avatar2.jpg" alt="" class="rounded-circle" width="40" height="40">
-                            <h4>Rob Simpson</h4>
-                            <span>- 20 October, 2018</span>
-                            <br>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus numquam assumenda hic
-                                aliquam vero sequi velit molestias doloremque molestiae dicta?</p>
-                            <div class="reply-form">
-                                <button class="reply-to">
-                                    Reply
-                                    <i class="fa-solid fa-reply"></i>
-                                </button>
+                        <div class="d-flex align-items-center justify-content-center vh-100">
+                            <div class="container">
+                                <div class="row justify-content-center mb-4">
+                                    <div class="col">
+                                        <h5>2 Comments</h5>
+                                    </div>
+                                </div>
+                                <div class="row justify-content-center mb-4">
+                                    <div class="col">
+                                        <div class="comments">
+                                            <div class="comment d-flex mb-4">
+                                                <div class="flex-shrink-0">
+                                                    <div class="avatar avatar-sm rounded-circle">
+                                                        <img class="avatar-img"
+                                                            src="https://randomuser.me/api/portraits/men/32.jpg" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="flex-grow-1 ms-2 ms-sm-3">
+                                                    <div class="comment-meta d-flex align-items-baseline">
+                                                        <h6 class="me-2">Jordan Singer</h6>
+                                                        <span class="text-muted">2d</span>
+                                                    </div>
+                                                    <div class="comment-body">
+                                                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non
+                                                        minima ipsum at amet doloremque qui magni, placeat deserunt
+                                                        pariatur itaque laudantium impedit aliquam eligendi repellendus
+                                                        excepturi quibusdam nobis esse accusantium.
+                                                    </div>
+
+                                                    <div class="comment-replies bg-light p-3 mt-3 rounded">
+                                                        <h6
+                                                            class="comment-replies-title mb-4 text-muted text-uppercase">
+                                                            2 replies</h6>
+
+                                                        <div class="reply d-flex mb-4">
+                                                            <div class="flex-shrink-0">
+                                                                <div class="avatar avatar-sm rounded-circle">
+                                                                    <img class="avatar-img"
+                                                                        src="https://images.unsplash.com/photo-1501325087108-ae3ee3fad52f?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&s=f7f448c2a70154ef85786cf3e4581e4b"
+                                                                        alt="">
+                                                                </div>
+                                                            </div>
+                                                            <div class="flex-grow-1 ms-2 ms-sm-3">
+                                                                <div class="reply-meta d-flex align-items-baseline">
+                                                                    <h6 class="mb-0 me-2">Brandon Smith</h6>
+                                                                    <span class="text-muted">2d</span>
+                                                                </div>
+                                                                <div class="reply-body">
+                                                                    Lorem ipsum dolor sit, amet consectetur adipisicing
+                                                                    elit.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="reply d-flex">
+                                                            <div class="flex-shrink-0">
+                                                                <div class="avatar avatar-sm rounded-circle">
+                                                                    <img class="avatar-img"
+                                                                        src="https://randomuser.me/api/portraits/men/4.jpg"
+                                                                        alt="">
+                                                                </div>
+                                                            </div>
+                                                            <div class="flex-grow-1 ms-2 ms-sm-3">
+                                                                <div class="reply-meta d-flex align-items-baseline">
+                                                                    <h6 class="mb-0 me-2">James Parsons</h6>
+                                                                    <span class="text-muted">1d</span>
+                                                                </div>
+                                                                <div class="reply-body">
+                                                                    Lorem ipsum dolor sit amet, consectetur adipisicing
+                                                                    elit. Distinctio dolore sed eos sapiente,
+                                                                    praesentium.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="comment d-flex">
+                                                <div class="flex-shrink-0">
+                                                    <div class="avatar avatar-sm rounded-circle">
+                                                        <img class="avatar-img"
+                                                            src="https://randomuser.me/api/portraits/women/63.jpg"
+                                                            alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="flex-shrink-1 ms-2 ms-sm-3">
+                                                    <div class="comment-meta d-flex">
+                                                        <h6 class="me-2">Jenna Roberts</h6>
+                                                        <span class="text-muted">4d</span>
+                                                    </div>
+                                                    <div class="comment-body">
+                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+                                                        laborum in corrupti dolorum, quas delectus nobis porro
+                                                        accusantium molestias sequi.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row justify-content-center">
+                                    <div class="col-lg-8">
+                                        <div class="comment-form d-flex align-items-center">
+                                            <div class="flex-shrink-0">
+                                                <div class="avatar avatar-sm rounded-circle">
+                                                    <img class="avatar-img"
+                                                        src="https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&crop=faces&fit=crop&h=200&w=200"
+                                                        alt="">
+                                                </div>
+                                            </div>
+                                            <div class="flex-grow-1 ms-2 ms-sm-3">
+                                                <form>
+                                                    <textarea class="form-control py-0 px-1 border-0" rows="1"
+                                                        placeholder="Start writing..." style="resize: none;"></textarea>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

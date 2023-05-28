@@ -297,8 +297,28 @@
       "PackagePath": "staticwebassets\\js\\popper.min.js"
     },
     {
-      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\songs\\The Neighbourhood - The Beach.mp3",
-      "PackagePath": "staticwebassets\\songs\\The Neighbourhood - The Beach.mp3"
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\js\\search.js",
+      "PackagePath": "staticwebassets\\js\\search.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\songs\\Daddy Issues.mp3",
+      "PackagePath": "staticwebassets\\songs\\Daddy Issues.mp3"
+    },
+    {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\songs\\Heavenly.mp3",
+      "PackagePath": "staticwebassets\\songs\\Heavenly.mp3"
+    },
+    {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\songs\\Kiss it off Me.mp3",
+      "PackagePath": "staticwebassets\\songs\\Kiss it off Me.mp3"
+    },
+    {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\songs\\Prey.mp3",
+      "PackagePath": "staticwebassets\\songs\\Prey.mp3"
+    },
+    {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\songs\\The Beach.mp3",
+      "PackagePath": "staticwebassets\\songs\\The Beach.mp3"
     },
     {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.FinalProject.Microsoft.AspNetCore.StaticWebAssets.props",

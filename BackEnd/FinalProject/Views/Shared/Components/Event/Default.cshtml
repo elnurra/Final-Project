@@ -1,0 +1,46 @@
+﻿@model EventVM
+<div class="col-md-4">
+    <h1 style="margin-top: 30px;" class="song-title">Latest Events</h1>
+    <div class="event-pieces">
+        @foreach (var item in Model.Events)
+        {
+        <div class="event-card">
+            <div class="wrapper">
+                <div class="row">
+                    <div class="col-4">
+                        <div class="side-image">
+                            <img src="~/images/@item.ImageUrl" alt="">
+                        </div>
+                    </div>
+                    <div class="col-8">
+                        <div class="button-wrapper">
+                            <h3 style="color: white;"> @item.Title </h3>
+                            <p style="color: white;">@item.Description.Substring(0,14) ...</p>
+                            <a asp-controller="Event" asp-action="Detail" asp-route-id="@item.Id" class="side-buttons">Details</a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+            
+        }
+      
+    </div>
+    <div class="row">
+        <h2 style="color: white;">Tags:</h2>
+        @for (int i = 0; i < Model.Genres.Count()/2; i++)
+        {
+        <div class="col-@(i+3)"><a class="side-buttons">@Model.Genres[i].Name</a></div>
+        }
+    </div>
+    <div class="row">
+        @for (int i = Model.Genres.Count()/2; i < Model.Genres.Count(); i++)
+        {
+            <div class="col-@(i)"><a class="side-buttons">@Model.Genres[i].Name</a></div>
+        }
+    </div>
+</div>

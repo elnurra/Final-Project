@@ -9,7 +9,7 @@
             <div class="col-lg-6">
                 <div class="album-data">
                     <div class="album-img">
-                        <img src="~/images/Album2.png">
+                        <img src="~/images/@Model.Album.ImageUrl">
                     </div>
 
                 </div>
@@ -75,142 +75,21 @@
                     <div id="playlist">
 
                         <ul id="songs">
+                            @foreach (Song item in Model.Songs)
+                            {
+                                <li data-src="@Url.Content("~/songs/" + item.SongUrl) "
+                                    class="songs-item active-song">
 
-                            
-                            <li data-src="@Url.Content("~/songs/" + Model.Songs.FirstOrDefault().SongUrl) "
-                                class="songs-item active-song">
-                                
-                                <p>Tutu Remix - Camilo Ft. Shakira, Pedro Capó</p>
-                                <span class="heart"><i class="fa-regular fa-heart"></i></span>
-                            </li>
-                            <li src="https://www.playurbanomp3.com/Canciones/Don%20Omar/05.%20Don%20Omar%20-%20Aunque%20Te%20Fuiste%20(WwW.PlayUrbano.Com).mp3"
-                                class="songs-item">
-                                <p>Aunque Te Fuiste - Don Omar</p>
-                                <span class="heart"><i class="fa-regular fa-heart"></i></span>
-                            </li>
-                            <li src="https://www.playurbanomp3.com/Canciones/Don%20Omar/Don%20Omar,%20Rakim%20&%20Ken-Y%20-%20Si%20La%20Ves%20(WwW.PlayUrbano.Com).mp3"
-                                class="songs-item">
-                                <p> Si La Vez - Don Omar Ft. RKM Y Ken-Y</p>
-                                <span class="heart"><i class="fa-regular fa-heart"></i></span>
-                            </li>
-                            <li src="https://www.playurbanomp3.com/Canciones/Don%20Omar/Don%20Omar,%20Wisin%20&%20Yandel%20-%20My%20Space%20(WwW.PlayUrbano.Com).mp3"
-                                class="songs-item">
-                                <p>My Space - Don Omar Ft. Wisin Y Yandel</p>
-                                <span class="heart"><i class="fa-regular fa-heart"></i></span>
-                            </li>
-                            <li src="https://www.playurbanomp3.com/Canciones/Don%20Omar/Don%20Omar%20-%20Angelito%20Vuela%20(WwW.PlayUrbano.Com).mp3"
-                                class="songs-item">
-                                <p>Angelito Vuela - Don Omar</p>
-                                <span class="heart"><i class="fa-regular fa-heart"></i></span>
-                            </li>
-                            <li src="https://www.playurbanomp3.com/Canciones/Don%20Omar/Don%20Omar%20-%20Luna%20(WwW.PlayUrbano.Com).mp3"
-                                class="songs-item">
-                                <p>Luna - Don Omar</p>
-                                <span class="heart"><i class="fa-regular fa-heart"></i></span>
-                            </li>
-                            <li src="https://www.playurbanomp3.com/Canciones/Don%20Omar/Don%20Omar%20-%20Pobre%20diabla%20(WwW.PlayUrbano.Com).mp3"
-                                class="songs-item">
-                                <p>Pobre Diabla - Don Omar</p>
-                                <span class="heart"><i class="fa-regular fa-heart"></i></span>
-                            </li>
-                            <li src="https://www.playurbanomp3.com/Canciones/Don%20Omar/Don%20Omar%20Ft.%20Aventura%20-%20Ella%20y%20Yo%20(WwW.PlayUrbano.Com).mp3"
-                                class="songs-item">
-                                <p>Ella y Yo - Don Omar Ft. Aventura</p>
-                                <span class="heart"><i class="fa-regular fa-heart"></i></span>
-                            </li>
-                            <li src="https://www.playurbanomp3.com/Canciones/Don%20Omar/Don%20Omar%20Ft.%20Daddy%20Yankee,%20Wisin%20y%20Yandel%20-%20Mayor%20Que%20Yo%203%20(WwW.PlayUrbano.Com).mp3"
-                                class="songs-item">
-                                <p>Mayor Que Yo 3 - Don Omar Ft. Daddy Yankee, Wisin Y Yandel</p>
-                                <span class="heart"><i class="fa-regular fa-heart"></i></span>
-                            </li>
+                                    <p>@item.Name</p>
+                                    <span class="heart"><i class="fa-regular fa-heart"></i></span>
+                                </li>
+                            }                                                                  
                         </ul>
                     </div>
 
                 </div>
             </div>
-            <div class="col-md-4">
-                <h1 style="margin-top: 30px;" class="song-title">Latest Events</h1>
-                <div class="event-pieces">
-                    <div class="event-card">
-                        <div class="wrapper">
-                            <div class="row">
-                                <div class="col-4">
-                                    <div class="side-image">
-                                        <img src="~/images/Album1.png" alt="">
-                                    </div>
-                                </div>
-                                <div class="col-8">
-                                    <div class="button-wrapper">
-                                        <h3 style="color: white;"> THE CAS </h3>
-                                        <p style="color: white;">We also offer a section ...</p>
-                                        <a class="side-buttons">Details</a>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="event-card">
-                        <div class="wrapper">
-                            <div class="row">
-                                <div class="col-4">
-                                    <div class="side-image">
-                                        <img src="~/images/Album1.png" alt="">
-                                    </div>
-                                </div>
-                                <div class="col-8">
-                                    <div class="button-wrapper">
-                                        <h3 style="color: white;"> THE CAS </h3>
-                                        <p style="color: white;">We also offer a section ...</p>
-                                        <a class="side-buttons">Details</a>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="event-card">
-                        <div class="wrapper">
-                            <div class="row">
-                                <div class="col-4">
-                                    <div class="side-image">
-                                        <img src="~/images/Album1.png" alt="">
-                                    </div>
-                                </div>
-                                <div class="col-8">
-                                    <div class="button-wrapper">
-                                        <h3 style="color: white;"> THE CAS </h3>
-                                        <p style="color: white;">We also offer a section ...</p>
-                                        <a class="side-buttons">Details</a>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="row">
-                    <h2 style="color: white;">Tags:</h2>
-                    <div class="col-3"><a class="side-buttons">Jaz</a></div>
-                    <div class="col-4"><a class="side-buttons">Electronic</a></div>
-                    <div class="col-5"><a class="side-buttons">Hip Hop</a></div>
-                </div>
-                <div class="row">
-                    <div class="col-5"><a class="side-buttons">Jaz</a></div>
-                    <div class="col-4"><a class="side-buttons">Electronic</a></div>
-                    <div class="col-3"><a class="side-buttons">Hip Hop</a></div>
-                </div>
-            </div>
-
+            @await Component.InvokeAsync("Event");
         </div>
     </div>
 </section>
@@ -313,3 +192,6 @@
     </div>
 </section>
 
+@section AlbumScript{
+    <script src="~/js/audiopure.js"></script>
+}

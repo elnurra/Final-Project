@@ -418,4 +418,10 @@ $(document).ready(function () {
   });
 });
 
+$(document).on("keyup", "#input-search", function () {
+  let searchValue = $(this).val().trim();
+  let searchList = $("#searchList");
+  console.log(searchValue);
+});
+
 // Set the date we're counting down to

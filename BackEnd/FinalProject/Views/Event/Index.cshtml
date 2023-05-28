@@ -1,0 +1,86 @@
+﻿@model List<Event>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="backgro_mh">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="heding">
+                    <h2>Upcoming Events</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- upcoming -->
+<div id="upcoming" class="upcoming">
+    <div class="container-fluid padding_left3">
+        <div class="row display_boxflex">
+            <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12">
+                <div class="box_text">
+                    <div class="titlepage">
+                        <h2>Upcoming Events</h2>
+                    </div>
+                    <p>
+                        Get ready for an unforgettable night of music! This highly-anticipated event will showcase some of the
+                        hottest new music releases of the year. This event promises to deliver an unforgettable experience for
+                        music fans of all genres. From the latest pop hits to the freshest indie tracks, there's something for
+                        everyone. In addition to the amazing music, guests can also enjoy a range of food and drink options from
+                        local vendors. And with a state-of-the-art sound system and lighting setup, the atmosphere will be nothing
+                        short of electrifying. So grab your friends and get ready to dance the night away! Tickets are selling
+                        fast, so don't wait - get yours now and secure your spot at one of the hottest music events of the year.
+                    </p>
+                    <a href="">Read More</a>
+                </div>
+            </div>
+            <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12 border_right">
+                <div class="upcomimg">
+                    <figure><img src="~/images/up.jpg" alt="#" /></figure>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end upcoming -->
+<section class="section-padding event" id="events">
+    <div class="container">
+        <div class="row">
+            <div class="">
+                <h2 class="event-title"><span>EVENTS</span></h2>
+                <p class="event-subtitle">
+                    Here’s a list of upcoming events by our band in different locations. Please choose a
+                    location near to you. We’re thrilled to see you there. Let’s rock!
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            @foreach (var item in Model)
+            {
+            <div class="col-lg-4">
+                <div class="event-card">
+                    <div class="wrapper">
+                        <div class="banner-image">
+                            <img src="~/images/@item.ImageUrl" alt="">
+                        </div>
+                        <h3>@item.Title</h3>
+                            <p class="event-time">@item.CreatedTime.ToString("HH:mm")</p> <br>
+                        <p class="event-address">@item.Address</p>
+                    </div>
+                    <div class="button-wrapper">
+                        <a asp-action="Detail" asp-route-id="@item.Id" class="btn outline">DETAILS</a>
+                        <button class="btn fill">BUY NOW</button>
+                    </div>
+                </div>
+
+            </div>
+                
+            }
+            </div>
+
+        </div>
+    
+</section>
+

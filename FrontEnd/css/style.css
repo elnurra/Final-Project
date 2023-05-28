@@ -902,13 +902,11 @@ nav.main-menu {
   position: relative;
   border-bottom: solid #eee 1px;
 }
-.main-menu ul > li .sub-down li a::before {
-}
+
 .main-menu ul > li .sub-down li a:hover {
   color: #111111;
 }
-.main-menu ul > li .sub-down li a:hover::before {
-}
+
 .main-menu ul li:first-child {
   margin-left: 0;
 }
@@ -964,9 +962,7 @@ nav.main-menu {
   vertical-align: middle;
   margin: 6px 0px;
 }
-.main-menu ul > li:nth-child (6) {
-  padding-right: 0px;
-}
+
 .nav > li {
   position: inherit;
   display: inline-block;
@@ -1245,7 +1241,7 @@ nav.main-menu {
   display: inline-block;
   text-align: center;
   border-radius: 30px;
-  float: left;
+
   margin-top: 53px;
 }
 .box_text a:hover {
@@ -1295,7 +1291,7 @@ nav.main-menu {
   display: inline-block;
   text-align: center;
   border-radius: 30px;
-  float: right;
+
   margin-top: 53px;
 }
 .page-title {
@@ -1794,7 +1790,7 @@ ul.album-details li p {
 }
 
 #player {
-  overflow: scroll;
+  overflow-y: scroll;
   height: 830px;
   display: flex;
   flex-direction: column;
@@ -1929,10 +1925,10 @@ ul.album-details li p {
 }
 
 #volume {
+  -webkit-appearance: none;
   width: 100px;
   height: 20px;
   margin: 20px 0;
-  -webkit-appearance: none;
   background-color: #ddd;
   border-radius: 5px;
   outline: none;
@@ -1985,142 +1981,131 @@ ul.album-details li p {
 }
 
 /* ---------------------*/
-#clicked {
-  padding-top: 1px;
-  padding-bottom: 1px;
-  text-align: center;
+
+#page-forms .avatar {
+  position: relative;
+  display: inline-block;
+  width: 3rem;
+  height: 3rem;
+  font-size: 1.25rem;
+}
+
+#page-forms .avatar-img,
+.avatar-initials,
+.avatar-placeholder {
   width: 100%;
-  background-color: #ecb21f;
-  border-color: #a88734 #9c7e31 #846a29;
-  color: black;
-  border-width: 1px;
-  border-style: solid;
-  border-radius: 13px;
+  height: 100%;
+  border-radius: inherit;
 }
 
-#profile {
-  background-color: unset;
+#page-forms .avatar-img {
+  display: block;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
-#post {
-  margin: 10px;
-  padding: 6px;
-  padding-top: 2px;
-  padding-bottom: 2px;
-  text-align: center;
-  background-color: #0ed02b;
-  border-color: #a88734 #9c7e31 #846a29;
-  color: black;
-  border-width: 1px;
-  border-style: solid;
-  border-radius: 13px;
-  width: 50%;
-}
-
-#page-forms .comments {
-  margin-top: 5%;
-  margin-left: 20px;
-}
-
-#page-forms {
-  background-color: #222233;
-}
-
-#page-forms .darker {
-  border: 1px solid #ecb21f;
-  background-color: black;
-  float: right;
-  border-radius: 5px;
-  padding-left: 40px;
-  padding-right: 30px;
-  padding-top: 10px;
-}
-
-#page-forms .comment {
-  border: 1px solid #24242f;
-  background-color: #24242f;
-  float: left;
-  border-radius: 5px;
-  padding-left: 40px;
-  padding-right: 30px;
-  padding-top: 10px;
-}
-#page-forms .comment h4,
-.comment span,
-.darker h4,
-.darker span {
-  display: inline;
-  color: white;
-}
-
-#page-forms .comment p,
-.comment span,
-.darker p,
-.darker span {
-  color: rgb(184, 183, 183);
-}
-
-#page-forms h1,
-h4 {
-  color: white;
-  font-weight: bold;
-}
-#algin-form {
-  margin-top: 70px;
-}
-#page-forms label {
-  color: rgb(212, 208, 208);
-}
-
-#align-form {
-  margin-top: 20px;
-}
-#page-forms .form-group p a {
-  color: white;
-}
-
-#checkbx {
-  background-color: black;
-}
-
-#darker img {
-  margin-right: 15px;
-  position: static;
-}
-
-#page-forms .form-group input,
-.form-group textarea {
-  background-color: black;
-  border: 1px solid rgba(16, 46, 46, 1);
-  border-radius: 12px;
-}
-
-#page-forms form {
-  border: 1px solid rgba(16, 46, 46, 1);
-  background-color: #24242f;
-  border-radius: 5px;
-  padding: 20px;
-}
-
-#page-forms .comment-title {
-  color: #ffffff !important;
-}
-#page-forms .reply-form {
+#page-forms .avatar-initials {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-end;
-  width: 100%;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: #fff;
+  line-height: 0;
+  background-color: #a0aec0;
 }
-#page-forms .reply-to {
-  background-color: #0ed02b;
-  width: 100px;
-  height: 30px;
-  font-size: 20px;
-  border-radius: 10px;
-  color: white;
+
+#page-forms .avatar-placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #a0aec0
+    url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='%23fff' d='M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z'/%3e%3c/svg%3e")
+    no-repeat center/1.75rem;
 }
-#page-forms .fa-heart {
-  font-size: 30px;
+
+#page-forms .avatar-indicator {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 20%;
+  height: 20%;
+  display: block;
+  background-color: #a0aec0;
+  border-radius: 50%;
 }
+
+#page-forms .avatar-group {
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+#page-forms .avatar-group .avatar + .avatar {
+  margin-left: -0.75rem;
+}
+
+#page-forms .avatar-group .avatar:hover {
+  z-index: 1;
+}
+
+#page-forms .avatar-sm,
+#page-forms .avatar-group-sm > .avatar {
+  width: 2.125rem;
+  height: 2.125rem;
+  font-size: 1rem;
+}
+
+#page-forms .avatar-sm .avatar-placeholder,
+#page-forms .avatar-group-sm > .avatar .avatar-placeholder {
+  background-size: 1.25rem;
+}
+
+#page-forms .avatar-group-sm > .avatar + .avatar {
+  margin-left: -0.53125rem;
+}
+
+#page-forms .avatar-lg,
+#page-forms .avatar-group-lg > .avatar {
+  width: 4rem;
+  height: 4rem;
+  font-size: 1.5rem;
+}
+
+#page-forms .avatar-lg .avatar-placeholder,
+#page-forms .avatar-group-lg > .avatar .avatar-placeholder {
+  background-size: 2.25rem;
+}
+
+#page-forms .avatar-group-lg > .avatar + .avatar {
+  margin-left: -1rem;
+}
+
+#page-forms .avatar-light .avatar-indicator {
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.75);
+}
+
+#page-forms .avatar-group-light > .avatar {
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.75);
+}
+
+#page-forms .avatar-dark .avatar-indicator {
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.25);
+}
+
+#page-forms .avatar-group-dark > .avatar {
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.25);
+}
+
+/* Font not working in <textarea> for this version of bs */
+
+#page-forms textarea {
+  font-family: inherit;
+}
+
 /*-------------------------------------------------Event-Details Page------------------------------------------------------*/
 #event-about {
   height: 800px;
@@ -2215,6 +2200,12 @@ h4 {
 .icon-description span {
   font-family: "PT Sans Narrow", sans-serif;
   font-size: 20px;
+}
+
+.event-address {
+  text-decoration: none !important;
+
+  color: #000;
 }
 .event-item {
   margin-top: 100px;

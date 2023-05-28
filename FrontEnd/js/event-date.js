@@ -1,5 +1,5 @@
 // Set the date we're counting down to
-var countDownDate = new Date("2023-06-01 00:00:00.0000000").getTime();
+var countDownDate = new Date("2023-06-01 00:00:00").getTime();
 
 // Update the countdown every 1 second
 var x = setInterval(function () {
@@ -35,3 +35,9 @@ var x = setInterval(function () {
     document.getElementById("countdown").innerHTML = "EXPIRED";
   }
 }, 1000);
+
+const checkEvent = document.querySelector(".event-date");
+
+checkEvent.addEventListener("click", (e) => {
+  console.log(checkEvent.getAttribute("value"));
+});

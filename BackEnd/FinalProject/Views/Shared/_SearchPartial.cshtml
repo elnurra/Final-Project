@@ -1,0 +1,8 @@
+﻿@model List<Album>
+
+@foreach(Album item in Model)
+{
+        <li class="result-item"><a asp-controller="Album" asp-action="detail" asp-route-id="@item.Id">@item.Name</a></li>
+    
+}
+

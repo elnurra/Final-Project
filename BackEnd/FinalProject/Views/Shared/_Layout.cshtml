@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
           media="screen">
-
+    <script src="~/js/custom.js" defer asp-append-version="true"></script>
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
@@ -65,10 +65,10 @@
                                         <ul class="menu-area-main">
                                             <li class="active"> <a href="index.html">Home</a> </li>
                                             <li> <a asp-controller="Album" asp-action="Index">Albums</a> </li>
-                                            <li> <a href="events.html">Events </a> </li>
-                                            <li> <a href="about.html">About</a> </li>
-                                            <li> <a href="contact.html">Contact</a> </li>
-                                            <li> <a href="login.html">Login</a> </li>
+                                            <li> <a asp-controller="Event" asp-action="Index">Events </a> </li>
+                                            <li> <a asp-controller="About" asp-action="Index">About</a> </li>
+                                            <li> <a asp-controller="Contact" asp-action="Index">Contact</a> </li>
+                                            <li> <a asp-controller="Account" asp-action="Login">Login</a> </li>
                                         </ul>
                                     </nav>
                                 </div>
@@ -84,6 +84,8 @@
     <main>
         
         @RenderBody()
+        @RenderSection("EventScript",false)
+        @RenderSection("AlbumScript",false)
     </main>
     <footer>
         <div class="footer ">
@@ -158,25 +160,18 @@
             </div>
         </div>
     </footer>
+   
 
  
     <script src="~/js/jquery.min.js"></script>
     <script src="~/js/jquery-3.0.0.min.js"></script>
     <script src="~/js/plugin.js"></script>
-    <!-- sidebar -->
     <script src="~/js/jquery.mCustomScrollbar.concat.min.js"></script>
-    <script src="~/js/custom.js"></script>
-    <script src="~/js/audiopure.js"></script>
+    
+    <script src="~/js/search.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
             crossorigin="anonymous"></script>
-    
-    
-    <!-- end footer -->
-    <!-- Javascript files-->
-
-
-
 </body>
 
 </html>

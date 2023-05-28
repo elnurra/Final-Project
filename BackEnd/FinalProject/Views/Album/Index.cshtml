@@ -28,7 +28,9 @@
                         <li class="category-item"> <a class="album" href="" data-id="@item.Name.ToLower()">@item.Name</a></li>
                     }
                     <li class="category-item"><i class="last_manu" href="#"><img src="~/images/search_icon.png" alt="#"></i></li>
-                    <li class="category-item"><input class="header-search" placeholder="Search:" style="display: none;" type="text"></li>
+                    <li class="category-item"><input id="header-search" class="header-search" placeholder="Search:" style="display: none;" type="text"></li>
+                </ul>
+                <ul id="searchList" class="Result">
 
                 </ul>
             </div>
@@ -50,11 +52,7 @@
                         </div>
                     </div>
                 </div>
-
             }
-
-
-
         </div>
     </div>
 </section>

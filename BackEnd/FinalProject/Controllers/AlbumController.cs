@@ -3,7 +3,7 @@ using FinalProject.Models;
 using FinalProject.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
+
 
 namespace FinalProject.Controllers
 {
@@ -38,15 +38,17 @@ namespace FinalProject.Controllers
             {
                 return NotFound();
             }
+#pragma warning disable CS8601 // Возможно, назначение-ссылка, допускающее значение NULL.
             AlbumVM albumVM = new()
             {
                 Genres = await _appDbContext.Genres.Where(g => !g.IsDeleted).ToListAsync(),
-                Album = await _appDbContext.Albums.Where(a => !a.IsDeleted).Include(a => a.Artist).Include(a => a.Genre).FirstOrDefaultAsync(),
+                Album  = await _appDbContext.Albums.Where(a => !a.IsDeleted).Include(a => a.Artist).Include(a => a.Genre).FirstOrDefaultAsync(a => a.Id == id),
                 Songs = await _appDbContext.Songs.Where(a => a.AlbumId == id).ToListAsync()
                 
         };
+#pragma warning restore CS8601 // Возможно, назначение-ссылка, допускающее значение NULL.
 
-           return View(albumVM);
+            return View(albumVM);
         }
     }
 }
