@@ -1,5 +1,7 @@
 ﻿using FinalProject.DAL;
 using FinalProject.Models;
+using FinalProject.Services.Interfaces;
+using FinalProject.Services;
 using Microsoft.AspNetCore.Identity;
 
 namespace FinalProject
@@ -12,8 +14,7 @@ namespace FinalProject
             options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
              );
             services.AddHttpContextAccessor();
-
-
+            
             services.AddIdentity<AppUser, IdentityRole>(options =>
             {
                 options.Password.RequiredLength = 6;

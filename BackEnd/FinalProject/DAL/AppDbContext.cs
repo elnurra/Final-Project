@@ -15,6 +15,7 @@ namespace FinalProject.DAL
         public DbSet<Song> Songs { get;set; }
         public DbSet<Genre> Genres { get; set; }  
         public DbSet<Event> Events { get; set; }
+        public DbSet<Comment> Comments { get; set; } 
 
     }
 }

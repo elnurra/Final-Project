@@ -22,10 +22,7 @@ namespace FinalProject.ViewComponents
                 Events = await _appDbContext.Events.Where(e => !e.IsDeleted).ToListAsync(),
                 Genres = await _appDbContext.Genres.Where(g=>!g.IsDeleted).Take(6).ToListAsync()
             };
-
-
             return View(eventVM);
-
         }
     }
 }

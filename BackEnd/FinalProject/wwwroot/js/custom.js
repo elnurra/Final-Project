@@ -26,6 +26,10 @@ $(function () {
     $('[data-toggle="tooltip"]').tooltip();
   });
 
+    $('.carousel-item:first-child').addClass('active');
+
+
+
   /* sticky
 	-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */
 

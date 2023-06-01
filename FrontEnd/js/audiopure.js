@@ -45,7 +45,7 @@ playPause.addEventListener("click", () => {
   if (audio.paused) {
     audio.src = playlist.children[currentSong].getAttribute("src");
     audio.play();
-    setActiveSong(currentSong);
+
     playPause.innerHTML = '<i class="fa-solid fa-pause"></i>';
   } else {
     audio.pause();

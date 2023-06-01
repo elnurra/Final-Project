@@ -1785,8 +1785,25 @@ ul.album-details li p {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+#verify-section {
+  background-image: url("/images/verifybackgr.jpg");
+  background-size: cover;
+  height: 600px;
+}
+
 #album-songs {
   background-color: #24242f;
+}
+.verify img {
+  background-image: url("/images/slider3.jpg");
+
+  /* Full height */
+  height: 1000px;
+  width: 100%;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #player {
@@ -2118,6 +2135,9 @@ ul.album-details li p {
   text-align: center;
 
   align-items: center;
+}
+.event-cards {
+  margin-top: 50px auto !important;
 }
 .event-section {
   margin-top: 200px;

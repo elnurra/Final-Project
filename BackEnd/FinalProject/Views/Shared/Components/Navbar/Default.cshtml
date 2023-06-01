@@ -1,0 +1,28 @@
+﻿@{
+    if (User.Identity.IsAuthenticated)
+    {
+        @if (User.IsInRole("SuperAdmin"))
+        {
+            <li><a asp-area="AdminArea" asp-controller="Dashboard" asp-action="index"> Admin </a></li>
+            <li><a asp-controller="account" asp-action="logout">Logout</a></li>
+        }
+        else if (User.IsInRole("Admin"))
+        {
+            <li><a asp-area="AdminArea" asp-controller="Dashboard" asp-action="index"> Admin </a></li>
+            <li><a asp-controller="account" asp-action="logout">Logout</a></li>
+
+        }
+        else if (User.IsInRole("Member"))
+        {
+            <li> <a asp-controller="Account" asp-action="Index"> Welcome @ViewBag.Fullname </a></li>
+            <li><a asp-controller="Account" asp-action="Logout">Logout</a></li>
+        }
+    }
+    else
+    {
+        <li><a asp-controller="Account" asp-action="Login">Login</a></li>
+        <span class="or" style="color:white ; font-size:20px">/</span>
+        <li><a asp-controller="Account" asp-action="Register">Register</a></li>
+
+    }
+}

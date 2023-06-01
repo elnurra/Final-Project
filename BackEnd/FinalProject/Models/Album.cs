@@ -13,6 +13,7 @@ namespace FinalProject.Models
         public int GenreId { get; set; } 
         public Genre Genre { get; set; } = null!;
         public List<Song> Songs { get; set; } = null!;
+        public List<Comment> Comments { get; set; } = null!;
 
     }
 }

@@ -5,6 +5,14 @@
       "PackagePath": "staticwebassets\\FinalProject.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\Template\\Change.html",
+      "PackagePath": "staticwebassets\\Template\\Change.html"
+    },
+    {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\Template\\Verify.html",
+      "PackagePath": "staticwebassets\\Template\\Verify.html"
+    },
+    {
       "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\css\\animate.min.css",
       "PackagePath": "staticwebassets\\css\\animate.min.css"
     },
@@ -137,6 +145,18 @@
       "PackagePath": "staticwebassets\\images\\Album9.png"
     },
     {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\images\\Elnur.jpg",
+      "PackagePath": "staticwebassets\\images\\Elnur.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\images\\Ilkin.jpg",
+      "PackagePath": "staticwebassets\\images\\Ilkin.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\images\\Vasif.jpg",
+      "PackagePath": "staticwebassets\\images\\Vasif.jpg"
+    },
+    {
       "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\images\\about.png",
       "PackagePath": "staticwebassets\\images\\about.png"
     },
@@ -205,6 +225,10 @@
       "PackagePath": "staticwebassets\\images\\gallery4.jpg"
     },
     {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\images\\lana-del-rey.jpg",
+      "PackagePath": "staticwebassets\\images\\lana-del-rey.jpg"
+    },
+    {
       "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\images\\loadMusic.gif",
       "PackagePath": "staticwebassets\\images\\loadMusic.gif"
     },
@@ -259,6 +283,10 @@
     {
       "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\images\\up.jpg",
       "PackagePath": "staticwebassets\\images\\up.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\images\\verifybackgr.jpg",
+      "PackagePath": "staticwebassets\\images\\verifybackgr.jpg"
     },
     {
       "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\js\\audiopure.js",

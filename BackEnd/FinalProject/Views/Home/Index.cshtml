@@ -10,7 +10,7 @@
         <div class="carousel-inner">
             @foreach (Slider item in Model)
             {
-                <div class="carousel-item active" data-bs-interval="10000">
+                <div class="carousel-item" data-bs-interval="10000">
                     <img class="img-fluid slider-image" src="~/images/@item.ImageUrl" alt="...">
                     <div class="carousel-caption d-none d-md-block">
                         <h2 class="slider-title">@item.Title</h2>
@@ -48,7 +48,7 @@
                         relevant tracks.
                     </p>
                 </div>
-                <a href="#" class="continue">Read More</a>
+                <a asp-controller="About" asp-action="Index" class="continue">Read More</a>
             </div>
             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                 <div class="about-box">
@@ -67,7 +67,7 @@
             <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12">
                 <div class="box_text">
                     <div class="titlepage">
-                        <h2>Upcoming Songs</h2>
+                        <h2>Upcoming Events</h2>
                     </div>
                     <p>
                         On our site you can find not only songs in your favorite genres, but also get acquainted with new talents
@@ -76,7 +76,7 @@
                         without distractions and ads. With our site, you can create your own playlist, set up personalized
                         recommendations, and enjoy your favorite songs anytime, anywhere.
                     </p>
-                    <a href="#" class="continue">Read More</a>
+                    <a asp-controller="Event" asp-action="Index" class="continue">Read More</a>
                 </div>
             </div>
 
@@ -151,7 +151,7 @@
                         of music. Join our community of music connoisseurs and enjoy the best music!
                     </p>
                 </div>
-                <a href="#" class="continue">Read More</a>
+                <a asp-controller="Album" asp-action="Index" class="continue">Read More</a>
             </div>
         </div>
     </div>

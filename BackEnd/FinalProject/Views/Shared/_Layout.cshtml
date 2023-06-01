@@ -29,9 +29,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
           media="screen">
     <script src="~/js/custom.js" defer asp-append-version="true"></script>
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+
 </head>
 <!-- body -->
 
@@ -63,12 +61,17 @@
                                 <div class="limit-box">
                                     <nav class="main-menu ">
                                         <ul class="menu-area-main">
-                                            <li class="active"> <a href="index.html">Home</a> </li>
+                                            <li class="active"> <a a asp-controller="Home" asp-action="Index">Home</a> </li>
                                             <li> <a asp-controller="Album" asp-action="Index">Albums</a> </li>
                                             <li> <a asp-controller="Event" asp-action="Index">Events </a> </li>
                                             <li> <a asp-controller="About" asp-action="Index">About</a> </li>
                                             <li> <a asp-controller="Contact" asp-action="Index">Contact</a> </li>
-                                            <li> <a asp-controller="Account" asp-action="Login">Login</a> </li>
+                                            
+                                            
+                                           @await Component.InvokeAsync("Navbar")
+                                          
+                                            
+                                           
                                         </ul>
                                     </nav>
                                 </div>
@@ -86,6 +89,7 @@
         @RenderBody()
         @RenderSection("EventScript",false)
         @RenderSection("AlbumScript",false)
+        @RenderSection("Scripts",false)
     </main>
     <footer>
         <div class="footer ">

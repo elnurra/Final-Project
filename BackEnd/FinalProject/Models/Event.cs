@@ -14,6 +14,7 @@ namespace FinalProject.Models
         public DateTime CreatedTime { get; set; }
         public Artist Artist { get; set; } = null!;
         [Column(TypeName = "decimal(18,0)")]
-        public decimal Price { get; set; } 
+        public decimal Price { get; set; }
+        public List<Comment> Comments { get; set; } = null!;
     }
 }

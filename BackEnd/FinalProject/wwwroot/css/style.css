@@ -169,6 +169,9 @@ img {
     border-color: #ffffff !important;
     box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25);
 }
+.form-control{
+color:white !important;
+}
 
 .navbar-form input {
     border: none !important;
@@ -529,7 +532,29 @@ nav.main-menu {
     float: right;
     margin-left: 12px;
 }
+#verify-section {
+    background-image: url(/images/verifybackgr.jpg);
+    background-size: cover;
+    height: 700px;
+}
+#forgot-section {
+    background-image: url(/images/verifybackgr.jpg);
+    background-size: cover;
+    height: 700px;
+}
+#reset-section {
+    background-image: url(/images/verifybackgr.jpg);
+    background-size: cover;
+    height: 700px;
+}
 
+.ver-img {
+    background-image:url(/images/profile.png);
+    width : 300px;
+    height:300px;
+    background-size:cover
+    
+}
 .dropdown-bar .dropdown-link {
     position: absolute;
     z-index: 1009;
@@ -1886,6 +1911,18 @@ div.active {
     box-sizing: border-box;
     background-size: 100% 100%;
     background-repeat: no-repeat;
+    
+}
+.backgr-img{
+    margin-top:50px;
+}
+.email-label{
+    font-size:50px;
+    color:white;
+}
+#emailHelp{
+    font-size:30px;
+    color:white;
 }
 /*------------------------------------------------------------- Events Page------------------------------------------------------ */
 .event-title {
@@ -1913,9 +1950,13 @@ div.active {
     line-height: 1.6;
     font-weight: 700;
 }
+.event-pieces{
+    overflow-y:scroll;
+    height:500px
+}
 
 .event-card {
-    margin: 20px 0;
+    margin: 50px 0;
     background-color: rgba(0, 255, 13, 0.25);
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.125);
@@ -2326,7 +2367,10 @@ ul.album-details li {
         padding-right: 30px;
         padding-top: 10px;
     }
-
+    .comment-box{
+        height:644px;
+        overflow-y:scroll;
+    }
         #page-forms .comment h4,
         .comment span,
         .darker h4,
