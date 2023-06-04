@@ -1,0 +1,27 @@
+﻿@model Genre
+@{
+    ViewData["Title"] = "Detail";
+    Layout = "~/Areas/AdminArea/Views/Shared/_AdminLayout.cshtml";
+}
+<ul style="list-style-type:none">
+    <li style="font-size:30px;text-align:center">
+        Genre Id - @Model.Id
+    </li>
+    <li style="font-size:30px;text-align:center" >
+        Genre Name - @Model.Name
+    </li>
+    <li style="font-size:30px;text-align:center" >
+        Genre Active - @if (Model.IsDeleted == false)
+        {
+            <div class="badge badge-success p-2">Active</div>
+        }
+        else
+        {
+            <div class="badge badge-danger p-2">No Active</div>
+        }
+    </li>
+
+   
+
+</ul>
+<a class="btn btn-danger" asp-action="Index">Go back</a>

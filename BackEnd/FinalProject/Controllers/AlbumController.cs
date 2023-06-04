@@ -36,7 +36,7 @@ namespace FinalProject.Controllers
         {
             if (id == null) return NotFound();
             Album? checkAlbum = await _appDbContext.Albums.FirstOrDefaultAsync(a => a.Id == id);
-            if (checkAlbum==null)
+            if (checkAlbum == null)
             {
                 return NotFound();
             }
@@ -44,10 +44,10 @@ namespace FinalProject.Controllers
             AlbumVM albumVM = new()
             {
                 Genres = await _appDbContext.Genres.Where(g => !g.IsDeleted).ToListAsync(),
-                Album  = await _appDbContext.Albums.Where(a => !a.IsDeleted).Include(a => a.Artist).Include(bd => bd.Comments).ThenInclude(u=>u.User).Include(a => a.Genre).FirstOrDefaultAsync(a => a.Id == id),
+                Album = await _appDbContext.Albums.Where(a => !a.IsDeleted).Include(a => a.Artist).Include(bd => bd.Comments).ThenInclude(u => u.User).Include(a => a.Genre).FirstOrDefaultAsync(a => a.Id == id),
                 Songs = await _appDbContext.Songs.Where(a => a.AlbumId == id).ToListAsync()
-                
-        };
+
+            };
 #pragma warning restore CS8601 // Возможно, назначение-ссылка, допускающее значение NULL.
 
             return View(albumVM);
@@ -77,9 +77,17 @@ namespace FinalProject.Controllers
             _appDbContext.SaveChanges();
             return RedirectToAction("Detail", new { id = albumId });
         }
-        public async Task<IActionResult> DeleteComment(int id)
+        public async Task<IActionResult> DeleteComment(int? id)
         {
+            if (id == null)
+            {
+                return NotFound();
+            }
             Comment? comment = await _appDbContext.Comments.FirstOrDefaultAsync(b => b.Id == id);
+            if (comment == null)
+            {
+                return NotFound();
+            }
             _appDbContext.Comments.Remove(comment);
             _appDbContext.SaveChanges();
             return RedirectToAction("Detail", new { id = comment.AlbumId });

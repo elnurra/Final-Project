@@ -1,0 +1,21 @@
+﻿@model ArtistUpdateVM
+@{
+    ViewData["Title"] = "Update";
+    Layout = "~/Areas/AdminArea/Views/Shared/_AdminLayout.cshtml";
+}
+<h1>Artist Update Form</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <form method="post" role="form">
+                <div class="form-group">
+                    <label asp-for="Name">Name</label>
+                    <input asp-for="Name" class="form-control" id="exampleInputEmail1" placeholder="Name">
+                    <span class="text-danger" asp-validation-for="Name"></span>
+                </div>
+                <button type="submit" class="btn btn-warning">Update</button>
+                <a asp-area="AdminArea" asp-controller="Genre" asp-action="Index" class="btn btn-link">Cancel</a>
+            </form>
+        </div>
+    </div>
+</div>

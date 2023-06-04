@@ -1,5 +1,4 @@
-﻿
-@model LoginVM
+﻿@model LoginVM
 @{
     Layout = null;
 }
@@ -36,7 +35,9 @@
 </head>
 <body>
     <div class="loader_bg">
-        <div class="loader"><img src="~/images/loadMusic.gif" alt="#" /></div>
+        <div class="loader">
+            <img src="~/images/loadMusic.gif" alt="#" />
+        </div>
     </div>
     <section class="gradient-form" style="background-color: #eee;">
         <div class="container  h-100">
@@ -47,9 +48,10 @@
                             <div class="col-lg-6">
                                 <div class="card-body p-md-5 mx-md-4">
                                     <div class="text-center">
-                                        <img src="~/images/profile.png" style="width: 185px;" alt="logo">
+                                        <a asp-controller="Home" asp-action="Index"> <img src="~/images/profile.png" style="width: 185px;" alt="logo"></a>
+
                                         <h2 style="font-size: 30px; ">We are The MUSICMAN Team</h2>
-                                    <div class="text-danger mb-2 mt-3" asp-validation-summary="All"></div>
+                                        <div class="text-danger mb-2 mt-3" asp-validation-summary="All"></div>
                                     </div>
                                     <form asp-controller="Account" asp-action="Login" method="post" target="_blank">
                                         <br>

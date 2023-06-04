@@ -1,0 +1,40 @@
+﻿@model SliderUpdateVM
+@{
+    ViewData["Title"] = "Update";
+    Layout = "~/Areas/AdminArea/Views/Shared/_AdminLayout.cshtml";
+}
+<div class="container">
+    <div class="row">
+        <h1>Update Slider Form </h1>
+        <div class="tab-content">
+            <div class="tab-pane fade active in" id="home">    
+                <a asp-action="Index" as class="btn btn-primary" >Return Back </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <img src="~/images/@Model.ImageUrl" width="100" height="100" />
+            <form method="post" role="form" class="form-control-static" enctype="multipart/form-data">
+                <div class="form-group">
+                   
+                    <label asp-for="Photo">Name</label>
+                    <input asp-for="Photo" class="form-control" id="exampleInputEmail1" placeholder="Photo">
+                    <span class="text-danger" asp-validation-for="Photo"></span>
+                    <label asp-for="Title">Title</label>
+                    <input asp-for="Title" class="form-control" id="exampleInputEmail1" placeholder="Title">
+                    <span class="text-danger" asp-validation-for="Title"></span>
+                    <label asp-for="Description">Description</label>
+                    <input asp-for="Description" class="form-control" id="exampleInputEmail1" placeholder="Description">
+                    <span class="text-danger" asp-validation-for="Description"></span>
+
+                </div>
+                <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                <button type="submit" class="btn btn-link">Cancel</button>
+            </form>
+        </div>
+    </div>
+</div>
+

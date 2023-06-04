@@ -1,0 +1,44 @@
+﻿@model AlbumUpdateVM
+@{
+    ViewData["Title"] = "Update";
+    Layout = "~/Areas/AdminArea/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1 style="text-align:center">Update Album form</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12" style="margin-top:50px">
+            <form method="post" role="form" class="form-control-static" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label asp-for="Photo">Photo</label>
+                    <input asp-for="Photo" class="form-control" id="exampleInputEmail1" placeholder="Name">
+                    <span class="text-danger" asp-validation-for="Photo"></span>
+                    <label asp-for="Name">Name</label>
+                    <input asp-for="Name" class="form-control" id="exampleInputEmail1" placeholder="Title">
+                    <span class="text-danger" asp-validation-for="Name"></span>
+                    <div class="form-group">
+                        <label asp-for="GenreId">Genre</label>
+                        <select asp-for="GenreId" class="form-select" asp-items="ViewBag.Genres" aria-label="Default select example">
+                        </select>
+                        <span class="text-danger" asp-validation-for="GenreId"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="ArtistId">Artist</label>
+                        <select asp-for="ArtistId" class="form-select" asp-items="ViewBag.Artists" aria-label="Default select example">
+                        </select>
+                        <span class="text-danger" asp-validation-for="ArtistId"></span>
+                    </div>
+                    <label asp-for="CreatedTime">Release Date:</label>
+                    <input asp-for="CreatedTime" class="form-control" id="exampleInputEmail1" placeholder="Title">
+                    <span class="text-danger" asp-validation-for="CreatedTime"></span>
+                    <label asp-for="Label">Label</label>
+                    <input asp-for="Label" class="form-control" id="exampleInputEmail1" placeholder="Title">
+                    <span class="text-danger" asp-validation-for="Label"></span>
+                </div>
+                <button type="submit" class="btn btn-success mr-2">Submit</button>
+                <button type="submit" class="btn btn-link">Cancel</button>
+            </form>
+        </div>
+    </div>
+</div>
+

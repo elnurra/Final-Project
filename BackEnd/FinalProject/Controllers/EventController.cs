@@ -58,12 +58,20 @@ namespace FinalProject.Controllers
             _appDbContext.SaveChanges();
             return RedirectToAction("Detail", new { id = eventId });
         }
-        public async Task<IActionResult> DeleteComment(int id)
+        public async Task<IActionResult> DeleteComment(int? id)
         {
+            if (id == null)
+            {
+                return NotFound();
+            }
             Comment? comment = await _appDbContext.Comments.FirstOrDefaultAsync(b => b.Id == id);
+            if (comment == null)
+            {
+                return NotFound();
+            }
             _appDbContext.Comments.Remove(comment);
             _appDbContext.SaveChanges();
-            return RedirectToAction("Detail", new { id = comment.AlbumId });
+            return RedirectToAction("Detail", new { id = comment.EventId });
         }
 
 

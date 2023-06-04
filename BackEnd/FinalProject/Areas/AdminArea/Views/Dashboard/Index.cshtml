@@ -1,0 +1,66 @@
+﻿@model DashboardVM
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/AdminArea/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-12 grid-margin">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="d-sm-flex align-items-baseline report-summary-header">
+                            <h5 class="font-weight-semibold">Report Summary</h5> <span class="ml-auto">Updated Report</span>
+                            <button class="btn btn-icons border-0 p-2"><i class="icon-refresh"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row report-inner-cards-wrapper">
+                    <div class=" col-md -6 col-xl report-inner-card">
+                        <div class="inner-card-text">
+                            <span class="report-title">Albums</span>
+                            <h4>@Model.Albums.Count()</h4>
+
+                        </div>
+                        <div class="inner-card-icon bg-success">
+                            <i class="icon-earphones-alt"></i>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl report-inner-card">
+                        <div class="inner-card-text">
+                            <span class="report-title">Artists</span>
+                            <h4>@Model.Artists.Count()</h4>
+
+                        </div>
+                        <div class="inner-card-icon bg-danger">
+                            <i class="icon-equalizer"></i>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl report-inner-card">
+                        <div class="inner-card-text">
+                            <span class="report-title">SONGS:</span>
+                            <h4>@Model.Songs.Count()</h4>
+
+                        </div>
+                        <div class="inner-card-icon bg-warning">
+                            <i class="icon-music-tone-alt"></i>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl report-inner-card">
+                        <div class="inner-card-text">
+                            <span class="report-title">GENRES</span>
+                            <h4>@Model.Genres.Count()</h4>
+
+                        </div>
+                        <div class="inner-card-icon bg-primary">
+                            <i class="icon-diamond"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
