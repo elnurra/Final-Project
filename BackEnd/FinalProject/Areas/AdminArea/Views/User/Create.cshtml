@@ -1,0 +1,56 @@
+﻿@model UserCreateVM
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Areas/AdminArea/Views/Shared/_AdminLayout.cshtml";
+}
+<div class="text-center">
+    <img src="~/images/profile.png" style="width: 185px;" alt="logo">
+    <h2 style="font-size: 30px; ">We are The MUSICMAN Team</h2>
+</div>
+
+<form asp-controller="User" asp-action="Create" method="post" target="_blank">
+    <br>
+    <p style="font-size: 17px; margin-bottom: 30px; text-align:center">Create a new User: </p>
+    <br>
+    <div class=" form-outline mb-4">
+        <label asp-for="Fullname">Fullname</label>
+        <input class="form-control" asp-for="Fullname" placeholder="Fullname">
+        <span class="text-danger" asp-validation-for="Fullname"></span>
+    </div>
+    <div class=" form-outline mb-4">
+        <label asp-for="Username">Username</label>
+        <input class="form-control" asp-for="Username" placeholder="Username">
+        <span class="text-danger" asp-validation-for="Username"></span>
+    </div>
+
+    <div class=" form-outline mb-4">
+        <label asp-for="Email">Email address</label>
+        <input class="form-control" asp-for="Email" placeholder="Email">
+        <span class="text-danger" asp-validation-for="Email"></span>
+    </div>
+    <div class="form-outline mb-4">
+        <label asp-for="Password">Password</label>
+        <input class="form-control" asp-for="Password" placeholder="Password">
+        <span class="text-danger" asp-validation-for="Password"></span>
+    </div>
+    <div class="form-outline mb-4">
+        <label asp-for="ConfirmPassword">Confirm Password</label>
+        <input class="form-control" asp-for="ConfirmPassword" placeholder="Password">
+        <span class="text-danger" asp-validation-for="ConfirmPassword"></span>
+    </div>
+    @foreach (IdentityRole item in Model.AllRoles)
+    {
+        <input name="roles" value="@item" type="checkbox" /> @item
+        <br />
+    }
+    <div class="text-center pt-1 mb-5 pb-1">
+        <button class="btn btn-outline-github btn-block mb-3 w-100"
+                type="submit">
+            Create User
+        </button>
+
+    </div>
+
+
+</form>
+

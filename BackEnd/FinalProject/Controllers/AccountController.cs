@@ -4,7 +4,6 @@ using FinalProject.Services.Interfaces;
 using FinalProject.ViewModels.AccountVM;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using NuGet.Protocol.Plugins;
 
 namespace FinalProject.Controllers
 {

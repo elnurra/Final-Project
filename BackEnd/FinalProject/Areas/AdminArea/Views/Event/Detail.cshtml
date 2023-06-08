@@ -1,0 +1,17 @@
+﻿@model Event
+@{
+    ViewData["Title"] = "Detail";
+    Layout = "~/Areas/AdminArea/Views/Shared/_AdminLayout.cshtml";
+}
+<h1 style="text-align:center">Event Detail</h1>
+<div style="display: flex; flex-direction: column; align-items: center; text-align: center; max-width: 600px; margin: 0 auto;">
+    <img src="~/images/@Model.ImageUrl" alt="Album Cover" style="width: 300px; height: 300px; object-fit: cover; border-radius: 5px; margin-bottom: 20px;">
+    <h2 style="font-size: 24px; font-weight: bold; margin-bottom: 10px;">@Model.Title</h2>
+    <p style="font-size: 18px; color: #777; margin-bottom: 10px;"><strong>Artist: </strong>@Model.Artist.Name</p>
+    <p style="font-size: 16px; color: #777; margin-bottom: 5px;"><strong>Release Date: </strong>@Model.CreatedTime.ToString("dd,MMMM,yyyy")</p>
+    <p style="font-size: 16px; color: #777; margin-bottom: 5px;"><strong>Price: </strong>@Model.Price $</p>
+    <p style="font-size: 16px; color: #777; margin-bottom: 5px; text-align:center"><strong>Description: </strong>@Model.Description</p>
+    <p style="font-size: 16px; color: #777; margin-bottom: 5px; text-align:center"><strong>Address: </strong>@Model.Address</p>
+    <p style="font-size: 16px; color: #777; margin-bottom: 5px; text-align:center"><strong>Address Url: </strong>@Model.AddressUrl</p>
+</div>
+

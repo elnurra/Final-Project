@@ -1,0 +1,28 @@
+﻿@model UserDetailVM
+@{
+    ViewData["Title"] = "Detail";
+    Layout = "~/Areas/AdminArea/Views/Shared/_AdminLayout.cshtml";
+}
+<div class="container">
+    <div class="row">
+        <div class="user-content">
+        <h2>User Detail</h2>
+        
+          
+                <h4> Fullname: @Model.User.Fullname</h4>
+                <br />
+                <p>
+                  Username:  @Model.User.UserName
+                </p>
+               <span>State: </span>
+                @foreach (string item in Model.UserRoles)
+                {
+                    <p>@item</p>
+                }
+                <a asp-action="Index" class="btn btn-danger" style="font-size:30px">Return Back </a>
+
+        
+        </div>
+    </div>
+</div>
+

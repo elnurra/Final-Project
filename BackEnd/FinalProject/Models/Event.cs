@@ -12,7 +12,9 @@ namespace FinalProject.Models
         public string Description { get; set; } = null!;
         public string Address { get; set; } = null!;
         public DateTime CreatedTime { get; set; }
+        
         public Artist Artist { get; set; } = null!;
+        public int ArtistId { get; set; } 
         [Column(TypeName = "decimal(18,0)")]
         public decimal Price { get; set; }
         public List<Comment> Comments { get; set; } = null!;

@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using Org.BouncyCastle.Utilities;
 using System.Data;
 
 
@@ -26,15 +27,20 @@ namespace FinalProject.Areas.AdminArea.Controllers
             _env = env;
         }
 
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string search)
         {
-            var query = _appDbContext.Albums.Include(a => a.Artist).Include(g => g.Genre).Include(s => s.Songs);
 
+            List<Album> albums = search != null ?
+   await _appDbContext.Albums.Include(a => a.Artist).Include(g => g.Genre).Include(s => s.Songs)
+    .Where(u => u.Name.Trim().ToLower().Contains(search.Trim().ToLower())).Where(u => !u.IsDeleted).ToListAsync()
+    : await _appDbContext.Albums.Include(a => a.Artist).Include(g => g.Genre).Include(s => s.Songs).ToListAsync();
+
+            var query = _appDbContext.Albums.Include(a => a.Artist).Include(g => g.Genre).Include(s => s.Songs);
             ViewBag.AlbumCount = query.Count();
             AlbumReadVM albumVM = new()
             {
                 Genres = await _appDbContext.Genres.Where(g => !g.IsDeleted).ToListAsync(),
-                Albums = await query.ToListAsync(),
+                Albums = albums,
             };
             return View(albumVM);
         }
@@ -43,7 +49,6 @@ namespace FinalProject.Areas.AdminArea.Controllers
         {
             ViewBag.Genres = new SelectList(await _appDbContext.Genres.ToListAsync(), "Id", "Name");
             ViewBag.Artists = new SelectList(await _appDbContext.Artists.ToListAsync(), "Id", "Name");
-
             return View();
         }
 
@@ -88,17 +93,18 @@ namespace FinalProject.Areas.AdminArea.Controllers
             if (id == null) return NotFound();
             Album? album = await _appDbContext.Albums.FirstOrDefaultAsync(c => c.Id == id);
             if (album == null) return NotFound();
-            return View(new AlbumUpdateVM 
-            { ImageUrl = album.ImageUrl, 
-                Name = album.Name, 
-                CreatedTime = album.CreatedTime, 
-                Label = album.Label, 
-                GenreId = album.GenreId, 
+            return View(new AlbumUpdateVM
+            {
+                ImageUrl = album.ImageUrl,
+                Name = album.Name,
+                CreatedTime = album.CreatedTime,
+                Label = album.Label,
+                GenreId = album.GenreId,
                 ArtistId = album.ArtistId
             });
         }
         [HttpPost]
-        public async Task<IActionResult> Update(int? id,AlbumUpdateVM albumUpdateVM)
+        public async Task<IActionResult> Update(int? id, AlbumUpdateVM albumUpdateVM)
         {
             if (id == null) return NotFound();
             Album? album = await _appDbContext.Albums.FirstOrDefaultAsync(c => c.Id == id);
@@ -154,21 +160,28 @@ namespace FinalProject.Areas.AdminArea.Controllers
         }
         public async Task<IActionResult> Detail(int? id)
         {
+            AlbumReadVM albumReadVM = new();
             if (id == null) return NotFound();
             Album? album = await _appDbContext.Albums.FirstOrDefaultAsync(s => s.Id == id);
-            if (album == null) return NotFound();
-            AlbumReadVM albumReadVM = new()
+            if (album == null)
             {
-                Genres = await _appDbContext.Genres.Where(g => !g.IsDeleted).ToListAsync(),
-                Album = await _appDbContext.Albums.Where(a => !a.IsDeleted)
-                .Include(a => a.Artist)
-                .Include(bd => bd.Comments)
-                .ThenInclude(u => u.User)
-                .Include(a => a.Genre)
-                .FirstOrDefaultAsync(a => a.Id == id),
-                Songs = await _appDbContext.Songs.Where(a => a.AlbumId == id).ToListAsync()
-            };
+                return NotFound();
+            }
+            else
+            {
+                albumReadVM.Genres = await _appDbContext.Genres.Where(g => !g.IsDeleted).ToListAsync();
+#pragma warning disable CS8601 // Возможно, назначение-ссылка, допускающее значение NULL.
+                albumReadVM.Album  = await _appDbContext.Albums.Where(a => !a.IsDeleted)
+                    .Include(a => a.Artist)
+                    .Include(bd => bd.Comments)
+                    .ThenInclude(u => u.User)
+                    .Include(a => a.Genre)
+                    .FirstOrDefaultAsync(a => a.Id == id);
+#pragma warning restore CS8601 // Возможно, назначение-ссылка, допускающее значение NULL.
+                albumReadVM.Songs = await _appDbContext.Songs.Where(a => a.AlbumId == id).ToListAsync();
+            }
             return View(albumReadVM);
+
         }
     }
 }

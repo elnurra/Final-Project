@@ -1,0 +1,27 @@
+﻿@model UserUpdateRoleVM
+@{
+    ViewData["Title"] = "UpdateRole";
+    Layout = "~/Areas/AdminArea/Views/Shared/_AdminLayout.cshtml";
+}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 grid-margin stretch-card">
+            <form method="post">
+                @foreach (var item in Model.AllRoles)
+                {
+                    if (Model.UserRoles.Any(r => r == item.Name))
+                    {
+                        <input name="roles" value="@item.Name" type="checkbox" checked /> @item.Name <br />
+                    }
+                    else
+                    {
+                        <input name="roles" value="@item.Name" type="checkbox" /> @item.Name <br />
+                    }
+
+                }
+                <button class="btn btn-info" type="submit"> Submit </button>
+            </form>
+        </div>
+    </div>
+</div>
+

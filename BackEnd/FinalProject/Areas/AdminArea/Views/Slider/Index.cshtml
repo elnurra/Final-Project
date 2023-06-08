@@ -12,6 +12,12 @@
                     <a asp-area="AdminArea" asp-controller="Dashboard" asp-action="Index" class="text-dark ml-auto mb-3 mb-sm-0"> View all Products</a>
 
                 </div>
+                <br />
+                <form asp-controller="Slider" asp-action="Index">
+                    <input class="form-control" name="search" value="" placeholder="Title" />
+                    <br />
+                    <button class="btn btn-info" type="submit"> Search </button>
+                </form>
                 <div class="table-responsive border rounded p-1">
                     <a asp-area="AdminArea" asp-controller="Slider" asp-action="Create" class="btn btn-success">Create</a>
                     <table class="table">

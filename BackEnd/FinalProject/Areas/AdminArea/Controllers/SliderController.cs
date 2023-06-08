@@ -22,9 +22,14 @@ namespace FinalProject.Areas.AdminArea.Controllers
             _env = env;
         }
 
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string search)
         {
-            List<Slider> sliders = await _appDbContext.Sliders.ToListAsync();
+            List<Slider> sliders = search != null ?
+  await _appDbContext.Sliders
+   .Where(u => u.Title.Trim().ToLower().Contains(search.Trim().ToLower()))
+   .Where(u => !u.IsDeleted).ToListAsync()
+   : await _appDbContext.Sliders.ToListAsync();
+
             return View(sliders);
         }
         public IActionResult Create()
@@ -62,12 +67,12 @@ namespace FinalProject.Areas.AdminArea.Controllers
         }
 
 
-        public async Task <IActionResult> Update(int? id)
+        public async Task<IActionResult> Update(int? id)
         {
             if (id == null) return NotFound();
             Slider? slider = await _appDbContext.Sliders.FirstOrDefaultAsync(c => c.Id == id);
             if (slider == null) return NotFound();
-            return View(new SliderUpdateVM { ImageUrl = slider.ImageUrl, Description = slider.Description,Title=slider.Title });
+            return View(new SliderUpdateVM { ImageUrl = slider.ImageUrl, Description = slider.Description, Title = slider.Title });
         }
 
         [HttpPost]
@@ -120,13 +125,13 @@ namespace FinalProject.Areas.AdminArea.Controllers
             }
             else
             {
-            _appDbContext.Remove(slider);
-            _appDbContext.SaveChanges();
-            string fullpath = Path.Combine(_env.WebRootPath, "images", slider.ImageUrl);
-            if (System.IO.File.Exists(fullpath))
-            {
-                System.IO.File.Delete(fullpath);
-            }
+                _appDbContext.Remove(slider);
+                _appDbContext.SaveChanges();
+                string fullpath = Path.Combine(_env.WebRootPath, "images", slider.ImageUrl);
+                if (System.IO.File.Exists(fullpath))
+                {
+                    System.IO.File.Delete(fullpath);
+                }
             };
             return RedirectToAction("Index");
         }

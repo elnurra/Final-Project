@@ -12,6 +12,12 @@
                     <a asp-area="AdminArea" asp-controller="Dashboard" asp-action="Index" class="text-dark ml-auto mb-3 mb-sm-0"> View all Products</a>
 
                 </div>
+                <br />
+                <form asp-controller="Album" asp-action="Index">
+                    <input class="form-control" name="search" value="" placeholder="Album Name:" />
+                    <br />
+                    <button class="btn btn-info" type="submit"> Search </button>
+                </form>
                 <div class="table-responsive border rounded p-1">
                     <a asp-area="AdminArea" asp-controller="Album" asp-action="Create" class="btn btn-success">Create</a>
                     <table class="table">
@@ -21,8 +27,6 @@
                                 <th class="font-weight-bold">Image:</th>
                                 <th class="font-weight-bold">Album Name:</th>
                                 <th class="font-weight-bold">Genre:</th>
-                                <th class="font-weight-bold">Release Date:</th>
-                                <th class="font-weight-bold">Label:</th>
                                 <th class="font-weight-bold">Artist:</th>
                                 <th class="font-weight-bold" style="text-align:center">Status:</th>
                                 <th class="font-weight-bold" style="text-align:center">Settings:</th>
@@ -41,8 +45,6 @@
                                     </td>
                                     <td>@item.Name</td>
                                     <td>@item.Genre.Name</td>
-                                    <td>@item.CreatedTime.ToString("dd,MMMM,yyyy")</td>
-                                    <td>@item.Label</td>
                                     <td>@item.Artist.Name</td>
                                     @if (item.IsDeleted == false)
                                     {

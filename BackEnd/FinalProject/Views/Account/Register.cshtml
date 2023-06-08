@@ -49,7 +49,7 @@
                                     <img src="~/images/profile.png" style="width: 185px;" alt="logo">
                                     <h2 style="font-size: 30px; ">We are The MUSICMAN Team</h2>
                                 </div>
-
+                                    <div class="text-danger" asp-validation-summary="All"></div>
                                 <form asp-controller="Account" asp-action="Register" method="post" target="_blank">
                                     <br>
                                     <p style="font-size: 17px; margin-bottom: 30px;">Create a new account: </p>
@@ -90,7 +90,7 @@
 
                                     <div class="d-flex align-items-center justify-content-center pb-4">
                                         <p class="mb-0 me-2">Have an account?</p>
-                                        <button type="submit" class="btn btn-outline-success">Sign In</button>
+                                        <a asp-action="Login" class="btn btn-outline-success">Sign In</a>
                                     </div>
 
                                 </form>

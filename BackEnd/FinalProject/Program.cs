@@ -4,22 +4,18 @@ using FinalProject.Services.Interfaces;
 using FinalProject.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using FinalProject;
 
 var builder = WebApplication.CreateBuilder(args);
 var _config = builder.Configuration;
 
-// Add services to the container.
-builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<AppDbContext>(options =>
 {
     options.UseSqlServer(_config.GetConnectionString("DefaultConnection"));
 });
 
-builder.Services.AddIdentity<AppUser, IdentityRole>()
-                .AddEntityFrameworkStores<AppDbContext>()
-                .AddDefaultTokenProviders();
-builder.Services.AddScoped<IEmailService, EmailService>();
-builder.Services.AddScoped<IFileService, FileService>();
+builder.Services.BackendProjectServiceRegistration();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

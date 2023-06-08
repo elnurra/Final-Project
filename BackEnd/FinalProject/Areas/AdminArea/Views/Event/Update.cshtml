@@ -1,0 +1,55 @@
+﻿@model EventUpdateVM
+@{
+    ViewData["Title"] = "Update";
+    Layout = "~/Areas/AdminArea/Views/Shared/_AdminLayout.cshtml";
+}
+<h1 style="text-align:center">Update Event Form</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12" style="margin-top:50px">
+            <form method="post" role="form" class="form-control-static" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label asp-for="Photo">Photo</label>
+                    <input asp-for="Photo" class="form-control" id="exampleInputEmail1" placeholder="Name">
+                    <span class="text-danger" asp-validation-for="Photo"></span>
+                    <br />
+                    <label asp-for="Title">Title</label>
+                    <input asp-for="Title" class="form-control" id="exampleInputEmail1" placeholder="Title">
+                    <span class="text-danger" asp-validation-for="Title"></span>
+                    <br />
+                    <label asp-for="Address">Address</label>
+                    <input asp-for="Address" class="form-control" id="exampleInputEmail1" placeholder="Address">
+                    <span class="text-danger" asp-validation-for="Address"></span>
+                    <br />
+                    <label asp-for="AddressUrl">Address Url</label>
+                    <input asp-for="AddressUrl" class="form-control" id="exampleInputEmail1" placeholder="Address Url">
+                    <span class="text-danger" asp-validation-for="AddressUrl"></span>
+                    <br />
+                    <label asp-for="Description">Description</label>
+                    <input asp-for="Description" class="form-control" id="exampleInputEmail1" placeholder="Description">
+                    <span class="text-danger" asp-validation-for="Description"></span>
+                    <br />
+                    <label asp-for="Price">Price of Concert</label>
+                    <input asp-for="Price" class="form-control" id="exampleInputEmail1" placeholder="Price">
+                    <span class="text-danger" asp-validation-for="Price"></span>
+                    <br />
+                    <div class="form-group">
+                        <label asp-for="ArtistId">Artist</label>
+                        <br />
+                        <select asp-for="ArtistId" class="form-select" asp-items="ViewBag.Artists" aria-label="Default select example">
+                        </select>
+                        <span class="text-danger" asp-validation-for="ArtistId"></span>
+                    </div>
+                    <br />
+                    <label asp-for="CreatedTime">Release Date:</label>
+                    <input asp-for="CreatedTime" class="form-control" id="exampleInputEmail1" placeholder="Released Date">
+                    <span class="text-danger" asp-validation-for="CreatedTime"></span>
+
+
+                </div>
+                <button type="submit" class="btn btn-success mr-2">Submit</button>
+                <a asp-action="Index" type="submit" class="btn btn-link">Cancel</a>
+            </form>
+        </div>
+    </div>
+</div>

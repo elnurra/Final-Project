@@ -493,6 +493,10 @@
       "PackagePath": "staticwebassets\\Admin\\images\\music_icon.png"
     },
     {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\Admin\\images\\profile.png",
+      "PackagePath": "staticwebassets\\Admin\\images\\profile.png"
+    },
+    {
       "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\Admin\\images\\samples\\1280x768\\1.jpg",
       "PackagePath": "staticwebassets\\Admin\\images\\samples\\1280x768\\1.jpg"
     },
@@ -655,6 +659,10 @@
     {
       "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\Admin\\images\\sprites\\yellow.png",
       "PackagePath": "staticwebassets\\Admin\\images\\sprites\\yellow.png"
+    },
+    {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\Admin\\js\\audiopure.js",
+      "PackagePath": "staticwebassets\\Admin\\js\\audiopure.js"
     },
     {
       "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\Admin\\js\\chart.js",
@@ -3395,6 +3403,10 @@
     {
       "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\songs\\Kiss it off Me.mp3",
       "PackagePath": "staticwebassets\\songs\\Kiss it off Me.mp3"
+    },
+    {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\songs\\Lana Del Rey - Born to Die.mp3",
+      "PackagePath": "staticwebassets\\songs\\Lana Del Rey - Born to Die.mp3"
     },
     {
       "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\songs\\Prey.mp3",

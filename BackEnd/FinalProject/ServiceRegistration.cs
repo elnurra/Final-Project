@@ -10,11 +10,19 @@ namespace FinalProject
     {
         public static void BackendProjectServiceRegistration(this IServiceCollection services)
         {
+            // Add services to the container.
+            services.AddControllersWithViews();
+            //------------------------------------------------------------------------------------------------
             services.AddControllersWithViews().AddNewtonsoftJson(options =>
             options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
              );
+            //------------------------------------------------------------------------------------------------
             services.AddHttpContextAccessor();
-            
+            //------------------------------------------------------------------------------------------------
+            services.AddScoped<IEmailService, EmailService>();
+            //------------------------------------------------------------------------------------------------
+            services.AddScoped<IFileService, FileService>();
+            //------------------------------------------------------------------------------------------------
             services.AddIdentity<AppUser, IdentityRole>(options =>
             {
                 options.Password.RequiredLength = 6;

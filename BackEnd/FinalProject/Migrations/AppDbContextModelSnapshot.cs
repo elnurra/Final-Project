@@ -86,6 +86,9 @@ namespace FinalProject.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("ImageUrl")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
 
@@ -473,7 +476,7 @@ namespace FinalProject.Migrations
             modelBuilder.Entity("FinalProject.Models.Comment", b =>
                 {
                     b.HasOne("FinalProject.Models.Album", "Album")
-                        .WithMany()
+                        .WithMany("Comments")
                         .HasForeignKey("AlbumId");
 
                     b.HasOne("FinalProject.Models.AppUser", "User")
@@ -483,7 +486,7 @@ namespace FinalProject.Migrations
                         .IsRequired();
 
                     b.HasOne("FinalProject.Models.Event", "Event")
-                        .WithMany()
+                        .WithMany("Comments")
                         .HasForeignKey("EventId");
 
                     b.Navigation("Album");
@@ -568,12 +571,19 @@ namespace FinalProject.Migrations
 
             modelBuilder.Entity("FinalProject.Models.Album", b =>
                 {
+                    b.Navigation("Comments");
+
                     b.Navigation("Songs");
                 });
 
             modelBuilder.Entity("FinalProject.Models.Artist", b =>
                 {
                     b.Navigation("Albums");
+                });
+
+            modelBuilder.Entity("FinalProject.Models.Event", b =>
+                {
+                    b.Navigation("Comments");
                 });
 #pragma warning restore 612, 618
         }

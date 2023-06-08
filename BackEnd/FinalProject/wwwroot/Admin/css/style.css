@@ -6109,10 +6109,11 @@ input[type="button"].btn-block {
   border-bottom-right-radius: 0.25rem; }
 
 .page-item.active .page-link {
-  z-index: 3;
-  color: #fff;
-  background-color: #007bff;
-  border-color: #007bff; }
+    z-index: 3;
+    color: #fff;
+    background-color: #0ed02b;
+    border-color: #0ed02b;
+}
 
 .page-item.disabled .page-link {
   color: #6c757d;
@@ -11997,13 +11998,15 @@ dl {
   color: #ffffff; }
 
 .pagination-info .page-item.active .page-link {
-  background: #8e32e9;
-  border-color: #8e32e9; }
+    background: #0ed02b;
+    border-color: #0ed02b;
+}
 
 .pagination-info .page-item .page-link:hover {
-  background: #9b49eb;
-  border-color: #8e32e9;
-  color: #ffffff; }
+    background: #0ed02b;
+    border-color: #0ed02b;
+    color: #ffffff;
+}
 
 .pagination-warning .page-item.active .page-link {
   background: #ffde73;
@@ -12514,7 +12517,6 @@ dl {
         color: #1b2658; }
       .navbar .navbar-brand-wrapper .navbar-brand img {
         width: 100%;
-        height: 28px;
         margin: auto;
         vertical-align: middle; }
       .navbar .navbar-brand-wrapper .navbar-brand.brand-logo-mini {
@@ -12684,11 +12686,15 @@ dl {
             margin-top: 0;
             padding: 0; }
             .navbar .navbar-menu-wrapper .navbar-nav .nav-item.dropdown .dropdown-menu.navbar-dropdown .dropdown-item {
-              margin-bottom: 0;
-              padding: 11px 13px;
-              cursor: pointer; }
-              .navbar .navbar-menu-wrapper .navbar-nav .nav-item.dropdown .dropdown-menu.navbar-dropdown .dropdown-item i {
-                font-size: 17px; }
+                margin-bottom: 0;
+                padding: 11px 13px;
+                cursor: pointer;
+
+            }
+                .navbar .navbar-menu-wrapper .navbar-nav .nav-item.dropdown .dropdown-menu.navbar-dropdown .dropdown-item i {
+                    font-size: 17px;
+                    color: #0ed02b !important;
+                }
               .navbar .navbar-menu-wrapper .navbar-nav .nav-item.dropdown .dropdown-menu.navbar-dropdown .dropdown-item .ellipsis {
                 max-width: 200px;
                 overflow: hidden;
@@ -13350,3 +13356,201 @@ dl {
       padding: 0.25rem 0.5rem; } }
 
 /*# sourceMappingURL=style.css.map */
+#player {
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #0ed02b;
+    border-radius: 10px;
+}
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: #0ed02b;
+    }
+
+#controls {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+#play-pause {
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background-color: #0ed02b;
+    color: #fff;
+    font-size: 20px;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+    #play-pause:hover {
+        background-color: #444;
+    }
+
+#prev,
+#next {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background-color: #ddd;
+    color: #333;
+    font-size: 20px;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+    #prev:hover,
+    #next:hover {
+        background-color: #eee;
+    }
+
+#playlist {
+    width: 100%;
+    margin: 20px 0;
+}
+
+#songs {
+    list-style: none;
+    padding: 0;
+}
+
+    #songs li {
+        padding: 10px;
+        background-color: #ddd;
+        margin: 10px 0;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+    }
+
+        #songs li p {
+            font-size: 20px;
+            font-family: "Bangers", cursive;
+        }
+
+#random-icon {
+    color: #0ed02b;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+    #random-icon :hover {
+        color: #000 !important;
+    }
+
+#songs li:hover {
+    background-color: #0ed02b;
+}
+
+#songs li.active-song {
+    background-color: rgb(87, 206, 57);
+}
+
+#progress-bar {
+    width: 100%;
+    height: 5px;
+    background-color: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 20px 0;
+    cursor: pointer;
+}
+
+    #progress-bar .progress {
+        width: 0;
+        height: 100%;
+        background-color: #333;
+        border-radius: 5px;
+        transition: width 0.2s ease;
+        cursor: pointer;
+    }
+
+#volume {
+    -webkit-appearance: none;
+    width: 100px;
+    height: 20px;
+    margin: 20px 0;
+    background-color: #ddd;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+}
+
+    #volume::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: #333;
+        cursor: pointer;
+    }
+
+#time {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#album-songs .songs-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+    #album-songs .songs-item .fa-heart {
+        color: white;
+        font-size: 30px;
+        color: red;
+    }
+
+    #album-songs .songs-item .fa-solid .fa-heart {
+        color: white;
+        font-size: 30px;
+        color: red;
+    }
+
+#album-songs h1 {
+    color: white;
+}
+
+.album-name {
+    margin-top: 10px;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    text-align: center;
+}
+
+.album-song {
+    display: block;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}

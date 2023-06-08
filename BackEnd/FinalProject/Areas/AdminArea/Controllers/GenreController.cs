@@ -2,6 +2,7 @@
 using FinalProject.DAL;
 using FinalProject.Models;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
@@ -19,9 +20,12 @@ namespace FinalProject.Areas.AdminArea.Controllers
             _appDbContext = appDbContext;
         }
 
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string search)
         {
-            List<Genre> genres = await _appDbContext.Genres.ToListAsync();
+            List<Genre> genres = search != null ?
+               await _appDbContext.Genres
+                .Where(u => u.Name.Trim().ToLower().Contains(search.Trim().ToLower())).Where(u => !u.IsDeleted).ToListAsync()
+                : await _appDbContext.Genres.ToListAsync();
             return View(genres);
         }
         public IActionResult Create()

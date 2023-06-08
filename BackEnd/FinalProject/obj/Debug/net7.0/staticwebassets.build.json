@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "EO5DbTW1ccSvRZfEP/O5lwmRaPPN6WwKkGfH42jri1M=",
+  "Hash": "jS4iZJgoazuynXnH5G9/70g4vZt1phzcN/mYdlXxv8w=",
   "Source": "FinalProject",
   "BasePath": "_content/FinalProject",
   "Mode": "Default",
@@ -2125,6 +2125,23 @@
       "OriginalItemSpec": "wwwroot\\Admin\\images\\music_icon.png"
     },
     {
+      "Identity": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\Admin\\images\\profile.png",
+      "SourceId": "FinalProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\",
+      "BasePath": "_content/FinalProject",
+      "RelativePath": "Admin/images/profile.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Admin\\images\\profile.png"
+    },
+    {
       "Identity": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\Admin\\images\\samples\\1280x768\\1.jpg",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
@@ -2820,6 +2837,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Admin\\images\\sprites\\yellow.png"
+    },
+    {
+      "Identity": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\Admin\\js\\audiopure.js",
+      "SourceId": "FinalProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\",
+      "BasePath": "_content/FinalProject",
+      "RelativePath": "Admin/js/audiopure.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Admin\\js\\audiopure.js"
     },
     {
       "Identity": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\Admin\\js\\chart.js",
@@ -14431,6 +14465,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\songs\\Kiss it off Me.mp3"
+    },
+    {
+      "Identity": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\songs\\Lana Del Rey - Born to Die.mp3",
+      "SourceId": "FinalProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\",
+      "BasePath": "_content/FinalProject",
+      "RelativePath": "songs/Lana Del Rey - Born to Die.mp3",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\songs\\Lana Del Rey - Born to Die.mp3"
     },
     {
       "Identity": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\songs\\Prey.mp3",

@@ -18,9 +18,12 @@
     <!-- inject:css -->
     <!-- endinject -->
     <!-- Layout styles -->
+
     <link rel="stylesheet" href="~/Admin/css/style.css">
     <!-- End layout styles -->
     <link rel="shortcut icon" href="~/Admin/images/music_icon.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
 </head>
 
 <body>
@@ -28,8 +31,8 @@
         <!-- partial:partials/_navbar.html -->
         <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
             <div class="navbar-brand-wrapper d-flex align-items-center">
-                <a class="navbar-brand brand-logo" href="index.html">
-                    <img src="~/Admin/images/cover.png" alt="logo" class="logo-dark" />
+                <a class="navbar-brand brand-logo" asp-area="AdminArea" asp-controller="Dashboard" asp-action="Index">
+                    <img src="~/Admin/images/profile.png" alt="logo" class="logo-dark" />
                 </a>
                 <a class="navbar-brand brand-logo-mini" asp-area="AdminArea" asp-controller="Dashboard" asp-action="Index"><img src="~/Admin/images/cover.png" alt="logo" /></a>
             </div>
@@ -48,7 +51,7 @@
                                 <p class="mb-1 mt-3">Elnur Azizov</p>
                                 <p class="font-weight-light text-muted mb-0">elnurazizov2617@gmail.com</p>
                             </div>
-                            <a class="dropdown-item"><i class="dropdown-item-icon icon-power text-primary"></i>Sign Out</a>
+                            <a asp-area="" asp-controller="Account" asp-action="Logout" class="dropdown-item"><i class="dropdown-item-icon icon-power text-primary"></i>Sign Out</a>
                         </div>
                     </li>
                 </ul>
@@ -93,73 +96,69 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" asp-area="AdminArea" asp-controller="Slider" asp-action="Index" >
+                        <a class="nav-link" asp-area="AdminArea" asp-controller="Slider" asp-action="Index">
                             <span class="menu-title">Slider</span>
-                            <i class="icon-globe menu-icon"></i>
+                            <i class=" icon-share-alt menu-icon"></i>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" asp-area="AdminArea" asp-controller="Artist" asp-action="Index">
                             <span class="menu-title">Artist</span>
-                            <i class="icon-book-open menu-icon"></i>
+                            <i class="icon-user-follow menu-icon"></i>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" asp-area="AdminArea" asp-controller="Album" asp-action="Index">
                             <span class="menu-title">Album</span>
-                            <i class="icon-chart menu-icon"></i>
+                            <i class="icon-picture menu-icon"></i>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="pages/tables/basic-table.html">
-                            <span class="menu-title">Tables</span>
-                            <i class="icon-grid menu-icon"></i>
+                        <a class="nav-link" asp-area="AdminArea" asp-controller="Event" asp-action="Index">
+                            <span class="menu-title">Event</span>
+                            <i class="icon-paper-plane menu-icon"></i>
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-area="AdminArea" asp-controller="Song" asp-action="Index">
+                            <span class="menu-title">Song</span>
+                            <i class="icon-music-tone-alt menu-icon"></i>
+                        </a>
+                    </li> 
+                    <li class="nav-item">
+                        <a class="nav-link" asp-area="AdminArea" asp-controller="User" asp-action="Index">
+                            <span class="menu-title">User</span>
+                            <i class="icon-user menu-icon"></i>
+                        </a>
+                    </li> 
+                    <li class="nav-item">
+                        <a class="nav-link" asp-area="AdminArea" asp-controller="Role" asp-action="Index">
+                            <span class="menu-title">Role</span>
+                            <i class="icon-people menu-icon"></i>
+                        </a>
+                    </li>
+
                 </ul>
             </nav>
             <div class="main-panel">
-
                 @RenderBody()
-                </div>
-                <!-- content-wrapper ends -->
-                <!-- partial:partials/_footer.html -->
-                <!-- partial -->
+                @RenderSection("Play",false)
             </div>
-            <!-- main-panel ends -->
         </div>
-        <!-- page-body-wrapper ends -->
- 
-    <!-- container-scroller -->
-    <!-- plugins:js -->
-                <footer class="footer">
-                    <div class="d-sm-flex justify-content-center justify-content-sm-between">
-                        <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">
-                            Copyright © musicman.com
-                            2023
-                        </span>
-                    </div>
-                </footer>
-    
- 
-    <!-- partial -->
+
+    </div>
+
+    <footer class="footer">
+        <div class="d-sm-flex justify-content-center justify-content-sm-between">
+            <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">
+                musicman.com 2023 © All right are deserved.
+            </span>
+        </div>
+    </footer>
 
     <script src="~/Admin/vendors/js/vendor.bundle.base.js"></script>
-    <!-- endinject -->
-    <!-- Plugin js for this page -->
-
-    <script src="~/Admin/vendors/chart.js/Chart.min.js"></script>
-    <script src="~/Admin/vendors/moment/moment.min.js"></script>
-    <script src="~/Admin/vendors/daterangepicker/daterangepicker.js"></script>
-    <script src="~/Admin/vendors/chartist/chartist.min.js"></script>
-    <!-- End plugin js for this page -->
-    <!-- inject:js -->
     <script src="~/Admin/js/off-canvas.js"></script>
-    <script src="~/Admin/misc.js"></script>
-    <!-- endinject -->
-    <!-- Custom js for this page -->
-    <script src="~/Admin/js/dashboard.js"></script>
-    <!-- End custom js for this page -->
+    <script src="~/Admin/js/misc.js"></script>
 </body>
 
 </html>
