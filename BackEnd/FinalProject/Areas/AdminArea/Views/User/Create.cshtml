@@ -7,7 +7,6 @@
     <img src="~/images/profile.png" style="width: 185px;" alt="logo">
     <h2 style="font-size: 30px; ">We are The MUSICMAN Team</h2>
 </div>
-
 <form asp-controller="User" asp-action="Create" method="post" target="_blank">
     <br>
     <p style="font-size: 17px; margin-bottom: 30px; text-align:center">Create a new User: </p>
@@ -38,11 +37,19 @@
         <input class="form-control" asp-for="ConfirmPassword" placeholder="Password">
         <span class="text-danger" asp-validation-for="ConfirmPassword"></span>
     </div>
-    @foreach (IdentityRole item in Model.AllRoles)
+    @if (Model.AllRoles==null)
     {
-        <input name="roles" value="@item" type="checkbox" /> @item
         <br />
     }
+    else
+    {
+        @foreach (IdentityRole item in Model.AllRoles)
+        {
+            <input name="roles" value="@item" type="checkbox" /> @item
+            <br />
+        }
+    }
+    
     <div class="text-center pt-1 mb-5 pb-1">
         <button class="btn btn-outline-github btn-block mb-3 w-100"
                 type="submit">

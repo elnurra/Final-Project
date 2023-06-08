@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace FinalProject.Areas.AdminArea.Controllers
 {
-    [Area("AdminArea")]
+        [Area("AdminArea")]
         [Authorize(Roles ="SuperAdmin, Admin")]
     public class DashboardController : Controller
     {

@@ -1,0 +1,17 @@
+﻿@model IdentityRole
+@{
+    ViewData["Title"] = "Detail";
+    Layout = "~/Areas/AdminArea/Views/Shared/_AdminLayout.cshtml";
+}
+<ul style="list-style-type:none">
+    <li style="font-size:30px;text-align:center">
+        Role Id - @Model.Id
+    </li>
+    <li style="font-size:30px;text-align:center">
+        Role Name - @Model.Name
+    </li>
+    <li style="font-size:30px;text-align:center">
+        Normilized Name - @Model.NormalizedName
+    </li>
+</ul>
+<a class="btn btn-danger" asp-action="Index">Go back</a>

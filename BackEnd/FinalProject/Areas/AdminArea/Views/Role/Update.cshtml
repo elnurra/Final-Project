@@ -1,0 +1,21 @@
+﻿@model RoleUpdateVM
+@{
+    ViewData["Title"] = "Update";
+    Layout = "~/Areas/AdminArea/Views/Shared/_AdminLayout.cshtml";
+}
+<h1>Update Role Form</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12" style="margin-top:50px">
+            <form method="post" role="form" class="form-control-static">
+                <div class="form-group">
+                    <label for="rolecreate">New Role:</label><br />
+                    <input asp-for=Name id="rolecreate" class="text-form" />
+                </div>
+                <button type="submit" class="btn btn-success mr-2">Submit</button>
+                <a asp-action="Index" class="btn btn-outline-danger">Cancel</a>
+            </form>
+        </div>
+    </div>
+</div>
+

@@ -39,7 +39,9 @@ namespace FinalProject.Areas.AdminArea.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(UserCreateVM userCreateVM, List<string> roles)
         {
+            
             if (!ModelState.IsValid) return View(userCreateVM);
+            List<IdentityRole> allRoles = await _roleManager.Roles.ToListAsync();
             AppUser user = new()
             {
                 Fullname = userCreateVM.Fullname,
@@ -54,11 +56,12 @@ namespace FinalProject.Areas.AdminArea.Controllers
                 {
                     ModelState.AddModelError("", error.Description);
                 }
+                userCreateVM.AllRoles = allRoles;
                 return View(userCreateVM);
             }
             await _userManager.GenerateEmailConfirmationTokenAsync(user);
             await _userManager.AddToRolesAsync(user, roles);
-            await _signInManager.SignInAsync(user, false);
+            await _signInManager.SignInAsync(user, true);
             return RedirectToAction("Index");
         }
 
