@@ -31,7 +31,6 @@
                     <li class="category-item"><input id="header-search" class="header-search" placeholder="Search:" style="display: none;" type="text"></li>
                 </ul>
                 <ul id="searchList" class="Result">
-
                 </ul>
             </div>
         </div>
@@ -54,5 +53,18 @@
                 </div>
             }
         </div>
-    </div>
+
+        <div class="col-lg-12" style="display:flex; justify-content:center">
+            <nav aria-label="...">
+                <ul class="pagination pagination-lg">
+                    @for (int i = 1; i <= Model.PageCount; i++)
+                    {
+                        <li class="page-item @(Model.CurrentPage==i?"disabled":"")">
+                            <a style="color:#0ed02b" class="page-link" asp-action="index" asp-route-page="@i">@i</a>
+                        </li>
+                    }
+                </ul>
+            </nav>
+        </div>
+    </div>  
 </section>

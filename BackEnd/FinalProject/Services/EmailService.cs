@@ -32,6 +32,26 @@ namespace FinalProject.Services
             smtp.Send(email);
             smtp.Disconnect(true);
         }
+
+        public void Send(string[] toEmails, string subject, string body, string? from = null)
+        {
+            var email = new MimeMessage();
+            email.From.Add(MailboxAddress.Parse(from ?? _configuration.GetSection("Smtp:FromAddress").Value));
+            foreach (string message in toEmails)
+            {
+                email.To.Add(MailboxAddress.Parse(message));
+            }
+            email.Subject = subject;
+            email.Body = new TextPart(TextFormat.Html) { Text = body };
+            // send email
+            using var smtp = new SmtpClient();
+#pragma warning disable CS8604 // Возможно, аргумент-ссылка, допускающий значение NULL.
+            smtp.Connect(_configuration.GetSection("Smtp:Server").Value, int.Parse(_configuration.GetSection("Smtp:Port").Value), SecureSocketOptions.StartTls);
+#pragma warning restore CS8604 // Возможно, аргумент-ссылка, допускающий значение NULL.
+            smtp.Authenticate(_configuration.GetSection("Smtp:FromAddress").Value, _configuration.GetSection("Smtp:Password").Value);
+            smtp.Send(email);
+            smtp.Disconnect(true);
+        }
     }
     }
 

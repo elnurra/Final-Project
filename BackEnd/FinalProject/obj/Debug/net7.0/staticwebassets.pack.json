@@ -3069,6 +3069,10 @@
       "PackagePath": "staticwebassets\\Template\\Change.html"
     },
     {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\Template\\Letter.html",
+      "PackagePath": "staticwebassets\\Template\\Letter.html"
+    },
+    {
       "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\Template\\Verify.html",
       "PackagePath": "staticwebassets\\Template\\Verify.html"
     },
@@ -3221,6 +3225,10 @@
       "PackagePath": "staticwebassets\\images\\Vasif.jpg"
     },
     {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\images\\Willy William.jpg",
+      "PackagePath": "staticwebassets\\images\\Willy William.jpg"
+    },
+    {
       "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\images\\about.png",
       "PackagePath": "staticwebassets\\images\\about.png"
     },
@@ -3363,6 +3371,10 @@
     {
       "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\js\\event-date.js",
       "PackagePath": "staticwebassets\\js\\event-date.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\js\\formvalidation.js",
+      "PackagePath": "staticwebassets\\js\\formvalidation.js"
     },
     {
       "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\js\\jquery-3.0.0.min.js",

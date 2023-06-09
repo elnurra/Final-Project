@@ -18,18 +18,29 @@ namespace FinalProject.Controllers
             _userManager = userManager;
         }
 
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int page = 1, int take = 4)
         {
             var query = _appDbContext.Albums.Include(a => a.Artist).Include(g => g.Genre).Include(s => s.Songs);
+            List<Album> albums = await query.Where(a=>!a.IsDeleted).ToListAsync();
 
             ViewBag.AlbumCount = query.Count();
+            int pageCount = CalculatePageCount(albums, take);
+
             AlbumVM albumVM = new()
             {
                 Genres = await _appDbContext.Genres.Where(g => !g.IsDeleted).ToListAsync(),
-                Albums = await query.ToListAsync(),
+                Albums = await query.Skip((page - 1) * 4).
+                Take(take).
+                ToListAsync(),
+                PageCount = pageCount,
+                CurrentPage=page
             };
 
             return View(albumVM);
+        }
+        private int CalculatePageCount(List<Album> albums, int take)
+        {
+            return (int)Math.Ceiling((decimal)(albums.Count()) / take);
         }
 
         public async Task<IActionResult> Detail(int? id)
@@ -55,6 +66,11 @@ namespace FinalProject.Controllers
         [HttpPost]
         public async Task<IActionResult> AddComment(string Content, int albumId)
         {
+            if (Content==null)
+            {
+                ModelState.AddModelError("", "Comment cannot be empty!");
+                return RedirectToAction("Detail", new { id = albumId });
+            }
             AppUser? user;
 
             if (User.Identity.IsAuthenticated)

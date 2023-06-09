@@ -3,10 +3,12 @@ using FinalProject.Areas.AdminArea.ViewModels.EventCRUD;
 using FinalProject.DAL;
 using FinalProject.Extensions;
 using FinalProject.Models;
+using FinalProject.Services.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using NuGet.Packaging;
 using System.Data;
 
 namespace FinalProject.Areas.AdminArea.Controllers
@@ -17,11 +19,15 @@ namespace FinalProject.Areas.AdminArea.Controllers
     {
         private readonly AppDbContext _appDbContext;
         private readonly IWebHostEnvironment _env;
+        private readonly IEmailService _emailService;
+        private readonly IFileService _fileService;
 
-        public EventController(AppDbContext appDbContext, IWebHostEnvironment env)
+        public EventController(AppDbContext appDbContext, IWebHostEnvironment env, IEmailService emailService, IFileService fileService)
         {
             _appDbContext = appDbContext;
             _env = env;
+            _emailService = emailService;
+            _fileService = fileService;
         }
 
 
@@ -69,8 +75,20 @@ namespace FinalProject.Areas.AdminArea.Controllers
                 CreatedTime = eventCreateVM.CreatedTime,
                 IsDeleted = false
             };
+
             await _appDbContext.Events.AddAsync(newEvent);
             await _appDbContext.SaveChangesAsync();
+            string link = "https://localhost:44365/Event";
+            List<Subscribe> subscribes = await _appDbContext.Subscribes.Where(s=>!s.IsDeleted).ToListAsync();
+            string body = string.Empty;
+            string path = "wwwroot/Template/Letter.html";
+            body = _fileService.ReadFile(path, body);
+            body = body.Replace("{{link}}", link);
+            string subject = "New EVENT!";
+            foreach (Subscribe item in subscribes)
+            {
+                _emailService.Send(item.Email, subject, body);
+            }
             return RedirectToAction("Index");
 
         }

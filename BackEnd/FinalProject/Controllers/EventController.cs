@@ -4,6 +4,7 @@ using FinalProject.ViewModels;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace FinalProject.Controllers
 {
@@ -36,6 +37,11 @@ namespace FinalProject.Controllers
 
         public async Task<IActionResult> AddComment(string Content, int eventId)
         {
+            if (!ModelState.IsValid)
+            {
+                ModelState.AddModelError("", "Comment cannot be empty!");
+                return RedirectToAction("Detail", new { id = eventId });
+            }
             AppUser? user;
 
             if (User.Identity.IsAuthenticated)

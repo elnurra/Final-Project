@@ -1,4 +1,5 @@
 ﻿using FinalProject.Models.BaseClass;
+using System.ComponentModel.DataAnnotations;
 
 namespace FinalProject.Models
 {
@@ -11,6 +12,7 @@ namespace FinalProject.Models
         public Event? Event { get; set; }
         public int? EventId { get; set; }
         public DateTime CreatedTime { get; set; }
+        [Required]
         public string Content { get; set; } = null!;
 
 

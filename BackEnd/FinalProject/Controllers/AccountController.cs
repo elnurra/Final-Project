@@ -140,7 +140,7 @@ namespace FinalProject.Controllers
                 return View(loginVM);
             }
 
-            return RedirectToAction("index", "Home");
+            return RedirectToAction("Index", "Home");
         }
 
         [HttpGet]
