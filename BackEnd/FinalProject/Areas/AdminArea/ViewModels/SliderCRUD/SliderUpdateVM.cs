@@ -8,5 +8,6 @@ namespace FinalProject.Areas.AdminArea.ViewModels.SliderCRUD
         public string ImageUrl { get; set; } = null!;
         public string Title { get; set; } = null!;
         public string Description { get; set; } = null!;
+        public bool IsDeleted { get; set; }
     }
 }

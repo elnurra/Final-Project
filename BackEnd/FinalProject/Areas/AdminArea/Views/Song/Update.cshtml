@@ -3,10 +3,11 @@
     ViewData["Title"] = "Update";
     Layout = "~/Areas/AdminArea/Views/Shared/_AdminLayout.cshtml";
 }
-<h1 style="text-align:center">Create Song Form</h1>
+<h1 style="text-align:center">Update Song</h1>
 <div class="container">
     <div class="row">
         <div class="col-md-12" style="margin-top:50px">
+
             <form method="post" role="form" class="form-control-static" enctype="multipart/form-data">
                 <div class="form-group">
                     <label asp-for="Audio">Audio</label>
@@ -25,6 +26,9 @@
                         <span class="text-danger" asp-validation-for="AlbumId"></span>
                     </div>
                     <br />
+                    <label asp-for="IsDeleted">Is Deleted?</label>
+                    <input asp-for="IsDeleted" class="form-control">
+                    <span class="text-danger" asp-validation-for="IsDeleted"></span>
                 </div>
                 <button type="submit" class="btn btn-success mr-2">Submit</button>
                 <a asp-action="Index" class="btn btn-danger">Cancel</a>

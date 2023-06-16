@@ -6,5 +6,6 @@ namespace FinalProject.Areas.AdminArea.ViewModels.GenreCRUD
     {
         [Required, MaxLength(50)]
         public string Name { get; set; } = null!;
+        public bool IsDeleted { get; set; }
     }
 }

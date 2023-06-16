@@ -3,34 +3,37 @@
     ViewData["Title"] = "Create";
     Layout = "~/Areas/AdminArea/Views/Shared/_AdminLayout.cshtml";
 }
-<h1 style="text-align:center">Create Song Form</h1>
+<h1 style="text-align:center">Create Song</h1>
 <div class="container">
     <div class="row">
         <div class="col-md-12" style="margin-top:50px">
-            <div class="alert-danger" asp-validation-summary="All"></div>
+            <div asp-validation-summary="All" class="text-danger"></div>
             <form method="post" role="form" class="form-control-static" enctype="multipart/form-data">
                 <div class="form-group">
+                    <br />
                     <label asp-for="Audio">Audio</label>
                     <input asp-for="Audio" class="form-control" id="exampleInputEmail1" placeholder="Name">
-                    <span class="text-danger" asp-validation-for="Audio"></span>
                     <br />
                     <label asp-for="Name">Name</label>
                     <input asp-for="Name" class="form-control" id="exampleInputEmail1" placeholder="Title">
-                    <span class="text-danger" asp-validation-for="Name"></span>
                     <br />
                     <div class="form-group">
                         <label asp-for="AlbumId">Album</label>
                         <br />
                         <select asp-for="AlbumId" class="form-select" asp-items="ViewBag.Albums" aria-label="Default select example">
                         </select>
-                        <span class="text-danger" asp-validation-for="AlbumId"></span>
                     </div>
                     <br />
+                    <label asp-for="IsDeleted">Is Deleted?</label>
+                    <input asp-for="IsDeleted" class="form-control" id="exampleInputEmail1" placeholder="Title">
+                    <span class="text-danger" asp-validation-for="IsDeleted"></span>
                 </div>
-                <button type="submit" class="btn btn-success mr-2">Submit</button>
-                <a asp-action="Index" class="btn btn-danger">Cancel</a>
+                <button type="submit" class="btn btn-outline-success">Submit</button>
+                <a asp-action="Index" class="btn btn-outline-danger">Cancel</a>
             </form>
         </div>
     </div>
 </div>
+
+
 

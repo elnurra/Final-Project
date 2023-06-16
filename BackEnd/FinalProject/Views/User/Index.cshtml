@@ -1,0 +1,62 @@
+﻿@model List<UserSong>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="backgro_mh">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="heding">
+                    <h2>Your Playlist</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<section id="album-songs">
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 style="margin-top: 30px;" class="song-title">Songs</h1>
+            <div id="player">
+                <audio id="audio" src=""></audio>
+                <div id="controls">
+                    <div class="random-take"><i id="random-icon" class="fa-solid fa-shuffle"></i></div>
+                    <button id="prev"><i class="fa-solid fa-caret-left"></i></button>
+                    <button id="play-pause"><i class="fa-solid fa-play"></i></button>
+                    <button id="next"><i class="fa-solid fa-caret-right"></i></button>
+                    <input type="range" id="volume" min="0" max="1" step="0.1" value="1">
+                </div>
+                <div id="progress-bar">
+                    <div class="progress"></div>
+                </div>
+                <div id="time">
+                    <span id="current-time">0:00</span>
+                    <span id="duration">0:00</span>
+                </div>
+                <div id="playlist">
+
+                    <ul id="songs">
+                          @foreach (UserSong item in Model)
+                            {
+                                <li data-src="@Url.Content("~/songs/" + item.Song.SongUrl) "
+                                    class="songs-item active-song">
+                                    <p>@item.Song.Name</p>
+                                    <span class="heart">
+                                        <a asp-action="RemoveSong" asp-route-id="@item.SongId"><i style="color:red; font-size:30px" class="fa-solid fa-trash"></i></a>
+                                    </span>
+                                </li>                           
+                            }                   
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+@section AlbumScript{
+    <script src="~/js/audiopure.js"></script>
+}
+

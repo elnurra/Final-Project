@@ -50,7 +50,6 @@
         </div>
     </div>
 </section>
-
 <section id="album-songs">
     <div class="container">
         <div class="row">
@@ -73,15 +72,15 @@
                         <span id="duration">0:00</span>
                     </div>
                     <div id="playlist">
-
                         <ul id="songs">
                             @foreach (Song item in Model.Songs)
                             {
                                 <li data-src="@Url.Content("~/songs/" + item.SongUrl) "
                                     class="songs-item active-song">
-
                                     <p>@item.Name</p>
-                                    <span class="heart"><i class="fa-regular fa-heart"></i></span>
+                                    <span class="heart">
+                                        <a asp-action="AddSongPlaylist" asp-route-SongId="@item.Id"><i class="fa-regular fa-heart"></i></a>                                        
+                                    </span>
                                 </li>
                             }
                         </ul>

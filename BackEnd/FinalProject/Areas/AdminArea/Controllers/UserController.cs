@@ -24,6 +24,22 @@ namespace FinalProject.Areas.AdminArea.Controllers
             _roleManager = roleManager;
             _signInManager = signInManager;
         }
+        public async Task<IActionResult> Index(string search, int page = 1, int take = 4)
+        {
+            List<AppUser> userCount = await _userManager.Users.ToListAsync();
+            var users = search != null ?
+               _userManager.Users
+                .Where(u => u.Fullname.Trim().ToLower().Contains(search.Trim().ToLower()))
+                : _userManager.Users.Skip((page - 1) * 4).Take(take);
+           int pageCount = CalculatePageCount(userCount, take);
+            UserReadVM userReadVM = new()
+            {
+                AppUsers = await users.ToListAsync(),
+                PageCount = pageCount,
+                CurrentPage = page
+            };
+            return View(userReadVM);
+        }
 
         [HttpGet]
         public async  Task<IActionResult> Create()
@@ -47,7 +63,7 @@ namespace FinalProject.Areas.AdminArea.Controllers
                 Fullname = userCreateVM.Fullname,
                 UserName = userCreateVM.Username,
                 Email = userCreateVM.Email,
-                EmailConfirmed = true
+                EmailConfirmed = true,
             };
             IdentityResult result = await _userManager.CreateAsync(user, userCreateVM.Password);
             if (!result.Succeeded)
@@ -65,14 +81,6 @@ namespace FinalProject.Areas.AdminArea.Controllers
             return RedirectToAction("Index");
         }
 
-        public async Task<IActionResult> Index(string search)
-        {
-            List<AppUser> users = search != null ?
-               await _userManager.Users
-                .Where(u => u.Fullname.Trim().ToLower().Contains(search.Trim().ToLower())).Where(u => !u.IsActive).ToListAsync()
-                : await _userManager.Users.ToListAsync();
-            return View(users);
-        }
 
         public async Task<IActionResult> Detail(string id)
         {
@@ -114,6 +122,10 @@ namespace FinalProject.Areas.AdminArea.Controllers
             await _userManager.DeleteAsync(user);
             return RedirectToAction("Index");
 
+        }
+        private int CalculatePageCount(List<AppUser> appUsers, int take)
+        {
+            return (int)Math.Ceiling((decimal)(appUsers.Count()) / take);
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿@model List<IdentityRole>
+﻿@model RoleReadVM
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Areas/AdminArea/Views/Shared/_AdminLayout.cshtml";
@@ -8,7 +8,7 @@
         <div class="card">
             <div class="card-body">
                 <div class="d-sm-flex align-items-center mb-4">
-                    <h4 class="card-title mb-sm-0">Products Inventory</h4>
+                    <h4 class="card-title mb-sm-0">Roles Inventory</h4>
                     <a asp-area="AdminArea" asp-controller="Dashboard" asp-action="Index" class="text-dark ml-auto mb-3 mb-sm-0"> View all Products</a>
 
                 </div>
@@ -30,7 +30,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach (IdentityRole item in Model)
+                            @foreach (IdentityRole item in Model.IdentityRoles)
                             {
                                 <tr>
                                     <td>
@@ -58,15 +58,14 @@
                     </table>
                 </div>
                 <div class="d-flex mt-4 flex-wrap">
-                    <p class="text-muted">Showing 1 to 10 of 57 entries</p>
                     <nav class="ml-auto">
                         <ul class="pagination separated pagination-info">
-                            <li class="page-item"><a href="#" class="page-link"><i class="icon-arrow-left"></i></a></li>
-                            <li class="page-item active"><a href="#" class="page-link">1</a></li>
-                            <li class="page-item"><a href="#" class="page-link">2</a></li>
-                            <li class="page-item"><a href="#" class="page-link">3</a></li>
-                            <li class="page-item"><a href="#" class="page-link">4</a></li>
-                            <li class="page-item"><a href="#" class="page-link"><i class="icon-arrow-right"></i></a></li>
+                            @for (int i = 1; i <= Model.PageCount; i++)
+                            {
+                                <li class="page-item @(Model.CurrentPage==i?"disabled":"")">
+                                    <a asp-action="index" asp-route-page="@i" class="page-link">@i</a>
+                                </li>
+                            }
                         </ul>
                     </nav>
                 </div>

@@ -1,5 +1,5 @@
-﻿using FinalProject.Areas.AdminArea.ViewModels.AlbumCRUD;
-using FinalProject.Areas.AdminArea.ViewModels.SliderCRUD;
+﻿
+using FinalProject.Areas.AdminArea.ViewModels.AlbumCRUD;
 using FinalProject.DAL;
 using FinalProject.Extensions;
 using FinalProject.Models;
@@ -8,8 +8,8 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using Org.BouncyCastle.Utilities;
 using System.Data;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 
 namespace FinalProject.Areas.AdminArea.Controllers
@@ -27,20 +27,22 @@ namespace FinalProject.Areas.AdminArea.Controllers
             _env = env;
         }
 
-        public async Task<IActionResult> Index(string search)
+        public async Task<IActionResult> Index(string search, int page = 1, int take = 4)
         {
+            List<Album> albumCount = await _appDbContext.Albums.Include(a => a.Artist).Include(g => g.Genre).Include(s => s.Songs).ToListAsync();
 
-            List<Album> albums = search != null ?
-   await _appDbContext.Albums.Include(a => a.Artist).Include(g => g.Genre).Include(s => s.Songs)
-    .Where(u => u.Name.Trim().ToLower().Contains(search.Trim().ToLower())).Where(u => !u.IsDeleted).ToListAsync()
-    : await _appDbContext.Albums.Include(a => a.Artist).Include(g => g.Genre).Include(s => s.Songs).ToListAsync();
+            var albums = search != null ?
+    _appDbContext.Albums.Include(a => a.Artist).Include(g => g.Genre).Include(s => s.Songs)
+    .Where(u => u.Name.Trim().ToLower().Contains(search.Trim().ToLower())).Where(u => !u.IsDeleted)
+    : _appDbContext.Albums.Skip((page - 1) * 4).Take(take).Include(a => a.Artist).Include(g => g.Genre).Include(s => s.Songs);
 
-            var query = _appDbContext.Albums.Include(a => a.Artist).Include(g => g.Genre).Include(s => s.Songs);
-            ViewBag.AlbumCount = query.Count();
+            int pageCount = CalculatePageCount(albumCount, take);
             AlbumReadVM albumVM = new()
             {
                 Genres = await _appDbContext.Genres.Where(g => !g.IsDeleted).ToListAsync(),
-                Albums = albums,
+                Albums = await albums.ToListAsync(),
+                PageCount = pageCount,
+                CurrentPage = page
             };
             return View(albumVM);
         }
@@ -55,6 +57,8 @@ namespace FinalProject.Areas.AdminArea.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(AlbumCreateVM albumCreateVM)
         {
+            ViewBag.Genres = new SelectList(await _appDbContext.Genres.ToListAsync(), "Id", "Name");
+            ViewBag.Artists = new SelectList(await _appDbContext.Artists.ToListAsync(), "Id", "Name");
             if (albumCreateVM.Photo == null)
             {
                 ModelState.AddModelError("Photo", "Upploaded is empty");
@@ -78,7 +82,7 @@ namespace FinalProject.Areas.AdminArea.Controllers
                 GenreId = albumCreateVM.GenreId,
                 Label = albumCreateVM.Label,
                 CreatedTime = albumCreateVM.CreatedTime,
-                IsDeleted = false
+                IsDeleted = albumCreateVM.IsDeleted
             };
             await _appDbContext.Albums.AddAsync(newAlbum);
             await _appDbContext.SaveChangesAsync();
@@ -100,12 +104,15 @@ namespace FinalProject.Areas.AdminArea.Controllers
                 CreatedTime = album.CreatedTime,
                 Label = album.Label,
                 GenreId = album.GenreId,
-                ArtistId = album.ArtistId
+                ArtistId = album.ArtistId,
+                IsDeleted =album.IsDeleted
             });
         }
         [HttpPost]
         public async Task<IActionResult> Update(int? id, AlbumUpdateVM albumUpdateVM)
         {
+            ViewBag.Genres = new SelectList(await _appDbContext.Genres.ToListAsync(), "Id", "Name");
+            ViewBag.Artists = new SelectList(await _appDbContext.Artists.ToListAsync(), "Id", "Name");
             if (id == null) return NotFound();
             Album? album = await _appDbContext.Albums.FirstOrDefaultAsync(c => c.Id == id);
             if (album == null) return NotFound();
@@ -133,6 +140,7 @@ namespace FinalProject.Areas.AdminArea.Controllers
                 album.ArtistId = albumUpdateVM.ArtistId;
                 album.GenreId = albumUpdateVM.GenreId;
                 album.Label = albumUpdateVM.Label;
+                album.IsDeleted = albumUpdateVM.IsDeleted;
 
                 await _appDbContext.SaveChangesAsync();
             }
@@ -183,5 +191,9 @@ namespace FinalProject.Areas.AdminArea.Controllers
             return View(albumReadVM);
 
         }
+    private int CalculatePageCount(List<Album> albums, int take)
+    {
+        return (int)Math.Ceiling((decimal)(albums.Count()) / take);
+    }
     }
 }

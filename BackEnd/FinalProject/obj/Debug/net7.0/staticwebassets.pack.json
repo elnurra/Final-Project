@@ -97,6 +97,18 @@
       "PackagePath": "staticwebassets\\Admin\\gulp-tasks\\vendors.js"
     },
     {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\Admin\\images\\AdminImages\\Ilkin.jpg",
+      "PackagePath": "staticwebassets\\Admin\\images\\AdminImages\\Ilkin.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\Admin\\images\\AdminImages\\Vasif.jpg",
+      "PackagePath": "staticwebassets\\Admin\\images\\AdminImages\\Vasif.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\Admin\\images\\AdminImages\\isagi.jpg",
+      "PackagePath": "staticwebassets\\Admin\\images\\AdminImages\\isagi.jpg"
+    },
+    {
       "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\Admin\\images\\auth\\lockscreen-bg.jpg",
       "PackagePath": "staticwebassets\\Admin\\images\\auth\\lockscreen-bg.jpg"
     },
@@ -3069,6 +3081,10 @@
       "PackagePath": "staticwebassets\\Template\\Change.html"
     },
     {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\Template\\Contact.html",
+      "PackagePath": "staticwebassets\\Template\\Contact.html"
+    },
+    {
       "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\Template\\Letter.html",
       "PackagePath": "staticwebassets\\Template\\Letter.html"
     },
@@ -3213,20 +3229,8 @@
       "PackagePath": "staticwebassets\\images\\Elnur.jpg"
     },
     {
-      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\images\\Ilkin.jpg",
-      "PackagePath": "staticwebassets\\images\\Ilkin.jpg"
-    },
-    {
       "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\images\\MyDearMelanCholy.jpg",
       "PackagePath": "staticwebassets\\images\\MyDearMelanCholy.jpg"
-    },
-    {
-      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\images\\Vasif.jpg",
-      "PackagePath": "staticwebassets\\images\\Vasif.jpg"
-    },
-    {
-      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\images\\Willy William.jpg",
-      "PackagePath": "staticwebassets\\images\\Willy William.jpg"
     },
     {
       "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\images\\about.png",
@@ -3403,6 +3407,22 @@
     {
       "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\js\\search.js",
       "PackagePath": "staticwebassets\\js\\search.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\songs\\Arctic Monkeys - Do I Wanna Know.mp3",
+      "PackagePath": "staticwebassets\\songs\\Arctic Monkeys - Do I Wanna Know.mp3"
+    },
+    {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\songs\\Arctic Monkeys - I Wanna Be Yours.mp3",
+      "PackagePath": "staticwebassets\\songs\\Arctic Monkeys - I Wanna Be Yours.mp3"
+    },
+    {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\songs\\Arctic Monkeys - R U Mine.mp3",
+      "PackagePath": "staticwebassets\\songs\\Arctic Monkeys - R U Mine.mp3"
+    },
+    {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\songs\\Arctic Monkeys - Why'd You Only Call Me When You're High.mp3",
+      "PackagePath": "staticwebassets\\songs\\Arctic Monkeys - Why'd You Only Call Me When You're High.mp3"
     },
     {
       "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\songs\\Daddy Issues.mp3",

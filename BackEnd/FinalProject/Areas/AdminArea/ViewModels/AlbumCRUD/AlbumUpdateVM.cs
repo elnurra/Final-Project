@@ -15,6 +15,8 @@ namespace FinalProject.Areas.AdminArea.ViewModels.AlbumCRUD
         public Genre Genre { get; set; } = null!;
         public List<Song> Songs { get; set; } = null!;
         public List<Comment> Comments { get; set; } = null!;
+        public bool IsDeleted { get; set; }
+
 
     }
 }

@@ -1,4 +1,5 @@
 ﻿using FinalProject.Areas.AdminArea.ViewModels.RoleCRUD;
+using FinalProject.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -18,17 +19,25 @@ namespace FinalProject.Areas.AdminArea.Controllers
             _roleManager = roleManager;
         }
 
-        public async Task <IActionResult> Index(string search)
+        public async Task <IActionResult> Index(string search, int page = 1, int take = 4)
         {
+            List<IdentityRole> roleCount = await _roleManager.Roles.ToListAsync();
 #pragma warning disable CS8602 // Разыменование вероятной пустой ссылки.
-            List<IdentityRole> roles = search != null ?
-  await _roleManager.Roles
+            var roles = search != null ?
+  _roleManager.Roles
    .Where(u => u.Name.Trim()
    .ToLower()
-   .Contains(search.Trim().ToLower())).ToListAsync()
-   : await _roleManager.Roles.ToListAsync();
+   .Contains(search.Trim().ToLower()))
+   :  _roleManager.Roles.Skip((page - 1) * 4).Take(take);
 #pragma warning restore CS8602 // Разыменование вероятной пустой ссылки.
-            return View(roles);
+            int pageCount = CalculatePageCount(roleCount, take);
+            RoleReadVM roleReadVM = new()
+            {
+                IdentityRoles = await roles.ToListAsync(),
+                PageCount = pageCount,
+                CurrentPage = page
+            };
+            return View(roleReadVM);
         }
         [HttpGet]
         public IActionResult Create()
@@ -48,7 +57,8 @@ namespace FinalProject.Areas.AdminArea.Controllers
                     return RedirectToAction("Index");
                 }
             }
-            return View();
+            ModelState.AddModelError("Role", "Role should not be empty");
+            return View(roleName) ;
         }
         public async Task<IActionResult> Delete(string id)
         {
@@ -94,7 +104,10 @@ namespace FinalProject.Areas.AdminArea.Controllers
             }
             return View(result);
         }
-
+        private int CalculatePageCount(List<IdentityRole> roles, int take)
+        {
+            return (int)Math.Ceiling((decimal)(roles.Count()) / take);
+        }
 
 
 

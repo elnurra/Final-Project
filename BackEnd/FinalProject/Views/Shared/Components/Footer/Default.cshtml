@@ -2,23 +2,24 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <form class="contact_bg">
+                <div class="text-danger" asp-validation-summary="All"></div>
+                <form asp-controller="Home" asp-action="ContactUser" class="contact_bg">
                     <div class="row">
                         <div class="col-md-12">
                             <div class="titlepage">
                                 <h2>Contact us</h2>
                             </div>
                             <div class="col-md-12">
-                                <input class="contactus" placeholder="Your Name" type="text" name="Your Name">
+                                <input class="contactus" placeholder="Your Name" type="text" name="Name">
                             </div>
                             <div class="col-md-12">
-                                <input class="contactus" placeholder="Your Email" type="email" name="Your Email">
+                                <input class="contactus" placeholder="Your Email" type="email" name="Email">
                             </div>
                             <div class="col-md-12">
-                                <input class="contactus" placeholder="Your Phone" type="number" name="Your Phone">
+                                <input class="contactus" placeholder="Your Phone" type="number" name="Number">
                             </div>
                             <div class="col-md-12">
-                                <textarea class="textarea" placeholder="Message" type="text" name="Message"></textarea>
+                                <textarea class="textarea" placeholder="Message" type="text" name="Content"></textarea>
                             </div>
                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
                                 <button class="send">Send</button>

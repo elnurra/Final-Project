@@ -1,20 +1,14 @@
 ﻿@{
     if (User.Identity.IsAuthenticated)
     {
-        @if (User.IsInRole("SuperAdmin"))
+        @if (User.IsInRole("SuperAdmin") || User.IsInRole("Admin"))
         {
             <li><a asp-area="AdminArea" asp-controller="Dashboard" asp-action="index"> Admin </a></li>
             <li><a asp-controller="account" asp-action="logout">Logout</a></li>
-        }
-        else if (User.IsInRole("Admin"))
-        {
-            <li><a asp-area="AdminArea" asp-controller="Dashboard" asp-action="index"> Admin </a></li>
-            <li><a asp-controller="account" asp-action="logout">Logout</a></li>
-
         }
         else if (User.IsInRole("Member"))
         {
-            <li> <a asp-controller="Account" asp-action="Index"> Welcome @ViewBag.Fullname </a></li>
+            <li> <a asp-controller="User" asp-action="Index"> Welcome @ViewBag.Fullname </a></li>
             <li><a asp-controller="Account" asp-action="Logout">Logout</a></li>
         }
     }

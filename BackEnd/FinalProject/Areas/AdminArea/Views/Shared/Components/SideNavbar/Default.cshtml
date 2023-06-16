@@ -1,0 +1,90 @@
+﻿@model AppUser
+<nav class="sidebar sidebar-offcanvas" id="sidebar">
+    <ul class="nav">
+        <li class="nav-item nav-profile">
+            <a href="#" class="nav-link">
+                <div class="profile-image">
+                    @if (Model.ImageUrl == null || Model.ImageUrl == string.Empty)
+                    {
+                        <img class="img-xs rounded-circle" src="~/Admin/images/user-admin.jpg" alt="">
+                    }
+                    else
+                    {
+                        <img class="img-xs rounded-circle" src="~/Admin/images/AdminImages/@Model.ImageUrl" alt="">
+                    }
+                    <div class="dot-indicator bg-success"></div>
+                </div>
+                <div class="text-wrapper">
+                    <p class="profile-name">@Model.Fullname</p>
+                    <p class="designation">Administrator</p>
+                </div>
+
+            </a>
+        </li>
+        <li class="nav-item nav-category">
+            <span class="nav-link">Dashboard</span>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" asp-area="AdminArea" asp-controller="Dashboard" asp-action="Index">
+                <span class="menu-title">Dashboard</span>
+                <i class="icon-screen-desktop menu-icon"></i>
+            </a>
+        </li>
+        <li class="nav-item nav-category"><span class="nav-link">CRUD Elements</span></li>
+        <li class="nav-item">
+            <a asp-area="AdminArea" asp-controller="Genre" asp-action="Index" class="nav-link">
+                <span class="menu-title">Genre</span>
+                <i class="icon-layers menu-icon"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" asp-area="AdminArea" asp-controller="Slider" asp-action="Index">
+                <span class="menu-title">Slider</span>
+                <i class=" icon-share-alt menu-icon"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" asp-area="AdminArea" asp-controller="Artist" asp-action="Index">
+                <span class="menu-title">Artist</span>
+                <i class="icon-user-follow menu-icon"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" asp-area="AdminArea" asp-controller="Album" asp-action="Index">
+                <span class="menu-title">Album</span>
+                <i class="icon-picture menu-icon"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" asp-area="AdminArea" asp-controller="Event" asp-action="Index">
+                <span class="menu-title">Event</span>
+                <i class="icon-paper-plane menu-icon"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" asp-area="AdminArea" asp-controller="Song" asp-action="Index">
+                <span class="menu-title">Song</span>
+                <i class="icon-music-tone-alt menu-icon"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" asp-area="AdminArea" asp-controller="User" asp-action="Index">
+                <span class="menu-title">User</span>
+                <i class="icon-user menu-icon"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" asp-area="AdminArea" asp-controller="Role" asp-action="Index">
+                <span class="menu-title">Role</span>
+                <i class="icon-people menu-icon"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" asp-area="AdminArea" asp-controller="Contact" asp-action="Index">
+                <span class="menu-title">Contact</span>
+                <i class="icon-phone menu-icon"></i>
+            </a>
+        </li>
+
+    </ul>
+</nav>

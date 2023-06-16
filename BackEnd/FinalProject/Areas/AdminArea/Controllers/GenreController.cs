@@ -1,6 +1,7 @@
 ﻿using FinalProject.Areas.AdminArea.ViewModels.GenreCRUD;
 using FinalProject.DAL;
 using FinalProject.Models;
+using FinalProject.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -20,13 +21,22 @@ namespace FinalProject.Areas.AdminArea.Controllers
             _appDbContext = appDbContext;
         }
 
-        public async Task<IActionResult> Index(string search)
+        public async Task<IActionResult> Index(string search, int page = 1, int take = 4)
         {
-            List<Genre> genres = search != null ?
-               await _appDbContext.Genres
-                .Where(u => u.Name.Trim().ToLower().Contains(search.Trim().ToLower())).Where(u => !u.IsDeleted).ToListAsync()
-                : await _appDbContext.Genres.ToListAsync();
-            return View(genres);
+            List<Genre> genreCount = await _appDbContext.Genres.ToListAsync();
+            var genres = search != null ?
+                _appDbContext.Genres
+                .Where(u => u.Name.Trim().ToLower().Contains(search.Trim().ToLower()))
+                : _appDbContext.Genres.Skip((page - 1) * 4).Take(take);
+            int pageCount = CalculatePageCount(genreCount,take);
+            GenreReadVM genreReadVM = new()
+            {
+                CurrentPage = page,
+                PageCount = pageCount,
+                Genres = await genres.ToListAsync()
+            };
+
+            return View(genreReadVM);
         }
         public IActionResult Create()
         {
@@ -45,7 +55,8 @@ namespace FinalProject.Areas.AdminArea.Controllers
             }
             Genre newGenre = new()
             {
-                Name = genre.Name
+                Name = genre.Name,
+                IsDeleted = genre.IsDeleted,
             };
             _appDbContext.Genres.Add(newGenre);
             _appDbContext.SaveChanges();
@@ -54,7 +65,7 @@ namespace FinalProject.Areas.AdminArea.Controllers
         public async Task<IActionResult> Update(int? id)
         {
             if (id == null) return NotFound();
-            Genre? genre = await _appDbContext.Genres.SingleOrDefaultAsync(c => c.Id == id);
+            Genre? genre = await _appDbContext.Genres.FirstOrDefaultAsync(c => c.Id == id);
             if (genre == null) return NotFound();
             return View(new GenreUpdateVM { Name = genre.Name });
         }
@@ -64,7 +75,7 @@ namespace FinalProject.Areas.AdminArea.Controllers
         {
 
             if (id == null) return NotFound();
-            Genre? existGenre = await _appDbContext.Genres.SingleOrDefaultAsync(c => c.Id == id);
+            Genre? existGenre = await _appDbContext.Genres.FirstOrDefaultAsync(c => c.Id == id);
             if (!ModelState.IsValid) return View();
             bool isExistGenre = await _appDbContext.Genres.AnyAsync(c => c.Name.ToLower() == updateVM.Name.ToLower() && c.Id != id);
             if (isExistGenre)
@@ -74,16 +85,17 @@ namespace FinalProject.Areas.AdminArea.Controllers
             }
             if (existGenre == null) return NotFound();
             existGenre.Name = updateVM.Name;
-            _appDbContext.SaveChanges();
+            existGenre.IsDeleted = updateVM.IsDeleted;
+            await _appDbContext.SaveChangesAsync();
             return RedirectToAction("Index");
         }
         public async Task <IActionResult> Delete(int? id)
         {
             if (id == null) return NotFound();
-            Genre? genre = await _appDbContext.Genres.SingleOrDefaultAsync(c => c.Id == id);
+            Genre? genre = await _appDbContext.Genres.FirstOrDefaultAsync(c => c.Id == id);
             if (genre == null) return NotFound();
             _appDbContext.Genres.Remove(genre);
-            _appDbContext.SaveChanges();
+           await _appDbContext.SaveChangesAsync();
             return RedirectToAction("Index");
         }
 
@@ -93,6 +105,10 @@ namespace FinalProject.Areas.AdminArea.Controllers
             Genre? genre = await _appDbContext.Genres.FirstOrDefaultAsync(c => c.Id == id);
             if (genre == null) return NotFound();
             return View(genre);
+        }
+        private int CalculatePageCount(List<Genre> genres, int take)
+        {
+            return (int)Math.Ceiling((decimal)(genres.Count()) / take);
         }
     }
 

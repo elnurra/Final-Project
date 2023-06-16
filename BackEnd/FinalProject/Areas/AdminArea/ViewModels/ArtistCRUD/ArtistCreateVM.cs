@@ -6,5 +6,7 @@ namespace FinalProject.Areas.AdminArea.ViewModels.ArtistCRUD
     {
         [Required, MaxLength(50)]
         public string Name { get; set; } = null!;
+        public bool IsDeleted {get; set; } 
+        
     }
 }

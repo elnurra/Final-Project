@@ -12,30 +12,40 @@
                     <label asp-for="Photo">Photo</label>
                     <input asp-for="Photo" class="form-control" id="exampleInputEmail1" placeholder="Name">
                     <span class="text-danger" asp-validation-for="Photo"></span>
+                    <br />
                     <label asp-for="Name">Name</label>
                     <input asp-for="Name" class="form-control" id="exampleInputEmail1" placeholder="Title">
                     <span class="text-danger" asp-validation-for="Name"></span>
+                    <br />
                     <div class="form-group">
                         <label asp-for="GenreId">Genre</label>
                         <select asp-for="GenreId" class="form-select" asp-items="ViewBag.Genres" aria-label="Default select example">
                         </select>
                         <span class="text-danger" asp-validation-for="GenreId"></span>
                     </div>
+                    <br />
                     <div class="form-group">
                         <label asp-for="ArtistId">Artist</label>
                         <select asp-for="ArtistId" class="form-select" asp-items="ViewBag.Artists" aria-label="Default select example">
                         </select>
                         <span class="text-danger" asp-validation-for="ArtistId"></span>
                     </div>
+                    <br />
                     <label asp-for="CreatedTime">Release Date:</label>
                     <input asp-for="CreatedTime" class="form-control" id="exampleInputEmail1" placeholder="Title">
                     <span class="text-danger" asp-validation-for="CreatedTime"></span>
+                    <br />
                     <label asp-for="Label">Label</label>
                     <input asp-for="Label" class="form-control" id="exampleInputEmail1" placeholder="Title">
                     <span class="text-danger" asp-validation-for="Label"></span>
+                    <br />
+                    <label asp-for="IsDeleted">Is Deleted?</label>
+                    <input asp-for="IsDeleted" class="form-control" id="exampleInputEmail1" placeholder="Title">
+                    <span class="text-danger" asp-validation-for="IsDeleted"></span>
+                    
                 </div>
-                <button type="submit" class="btn btn-success mr-2">Submit</button>
-                <a asp-action="Index" class="btn btn-link">Cancel</a>
+                <button type="submit" class="btn btn-outline-success">Submit</button>
+                <a asp-action="Index" class="btn btn-outline-danger">Cancel</a>
             </form>
         </div>
     </div>

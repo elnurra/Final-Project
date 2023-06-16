@@ -17,27 +17,27 @@
                     </div>
                 </div>
                 <div class="row report-inner-cards-wrapper">
-                    <div class=" col-md -6 col-xl report-inner-card">
+                    <div class=" col-md-3 col-xl report-inner-card">
                         <div class="inner-card-text">
                             <span class="report-title">Albums</span>
                             <h4>@Model.Albums.Count()</h4>
 
                         </div>
                         <div class="inner-card-icon bg-success">
-                            <i class="icon-earphones-alt"></i>
+                            <i class="icon-picture"></i>
                         </div>
                     </div>
-                    <div class="col-md-6 col-xl report-inner-card">
+                    <div class="col-md-3 col-xl report-inner-card">
                         <div class="inner-card-text">
                             <span class="report-title">Artists</span>
                             <h4>@Model.Artists.Count()</h4>
 
                         </div>
                         <div class="inner-card-icon bg-danger">
-                            <i class="icon-equalizer"></i>
+                            <i class="icon-user-follow"></i>
                         </div>
                     </div>
-                    <div class="col-md-6 col-xl report-inner-card">
+                    <div class="col-md-3 col-xl report-inner-card">
                         <div class="inner-card-text">
                             <span class="report-title">SONGS:</span>
                             <h4>@Model.Songs.Count()</h4>
@@ -47,20 +47,63 @@
                             <i class="icon-music-tone-alt"></i>
                         </div>
                     </div>
-                    <div class="col-md-6 col-xl report-inner-card">
+                    <div class="col-md-3 col-xl report-inner-card">
                         <div class="inner-card-text">
                             <span class="report-title">GENRES</span>
                             <h4>@Model.Genres.Count()</h4>
 
                         </div>
                         <div class="inner-card-icon bg-primary">
-                            <i class="icon-diamond"></i>
+                            <i class="icon-layers"></i>
                         </div>
                     </div>
                 </div>
+                <div style="margin-top:50px" class="row report-inner-cards-wrapper">
+                    <div class="col-md-3 col-xl report-inner-card">
+                        <div class="inner-card-text">
+                            <span class="report-title">Users</span>
+                            <h4>@Model.AppUsers.Count()</h4>
+
+                        </div>
+                        <div class="inner-card-icon bg-primary">
+                            <i class="icon-user"></i>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-xl report-inner-card">
+                        <div class="inner-card-text">
+                            <span class="report-title">Sliders</span>
+                            <h4>@Model.Sliders.Count()</h4>
+
+                        </div>
+                        <div class="inner-card-icon bg-warning">
+                            <i class="icon-share-alt"></i>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-xl report-inner-card">
+                        <div class="inner-card-text">
+                            <span class="report-title">Events</span>
+                            <h4>@Model.Events.Count()</h4>
+
+                        </div>
+                        <div class="inner-card-icon bg-success">
+                            <i class="icon-paper-plane"></i>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-xl report-inner-card">
+                        <div class="inner-card-text">
+                            <span class="report-title">Roles</span>
+                            <h4>@Model.IdentityRoles.Count()</h4>
+
+                        </div>
+                        <div class="inner-card-icon bg-danger">
+                            <i class="icon-people"></i>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
+
+
 </div>
-
-

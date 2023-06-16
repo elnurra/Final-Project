@@ -2586,3 +2586,7 @@ ul.album-details li {
         color: #fff;
         cursor: pointer;
     }
+.full-half{
+    display:flex;
+    justify-content:space-between
+}

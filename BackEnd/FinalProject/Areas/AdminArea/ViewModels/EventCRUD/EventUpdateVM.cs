@@ -20,5 +20,6 @@ namespace FinalProject.Areas.AdminArea.ViewModels.EventCRUD
         [Column(TypeName = "decimal(18,0)")]
         public decimal Price { get; set; }
         public List<Comment> Comments { get; set; } = null!;
+        public bool IsDeleted { get; set; }
     }
 }

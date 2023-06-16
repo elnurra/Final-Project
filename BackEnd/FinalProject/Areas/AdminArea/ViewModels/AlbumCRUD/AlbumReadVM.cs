@@ -2,7 +2,7 @@
 
 namespace FinalProject.Areas.AdminArea.ViewModels.AlbumCRUD
 {
-    public class AlbumReadVM
+    public class AlbumReadVM:BaseVM
     {
         public List<Genre> Genres { get; set; } = null!;
         public Album Album { get; set; } = null!;

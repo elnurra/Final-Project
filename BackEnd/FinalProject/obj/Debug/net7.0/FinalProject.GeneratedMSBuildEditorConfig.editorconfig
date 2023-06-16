@@ -16,6 +16,14 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\user\Documents\Code Academy\Final Project\BackEnd\FinalProject
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/user/Documents/Code Academy/Final Project/BackEnd/FinalProject/Areas/AdminArea/Views/Account/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXEFjY291bnRcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Documents/Code Academy/Final Project/BackEnd/FinalProject/Areas/AdminArea/Views/Account/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXEFjY291bnRcVXBkYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/user/Documents/Code Academy/Final Project/BackEnd/FinalProject/Areas/AdminArea/Views/Album/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXEFsYnVtXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -46,6 +54,18 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/user/Documents/Code Academy/Final Project/BackEnd/FinalProject/Areas/AdminArea/Views/Artist/Update.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXEFydGlzdFxVcGRhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Documents/Code Academy/Final Project/BackEnd/FinalProject/Areas/AdminArea/Views/Contact/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXENvbnRhY3RcRGV0YWlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Documents/Code Academy/Final Project/BackEnd/FinalProject/Areas/AdminArea/Views/Contact/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXENvbnRhY3RcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Documents/Code Academy/Final Project/BackEnd/FinalProject/Areas/AdminArea/Views/Contact/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXENvbnRhY3RcVXBkYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/user/Documents/Code Academy/Final Project/BackEnd/FinalProject/Areas/AdminArea/Views/Dashboard/Index.cshtml]
@@ -102,6 +122,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/user/Documents/Code Academy/Final Project/BackEnd/FinalProject/Areas/AdminArea/Views/Shared/Components/Header/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXFNoYXJlZFxDb21wb25lbnRzXEhlYWRlclxEZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Documents/Code Academy/Final Project/BackEnd/FinalProject/Areas/AdminArea/Views/Shared/Components/SideNavbar/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXFNoYXJlZFxDb21wb25lbnRzXFNpZGVOYXZiYXJcRGVmYXVsdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/user/Documents/Code Academy/Final Project/BackEnd/FinalProject/Areas/AdminArea/Views/Shared/_AdminLayout.cshtml]
@@ -230,6 +254,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/user/Documents/Code Academy/Final Project/BackEnd/FinalProject/Views/Shared/_ValidationPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Documents/Code Academy/Final Project/BackEnd/FinalProject/Views/User/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/user/Documents/Code Academy/Final Project/BackEnd/FinalProject/Views/_ViewImports.cshtml]

@@ -25,7 +25,6 @@ namespace FinalProject.Controllers
         }
 
 
-
         [HttpGet]
         public IActionResult Register()
         {

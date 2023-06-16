@@ -23,123 +23,16 @@
     <!-- End layout styles -->
     <link rel="shortcut icon" href="~/Admin/images/music_icon.png" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
 </head>
 
 <body>
     <div class="container-scroller">
-        <!-- partial:partials/_navbar.html -->
-        <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
-            <div class="navbar-brand-wrapper d-flex align-items-center">
-                <a class="navbar-brand brand-logo" asp-area="AdminArea" asp-controller="Dashboard" asp-action="Index">
-                    <img src="~/Admin/images/profile.png" alt="logo" class="logo-dark" />
-                </a>
-                <a class="navbar-brand brand-logo-mini" asp-area="AdminArea" asp-controller="Dashboard" asp-action="Index"><img src="~/Admin/images/cover.png" alt="logo" /></a>
-            </div>
-            <div class="navbar-menu-wrapper d-flex align-items-center flex-grow-1">
-                <h5 class="mb-0 font-weight-medium d-none d-lg-flex">Welcome MUSICMAN dashboard!</h5>
-                <ul class="navbar-nav navbar-nav-right ml-auto">
 
+        @await Component.InvokeAsync("Header")
 
-
-                    <li class="nav-item dropdown d-none d-xl-inline-flex user-dropdown">
-                        <a class="nav-link dropdown-toggle" id="UserDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
-                            <img class="img-xs rounded-circle ml-2" src="~/Admin/images/dashboard/user-admin.jpg" alt=""> <span class="font-weight-normal"> Elnur Azizov </span>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
-                            <div class="dropdown-header text-center">
-                                <p class="mb-1 mt-3">Elnur Azizov</p>
-                                <p class="font-weight-light text-muted mb-0">elnurazizov2617@gmail.com</p>
-                            </div>
-                            <a asp-area="" asp-controller="Account" asp-action="Logout" class="dropdown-item"><i class="dropdown-item-icon icon-power text-primary"></i>Sign Out</a>
-                        </div>
-                    </li>
-                </ul>
-                <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button"
-                        data-toggle="offcanvas">
-                    <span class="icon-menu"></span>
-                </button>
-            </div>
-        </nav>
-        <!-- partial -->
         <div class="container-fluid page-body-wrapper">
-            <!-- partial:partials/_sidebar.html -->
-            <nav class="sidebar sidebar-offcanvas" id="sidebar">
-                <ul class="nav">
-                    <li class="nav-item nav-profile">
-                        <a href="#" class="nav-link">
-                            <div class="profile-image">
-                                <img class="img-xs rounded-circle" src="~/Admin/images/dashboard/user-admin.jpg" alt="profile image">
-                                <div class="dot-indicator bg-success"></div>
-                            </div>
-                            <div class="text-wrapper">
-                                <p class="profile-name">Elnur</p>
-                                <p class="designation">Administrator</p>
-                            </div>
-
-                        </a>
-                    </li>
-                    <li class="nav-item nav-category">
-                        <span class="nav-link">Dashboard</span>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" asp-area="AdminArea" asp-controller="Dashboard" asp-action="Index">
-                            <span class="menu-title">Dashboard</span>
-                            <i class="icon-screen-desktop menu-icon"></i>
-                        </a>
-                    </li>
-                    <li class="nav-item nav-category"><span class="nav-link">CRUD Elements</span></li>
-                    <li class="nav-item">
-                        <a asp-area="AdminArea" asp-controller="Genre" asp-action="Index" class="nav-link">
-                            <span class="menu-title">Genre</span>
-                            <i class="icon-layers menu-icon"></i>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" asp-area="AdminArea" asp-controller="Slider" asp-action="Index">
-                            <span class="menu-title">Slider</span>
-                            <i class=" icon-share-alt menu-icon"></i>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" asp-area="AdminArea" asp-controller="Artist" asp-action="Index">
-                            <span class="menu-title">Artist</span>
-                            <i class="icon-user-follow menu-icon"></i>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" asp-area="AdminArea" asp-controller="Album" asp-action="Index">
-                            <span class="menu-title">Album</span>
-                            <i class="icon-picture menu-icon"></i>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" asp-area="AdminArea" asp-controller="Event" asp-action="Index">
-                            <span class="menu-title">Event</span>
-                            <i class="icon-paper-plane menu-icon"></i>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" asp-area="AdminArea" asp-controller="Song" asp-action="Index">
-                            <span class="menu-title">Song</span>
-                            <i class="icon-music-tone-alt menu-icon"></i>
-                        </a>
-                    </li> 
-                    <li class="nav-item">
-                        <a class="nav-link" asp-area="AdminArea" asp-controller="User" asp-action="Index">
-                            <span class="menu-title">User</span>
-                            <i class="icon-user menu-icon"></i>
-                        </a>
-                    </li> 
-                    <li class="nav-item">
-                        <a class="nav-link" asp-area="AdminArea" asp-controller="Role" asp-action="Index">
-                            <span class="menu-title">Role</span>
-                            <i class="icon-people menu-icon"></i>
-                        </a>
-                    </li>
-
-                </ul>
-            </nav>
+            @await Component.InvokeAsync("SideNavbar")
             <div class="main-panel">
                 @RenderBody()
                 @RenderSection("Play",false)

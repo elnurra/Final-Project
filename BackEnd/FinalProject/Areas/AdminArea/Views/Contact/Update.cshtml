@@ -1,0 +1,37 @@
+﻿@model Contact
+@{
+    ViewData["Title"] = "Update";
+    Layout = "~/Areas/AdminArea/Views/Shared/_AdminLayout.cshtml";
+}
+<div class="container">
+    <h1>Contact Update</h1>
+    <ul style="list-style-type:none">
+        <li style="font-size:30px;text-align:center">
+            Contact Id - @Model.Id
+        </li>
+        <li style="font-size:30px;text-align:center">
+            Contact Name - @Model.Name
+        </li>
+        <li style="font-size:30px;text-align:center">
+            Contact Number - @Model.Number
+        </li>
+        <li style="font-size:30px;text-align:center">
+            Contact Message:
+            <p>@Model.Content</p>
+        </li>
+
+    </ul>
+    <div class="form-group">
+        <form asp-action="Update">
+        <label for="exampleTextarea">Your Responce For Contact:</label>
+            <textarea class="form-control" id="exampleTextarea" rows="5" name="response"></textarea>
+        <button type="submit" class="btn btn-outline-github">Reply</button>
+            <a class="btn btn-outline-danger" asp-action="Index">Go back</a>
+        </form>
+    </div>
+</div>
+
+
+
+<a class="btn btn-outline-danger" asp-action="Index">Go back</a>
+

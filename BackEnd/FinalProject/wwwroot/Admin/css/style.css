@@ -10668,6 +10668,11 @@ code {
   width: 37px;
   height: 37px; }
 
+.img-md{
+    width:100px;
+    height:100px;
+}
+
 .img-ss {
   width: 26px;
   height: 26px; }
@@ -11935,12 +11940,11 @@ dl {
 .pagination.separated .page-item {
   margin-left: 2px;
   margin-right: 2px; }
-  .pagination.separated .page-item:first-child {
-    margin-left: 0; }
-  .pagination.separated .page-item:last-child {
-    margin-right: 0; }
+
   .pagination.separated .page-item .page-link {
-    border-radius: 2px; }
+    border-radius: 2px;
+    font-size:17px;
+  }
 
 .pagination.rounded .page-item:first-child .page-link, .pagination.loader-demo-box .page-item:first-child .page-link {
   border-radius: 25px 0 0 25px; }
@@ -13528,13 +13532,16 @@ dl {
 }
 
     #album-songs .songs-item .fa-heart {
-        color: white;
         font-size: 30px;
         color: red;
     }
 
     #album-songs .songs-item .fa-solid .fa-heart {
-        color: white;
+
+        font-size: 30px;
+        color: red;
+    }
+    #album-songs .songs-item .fa-solid .fa-trash {
         font-size: 30px;
         color: red;
     }
@@ -13553,4 +13560,11 @@ dl {
     display: block;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
+}
+
+.page-item .disabled{
+    background-color:grey;
+}
+.page-item .disabled:hover {
+    background-color:grey;
 }

@@ -1,5 +1,4 @@
-﻿
-@model GenreCreateVM
+﻿@model GenreCreateVM
 @{
     ViewData["Title"] = "Create";
     Layout = "~/Areas/AdminArea/Views/Shared/_AdminLayout.cshtml";
@@ -12,9 +11,13 @@
                     <label asp-for="Name">Name</label>
                     <input asp-for="Name" class="form-control" id="exampleInputEmail1" placeholder="Name">
                     <span class="text-danger" asp-validation-for="Name"></span>
+                    <br />
+                    <label asp-for="IsDeleted">Is Deleted?</label>
+                    <input asp-for="IsDeleted" class="form-control" id="exampleInputEmail1" placeholder="Title">
+                    <span class="text-danger" asp-validation-for="IsDeleted"></span>
                 </div>
-                <button type="submit" class="btn btn-primary mr-2">Submit</button>
-                <button type="submit" class="btn btn-link">Cancel</button>
+                <button type="submit" class="btn btn-outline-success">Submit</button>
+                <a asp-action="Index" class="btn btn-outline-danger">Cancel</a>
             </form>
         </div>
     </div>

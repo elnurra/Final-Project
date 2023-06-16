@@ -1,4 +1,5 @@
 ﻿using FinalProject.Models;
+using Microsoft.AspNetCore.Identity;
 
 namespace FinalProject.Areas.AdminArea.ViewModels
 {
@@ -8,5 +9,9 @@ namespace FinalProject.Areas.AdminArea.ViewModels
         public List<Artist> Artists { get; set; } = null!;
         public List<Album> Albums { get; set; } = null!;
         public List<Song> Songs { get; set; } = null!;
+        public List<Slider> Sliders { get; set; } = null!;
+        public List<AppUser> AppUsers { get; set; } = null!;
+        public List<Event> Events { get; set; } = null!;
+        public List<IdentityRole> IdentityRoles { get; set; } = null!;
     }
 }

@@ -21,7 +21,7 @@ namespace FinalProject.Controllers
         public async Task<IActionResult> Index(int page = 1, int take = 4)
         {
             var query = _appDbContext.Albums.Include(a => a.Artist).Include(g => g.Genre).Include(s => s.Songs);
-            List<Album> albums = await query.Where(a=>!a.IsDeleted).ToListAsync();
+            List<Album> albums = await query.Where(a => !a.IsDeleted).ToListAsync();
 
             ViewBag.AlbumCount = query.Count();
             int pageCount = CalculatePageCount(albums, take);
@@ -33,7 +33,7 @@ namespace FinalProject.Controllers
                 Take(take).
                 ToListAsync(),
                 PageCount = pageCount,
-                CurrentPage=page
+                CurrentPage = page
             };
 
             return View(albumVM);
@@ -66,7 +66,7 @@ namespace FinalProject.Controllers
         [HttpPost]
         public async Task<IActionResult> AddComment(string Content, int albumId)
         {
-            if (Content==null)
+            if (Content == null)
             {
                 ModelState.AddModelError("", "Comment cannot be empty!");
                 return RedirectToAction("Detail", new { id = albumId });
@@ -107,6 +107,31 @@ namespace FinalProject.Controllers
             _appDbContext.Comments.Remove(comment);
             _appDbContext.SaveChanges();
             return RedirectToAction("Detail", new { id = comment.AlbumId });
+        }
+
+        public async Task<IActionResult> AddSongPlaylist(int? SongId)
+        {
+            if (SongId==null)
+            {
+                return NotFound();
+            }
+            if (!User.Identity.IsAuthenticated)
+            {
+                return RedirectToAction("Login","Account");
+            }
+            AppUser? user = await _userManager.FindByNameAsync(User.Identity.Name);
+            UserSong? songCheck = await _appDbContext.UserSongs.FirstOrDefaultAsync(s=>s.Song.Id ==SongId);
+            if (songCheck != null) {
+                return RedirectToAction("Index");
+            }
+            UserSong userSong = new()
+            {
+                AppUserId = user.Id,
+                SongId = (int)SongId,
+            };
+            await _appDbContext.UserSongs.AddAsync(userSong);
+            await _appDbContext.SaveChangesAsync();
+            return RedirectToAction("Index");
         }
 
     }

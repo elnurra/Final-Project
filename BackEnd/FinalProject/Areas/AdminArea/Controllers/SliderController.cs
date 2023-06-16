@@ -22,15 +22,23 @@ namespace FinalProject.Areas.AdminArea.Controllers
             _env = env;
         }
 
-        public async Task<IActionResult> Index(string search)
+        public async Task<IActionResult> Index(string search, int page = 1, int take = 4)
         {
-            List<Slider> sliders = search != null ?
-  await _appDbContext.Sliders
+            List<Slider> sliderCount = await _appDbContext.Sliders.ToListAsync();
+            var sliders = search != null ?
+   _appDbContext.Sliders
    .Where(u => u.Title.Trim().ToLower().Contains(search.Trim().ToLower()))
-   .Where(u => !u.IsDeleted).ToListAsync()
-   : await _appDbContext.Sliders.ToListAsync();
+   .Where(u => !u.IsDeleted)
+   : _appDbContext.Sliders;
 
-            return View(sliders);
+            int pageCount = CalculatePageCount(sliderCount, take);
+            SliderReadVM sliderReadVM = new()
+            {
+                Sliders = await sliders.ToListAsync(),
+                PageCount = pageCount,
+                CurrentPage = page,
+            };
+            return View(sliderReadVM);
         }
         public IActionResult Create()
         {
@@ -40,6 +48,11 @@ namespace FinalProject.Areas.AdminArea.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(SliderCreateVM sliderCreateVM)
         {
+            if (!ModelState.IsValid)
+            {
+                ModelState.AddModelError("","");
+                return View(sliderCreateVM);
+            }
             if (sliderCreateVM.Photo == null)
             {
                 ModelState.AddModelError("Photo", "Upploaded is empty");
@@ -59,24 +72,31 @@ namespace FinalProject.Areas.AdminArea.Controllers
             {
                 ImageUrl = sliderCreateVM.Photo.SaveImage(_env, "images", sliderCreateVM.Photo.FileName),
                 Title = sliderCreateVM.Title,
-                Description = sliderCreateVM.Description
+                Description = sliderCreateVM.Description,
+                IsDeleted= sliderCreateVM.IsDeleted
             };
             await _appDbContext.Sliders.AddAsync(newSlider);
             await _appDbContext.SaveChangesAsync();
             return RedirectToAction("Index");
         }
 
-
+        [HttpGet]
         public async Task<IActionResult> Update(int? id)
         {
             if (id == null) return NotFound();
             Slider? slider = await _appDbContext.Sliders.FirstOrDefaultAsync(c => c.Id == id);
             if (slider == null) return NotFound();
-            return View(new SliderUpdateVM { ImageUrl = slider.ImageUrl, Description = slider.Description, Title = slider.Title });
+            return View(new SliderUpdateVM
+            {
+                ImageUrl = slider.ImageUrl,
+                Description = slider.Description,
+                Title = slider.Title,
+                IsDeleted = slider.IsDeleted
+            });
         }
 
         [HttpPost]
-        public IActionResult Update(int? id, SliderUpdateVM updateVM)
+        public async Task <IActionResult> Update(int? id, SliderUpdateVM updateVM)
         {
             if (id == null) return NotFound();
             Slider? slider = _appDbContext.Sliders.FirstOrDefault(c => c.Id == id);
@@ -102,8 +122,9 @@ namespace FinalProject.Areas.AdminArea.Controllers
                 slider.ImageUrl = updateVM.Photo.SaveImage(_env, "images", updateVM.Photo.FileName);
                 slider.Title = updateVM.Title;
                 slider.Description = updateVM.Description;
+                slider.IsDeleted = updateVM.IsDeleted;
 
-                _appDbContext.SaveChanges();
+                await _appDbContext.SaveChangesAsync();
             }
             return RedirectToAction("Index"); ;
 
@@ -134,6 +155,10 @@ namespace FinalProject.Areas.AdminArea.Controllers
                 }
             };
             return RedirectToAction("Index");
+        }
+        private int CalculatePageCount(List<Slider> sliders, int take)
+        {
+            return (int)Math.Ceiling((decimal)(sliders.Count()) / take);
         }
     }
 }

@@ -31,14 +31,24 @@ namespace FinalProject.Areas.AdminArea.Controllers
         }
 
 
-        public async Task<IActionResult> Index(string search)
+        public async Task<IActionResult> Index(string search,int page = 1, int take = 4)
         {
-            List<Event> events = search != null ?
-               await _appDbContext.Events.Include(a=>a.Artist)
-                .Where(u => u.Title.Trim().ToLower().Contains(search.Trim().ToLower())).Where(u => !u.IsDeleted).ToListAsync()
-                : await _appDbContext.Events.Include(a => a.Artist).ToListAsync();
-            return View(events);
+            List<Event> eventCount = await _appDbContext.Events.ToListAsync();
+            var events = search != null ?
+               _appDbContext.Events.Include(a => a.Artist)
+                .Where(u => u.Title.Trim().ToLower().Contains(search.Trim().ToLower()))
+                : _appDbContext.Events.Skip((page - 1) * 4).Take(take).Include(a => a.Artist);
+            int pageCount = CalculatePageCount(eventCount, take);
+            EventReadVM eventReadVM = new()
+            {
+                Events = await events.ToListAsync(),
+                PageCount = pageCount,
+                CurrentPage = page,
+            };
+
+            return View(eventReadVM);
         }
+        [HttpGet]
         public async Task<IActionResult> Create()
         {
             ViewBag.Artists = new SelectList(await _appDbContext.Artists.ToListAsync(), "Id", "Name");
@@ -48,6 +58,7 @@ namespace FinalProject.Areas.AdminArea.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(EventCreateVM eventCreateVM)
         {
+            ViewBag.Artists = new SelectList(await _appDbContext.Artists.ToListAsync(), "Id", "Name");
             if (eventCreateVM.Photo == null)
             {
                 ModelState.AddModelError("Photo", "Upploaded is empty");
@@ -73,7 +84,7 @@ namespace FinalProject.Areas.AdminArea.Controllers
                 AddressUrl = eventCreateVM.AddressUrl,
                 Price = eventCreateVM.Price,
                 CreatedTime = eventCreateVM.CreatedTime,
-                IsDeleted = false
+                IsDeleted = eventCreateVM.IsDeleted
             };
 
             await _appDbContext.Events.AddAsync(newEvent);
@@ -109,12 +120,14 @@ namespace FinalProject.Areas.AdminArea.Controllers
                 AddressUrl = @event.AddressUrl,
                 Price = @event.Price,
                 ArtistId = @event.ArtistId,
+                IsDeleted = @event.IsDeleted,
 
             });
         }
         [HttpPost]
         public async Task<IActionResult> Update(int? id, EventUpdateVM eventUpdateVM)
         {
+            ViewBag.Artists = new SelectList(await _appDbContext.Artists.ToListAsync(), "Id", "Name");
             if (id == null) return NotFound();
             Event? @event = await _appDbContext.Events.FirstOrDefaultAsync(c => c.Id == id);
             if (@event == null) return NotFound();
@@ -143,6 +156,7 @@ namespace FinalProject.Areas.AdminArea.Controllers
                 @event.Address = eventUpdateVM.Address;
                 @event.AddressUrl = eventUpdateVM.AddressUrl;
                 @event.Price = eventUpdateVM.Price;
+                @event.IsDeleted = eventUpdateVM.IsDeleted;
                 await _appDbContext.SaveChangesAsync();
             }
             return RedirectToAction("Index"); ;
@@ -176,7 +190,10 @@ namespace FinalProject.Areas.AdminArea.Controllers
             if (@event == null) return NotFound();           
             return View(@event);
         }
-
+        private int CalculatePageCount(List<Event> events, int take)
+        {
+            return (int)Math.Ceiling((decimal)(events.Count()) / take);
+        }
 
     }
 }
