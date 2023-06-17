@@ -27,6 +27,12 @@ namespace FinalProject.Controllers
         public async Task<IActionResult> Detail(int? id)
         {
             if (id == null) return NotFound();
+            ViewBag.UserId = null;
+            if (User.Identity.IsAuthenticated)
+            {
+                AppUser? user = await _userManager.FindByNameAsync(User.Identity.Name);
+                ViewBag.UserId = user.Id;
+            }
             Event? checkEvent = await _appDbContext.Events.Where(e => !e.IsDeleted).FirstOrDefaultAsync(e=>e.Id==id);
             if (checkEvent == null) return NotFound();
             EventVM eventVM = new();

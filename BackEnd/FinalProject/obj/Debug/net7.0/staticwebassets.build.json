@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "bpPVW+L5BNJXrob9gmZk9mQJj5eUlAHj7CnU3eyoSqc=",
+  "Hash": "krQqXVAJIp2GEdAzzbsUWiZj2m4MbBwvFTX7nLicHP4=",
   "Source": "FinalProject",
   "BasePath": "_content/FinalProject",
   "Mode": "Default",
@@ -442,6 +442,23 @@
       "OriginalItemSpec": "wwwroot\\Admin\\gulp-tasks\\vendors.js"
     },
     {
+      "Identity": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\Admin\\images\\AdminImages\\Elnur.jpg",
+      "SourceId": "FinalProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\",
+      "BasePath": "_content/FinalProject",
+      "RelativePath": "Admin/images/AdminImages/Elnur.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Admin\\images\\AdminImages\\Elnur.jpg"
+    },
+    {
       "Identity": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\Admin\\images\\AdminImages\\Ilkin.jpg",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
@@ -457,23 +474,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Admin\\images\\AdminImages\\Ilkin.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\Admin\\images\\AdminImages\\isagi.jpg",
-      "SourceId": "FinalProject",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\",
-      "BasePath": "_content/FinalProject",
-      "RelativePath": "Admin/images/AdminImages/isagi.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Admin\\images\\AdminImages\\isagi.jpg"
     },
     {
       "Identity": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\Admin\\images\\AdminImages\\Vasif.jpg",

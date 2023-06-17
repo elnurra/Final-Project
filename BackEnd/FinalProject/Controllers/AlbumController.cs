@@ -47,6 +47,12 @@ namespace FinalProject.Controllers
         {
             if (id == null) return NotFound();
             Album? checkAlbum = await _appDbContext.Albums.FirstOrDefaultAsync(a => a.Id == id);
+            ViewBag.UserId = null;
+            if (User.Identity.IsAuthenticated)
+            {
+                AppUser? user = await _userManager.FindByNameAsync(User.Identity.Name);
+                ViewBag.UserId = user.Id;
+            }
             if (checkAlbum == null)
             {
                 return NotFound();

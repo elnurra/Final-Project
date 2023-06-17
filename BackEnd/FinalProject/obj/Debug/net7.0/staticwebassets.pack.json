@@ -97,16 +97,16 @@
       "PackagePath": "staticwebassets\\Admin\\gulp-tasks\\vendors.js"
     },
     {
+      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\Admin\\images\\AdminImages\\Elnur.jpg",
+      "PackagePath": "staticwebassets\\Admin\\images\\AdminImages\\Elnur.jpg"
+    },
+    {
       "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\Admin\\images\\AdminImages\\Ilkin.jpg",
       "PackagePath": "staticwebassets\\Admin\\images\\AdminImages\\Ilkin.jpg"
     },
     {
       "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\Admin\\images\\AdminImages\\Vasif.jpg",
       "PackagePath": "staticwebassets\\Admin\\images\\AdminImages\\Vasif.jpg"
-    },
-    {
-      "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\Admin\\images\\AdminImages\\isagi.jpg",
-      "PackagePath": "staticwebassets\\Admin\\images\\AdminImages\\isagi.jpg"
     },
     {
       "Id": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\Admin\\images\\auth\\lockscreen-bg.jpg",
