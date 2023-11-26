@@ -1,5 +1,6 @@
 ﻿using FinalProject.Helpers;
 using FinalProject.Models;
+using FinalProject.Services;
 using FinalProject.Services.Interfaces;
 using FinalProject.ViewModels.AccountVM;
 using Microsoft.AspNetCore.Identity;
@@ -14,14 +15,16 @@ namespace FinalProject.Controllers
         private readonly RoleManager<IdentityRole> _roleManager;
         private readonly IEmailService _emailService;
         private readonly IFileService _fileService;
+        private readonly GoogleCaptchaService _googleCaptchaService;
 
-        public AccountController(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager, IEmailService emailService, IFileService fileService, RoleManager<IdentityRole> roleManager)
+        public AccountController(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager, IEmailService emailService, IFileService fileService, RoleManager<IdentityRole> roleManager, GoogleCaptchaService googleCaptchaService)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _emailService = emailService;
             _fileService = fileService;
             _roleManager = roleManager;
+            _googleCaptchaService = googleCaptchaService;
         }
 
 
@@ -122,7 +125,12 @@ namespace FinalProject.Controllers
             }
 
             AppUser? user = await _userManager.FindByEmailAsync(loginVM.UserNameorEmail);
-
+            var captchaResult = await _googleCaptchaService.VerifyToken(loginVM.Token);
+            if (!captchaResult)
+            {
+                ModelState.AddModelError("Token", "Please verify captcha");
+                return View(loginVM);
+            }
             user ??= await _userManager.FindByNameAsync(loginVM.UserNameorEmail);
 
             if (user == null)

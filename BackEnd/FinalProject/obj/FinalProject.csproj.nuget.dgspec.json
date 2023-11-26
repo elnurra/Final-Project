@@ -41,6 +41,10 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "AspNetCore.ReCaptcha": {
+              "target": "Package",
+              "version": "[1.7.0, )"
+            },
             "MailKit": {
               "target": "Package",
               "version": "[4.0.0, )"

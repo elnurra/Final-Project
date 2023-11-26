@@ -1,14 +1,12 @@
 using FinalProject.DAL;
-using FinalProject.Models;
-using FinalProject.Services.Interfaces;
-using FinalProject.Services;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using FinalProject;
+using FinalProject.Models;
 
 var builder = WebApplication.CreateBuilder(args);
-var _config = builder.Configuration;
 
+var _config = builder.Configuration;
+builder.Services.Configure<GoogleRecaptchaConfig>(builder.Configuration.GetSection("GoogleRecaptcha"));
 builder.Services.AddDbContext<AppDbContext>(options =>
 {
     options.UseSqlServer(_config.GetConnectionString("DefaultConnection"));

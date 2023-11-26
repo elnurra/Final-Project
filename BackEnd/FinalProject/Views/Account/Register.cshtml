@@ -37,86 +37,85 @@
 
 </head>
 <body class="main-layout">
-<section class="gradient-form" style="background-color: #eee;">
-    <div class="container  h-100">
-        <div class="row d-flex justify-content-center align-items-center h-100">
-            <div class="col-xl-10">
-                <div class="card rounded-3 text-black">
-                    <div class="row g-0">
-                        <div class="col-lg-6">
-                            <div class="card-body p-md-5 mx-md-4">
-                                <div class="text-center">
-                                    <img src="~/images/profile.png" style="width: 185px;" alt="logo">
-                                    <h2 style="font-size: 30px; ">We are The MUSICMAN Team</h2>
-                                </div>
+    <section class="gradient-form" style="background-color: #eee;">
+        <div class="container  h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-xl-10">
+                    <div class="card rounded-3 text-black">
+                        <div class="row g-0">
+                            <div class="col-lg-6">
+                                <div class="card-body p-md-5 mx-md-4">
+                                    <div class="text-center">
+                                        <img src="~/images/profile.png" style="width: 185px;" alt="logo">
+                                        <h2 style="font-size: 30px; ">We are The MUSICMAN Team</h2>
+                                    </div>
                                     <div class="text-danger" asp-validation-summary="All"></div>
-                                <form asp-controller="Account" asp-action="Register" method="post">
-                                    <br>
-                                    <p style="font-size: 17px; margin-bottom: 30px;">Create a new account: </p>
-                                    <br>
-                                    <div class=" form-outline mb-4">
-                                        <label asp-for="Fullname">Fullname</label>
-                                        <input class="form-control" asp-for="Fullname" placeholder="Fullname">
-                                        <span class="text-danger" asp-validation-for="Fullname"></span>
-                                    </div>
-                                    <div class=" form-outline mb-4">
-                                        <label asp-for="Username">Username</label>
-                                        <input class="form-control" asp-for="Username" placeholder="Username">
-                                        <span class="text-danger" asp-validation-for="Username"></span>
-                                    </div>
+                                    <form asp-controller="Account" asp-action="Register" method="post">
+                                        <br>
+                                        <p style="font-size: 17px; margin-bottom: 30px;">Create a new account: </p>
+                                        <br>
+                                        <div class=" form-outline mb-4">
+                                            <label asp-for="Fullname">Fullname</label>
+                                            <input class="form-control" asp-for="Fullname" placeholder="Fullname">
+                                            <span class="text-danger" asp-validation-for="Fullname"></span>
+                                        </div>
+                                        <div class=" form-outline mb-4">
+                                            <label asp-for="Username">Username</label>
+                                            <input class="form-control" asp-for="Username" placeholder="Username">
+                                            <span class="text-danger" asp-validation-for="Username"></span>
+                                        </div>
 
-                                    <div class=" form-outline mb-4">
-                                        <label asp-for="Email">Email address</label>
-                                        <input class="form-control" asp-for="Email" placeholder="Email">
-                                        <span class="text-danger" asp-validation-for="Email"></span>
-                                    </div>
-                                    <div class="form-outline mb-4">
-                                        <label asp-for="Password">Password</label>
-                                        <input class="form-control" asp-for="Password" placeholder="Password">
-                                        <span class="text-danger" asp-validation-for="Password"></span>
-                                    </div>
-                                    <div class="form-outline mb-4">
-                                        <label asp-for="ConfirmPassword">Confirm Password</label>
-                                        <input class="form-control" asp-for="ConfirmPassword" placeholder="Password">
-                                        <span class="text-danger" asp-validation-for="ConfirmPassword"></span>
-                                    </div>
-                                    <div class="text-center pt-1 mb-5 pb-1">
-                                        <button class="btn btn-outline-danger btn-block mb-3 w-100"
-                                                type="submit">
-                                            Sing Up
-                                        </button>
-                                        <a class="text-muted" href="#!">Forgot password?</a>
-                                    </div>
+                                        <div class=" form-outline mb-4">
+                                            <label asp-for="Email">Email address</label>
+                                            <input class="form-control" asp-for="Email" placeholder="Email">
+                                            <span class="text-danger" asp-validation-for="Email"></span>
+                                        </div>
+                                        <div class="form-outline mb-4">
+                                            <label asp-for="Password">Password</label>
+                                            <input class="form-control" asp-for="Password" placeholder="Password">
+                                            <span class="text-danger" asp-validation-for="Password"></span>
+                                        </div>
+                                        <div class="form-outline mb-4">
+                                            <label asp-for="ConfirmPassword">Confirm Password</label>
+                                            <input class="form-control" asp-for="ConfirmPassword" placeholder="Password">
+                                            <span class="text-danger" asp-validation-for="ConfirmPassword"></span>
+                                        </div>
+                                        <div class="text-center pt-1 mb-5 pb-1">
+                                            <button class="btn btn-outline-danger btn-block mb-3 w-100"
+                                                    type="submit">
+                                                Sing Up
+                                            </button>
+                                            <a class="text-muted" href="#!">Forgot password?</a>
+                                        </div>
 
-                                    <div class="d-flex align-items-center justify-content-center pb-4">
-                                        <p class="mb-0 me-2">Have an account?</p>
-                                        <a asp-action="Login" class="btn btn-outline-success">Sign In</a>
-                                    </div>
+                                        <div class="d-flex align-items-center justify-content-center pb-4">
+                                            <p class="mb-0 me-2">Have an account?</p>
+                                            <a asp-action="Login" class="btn btn-outline-success">Sign In</a>
+                                        </div>
 
-                                </form>
+                                    </form>
 
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-lg-6 d-flex align-items-center back-image">
+                            <div class="col-lg-6 d-flex align-items-center back-image">
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
 
 
-<script src="~/js/jquery.min.js"></script>
-<script src="~/js/jquery-3.0.0.min.js"></script>
-<script src="~/js/plugin.js"></script>
-<script src="~/js/jquery.mCustomScrollbar.concat.min.js"></script>
-
-<script src="~/js/search.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-        crossorigin="anonymous"></script>
+    <script src="~/js/jquery.min.js"></script>
+    <script src="~/js/jquery-3.0.0.min.js"></script>
+    <script src="~/js/plugin.js"></script>
+    <script src="~/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="~/js/search.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+            crossorigin="anonymous"></script>
 </body>
 
 </html>

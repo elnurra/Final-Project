@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v7.0": {
       "FinalProject/1.0.0": {
         "dependencies": {
+          "AspNetCore.ReCaptcha": "1.7.0",
           "MailKit": "4.0.0",
           "Microsoft.AspNetCore.Authentication.Core": "2.2.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "7.0.5",
@@ -20,6 +21,22 @@
         },
         "runtime": {
           "FinalProject.dll": {}
+        }
+      },
+      "AspNetCore.ReCaptcha/1.7.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Options": "7.0.1"
+        },
+        "runtime": {
+          "lib/net6.0/AspNetCore.ReCaptcha.dll": {
+            "assemblyVersion": "1.7.0.0",
+            "fileVersion": "1.7.0.0"
+          }
+        },
+        "resources": {
+          "lib/net6.0/nl/AspNetCore.ReCaptcha.resources.dll": {
+            "locale": "nl"
+          }
         }
       },
       "Azure.Core/1.24.0": {
@@ -2693,6 +2710,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "AspNetCore.ReCaptcha/1.7.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-lDuXXZUIB2kNh3c3MYxB2nXlAw2ixJdZagZvkrpZhhKXEdcmIMMWLpH3FZY28ls0An/U+vBbebTpI+kBx/z3YA==",
+      "path": "aspnetcore.recaptcha/1.7.0",
+      "hashPath": "aspnetcore.recaptcha.1.7.0.nupkg.sha512"
     },
     "Azure.Core/1.24.0": {
       "type": "package",

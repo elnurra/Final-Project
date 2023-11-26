@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "ZHftM6kMH+YDjCQF6PjTzm6h5uD6TGZ2K9hrVyB4+yZcrnXAjJG571lU16qbmr/iTc38maHZPjfUx3EF9oO5pw==",
+  "dgSpecHash": "W0fOvjNEdp6Cxfhk+4hPBwUxjiB/4dtTjeCWS67ZkJZccyk/fJ7Ey/3/T7D9yIaoFWFMY2hNVyEsIZ2J22dkOw==",
   "success": true,
   "projectFilePath": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\FinalProject.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\user\\.nuget\\packages\\aspnetcore.recaptcha\\1.7.0\\aspnetcore.recaptcha.1.7.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\bouncycastle.cryptography\\2.1.1\\bouncycastle.cryptography.2.1.1.nupkg.sha512",

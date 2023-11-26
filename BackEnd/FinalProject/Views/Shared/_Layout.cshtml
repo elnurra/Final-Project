@@ -32,7 +32,6 @@
 
 </head>
 <!-- body -->
-
 <body class="main-layout">
     <!-- loader  -->
     <div class="loader_bg">
@@ -61,17 +60,12 @@
                                 <div class="limit-box">
                                     <nav class="main-menu ">
                                         <ul class="menu-area-main">
-                                            <li class="active"> <a a asp-controller="Home" asp-action="Index">Home</a> </li>
+                                            <li>  <a asp-controller="Home" asp-action="Index">Home</a> </li>
                                             <li> <a asp-controller="Album" asp-action="Index">Albums</a> </li>
                                             <li> <a asp-controller="Event" asp-action="Index">Events </a> </li>
                                             <li> <a asp-controller="About" asp-action="Index">About</a> </li>
                                             <li> <a asp-controller="Contact" asp-action="Index">Contact</a> </li>
-                                            
-                                            
-                                           @await Component.InvokeAsync("Navbar")
-                                          
-                                            
-                                           
+                                            @await Component.InvokeAsync("Navbar")
                                         </ul>
                                     </nav>
                                 </div>
@@ -85,28 +79,23 @@
         </div>
     </header>
     <main>
-        
         @RenderBody()
         @RenderSection("EventScript",false)
         @RenderSection("AlbumScript",false)
         @RenderSection("Scripts",false)
     </main>
     <footer>
-      @await Component.InvokeAsync("Footer")
+        @await Component.InvokeAsync("Footer")
     </footer>
-   
-
- 
     <script src="~/js/jquery.min.js"></script>
     <script src="~/js/jquery-3.0.0.min.js"></script>
     <script src="~/js/plugin.js"></script>
     <script src="~/js/jquery.mCustomScrollbar.concat.min.js"></script>
-    
+
     <script src="~/js/search.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
             crossorigin="anonymous"></script>
-            <script src="~/js/formvalidation.js"></script>
+    <script src="~/js/formvalidation.js"></script>
 </body>
-
 </html>

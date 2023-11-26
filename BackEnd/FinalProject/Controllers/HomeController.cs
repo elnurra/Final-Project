@@ -1,32 +1,25 @@
 ﻿using FinalProject.DAL;
 using FinalProject.Models;
-using FinalProject.ViewModels;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
-using System.Diagnostics;
+
 
 namespace FinalProject.Controllers
 {
     public class HomeController : Controller
     {
         private readonly AppDbContext _appDbContext;
-
         public HomeController(AppDbContext appDbContext)
         {
             _appDbContext = appDbContext;
 
         }
-
         public async Task<IActionResult> Index()
         {
-
             List<Slider> sliders = await _appDbContext.Sliders.Where(s => !s.IsDeleted).ToListAsync();
-
             return View(sliders);
         }
-
         public async Task<IActionResult> Subscribe(string Email)
         {
             if (Email == null)
@@ -60,12 +53,10 @@ namespace FinalProject.Controllers
                 contact.Email = Email;
                 contact.Number = Number;
                 contact.Content = Content;               
-            }
-           
+            }         
             await _appDbContext.Contacts.AddAsync(contact);
             await _appDbContext.SaveChangesAsync();
             return RedirectToAction("Index");
         }
-
     }
 }

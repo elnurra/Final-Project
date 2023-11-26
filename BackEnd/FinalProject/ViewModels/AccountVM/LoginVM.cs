@@ -9,5 +9,7 @@ namespace FinalProject.ViewModels.AccountVM
         [Required]
         [DataType(DataType.Password)]
         public string Password { get; set; } = null!;
+        [Required]
+        public string Token { get; set; } = null!;
     }
 }

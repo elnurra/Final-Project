@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "krQqXVAJIp2GEdAzzbsUWiZj2m4MbBwvFTX7nLicHP4=",
+  "Hash": "Go1KnsOpIXqZrXmoeOCRgXx46tKRNhRvvoNCkQeO3eg=",
   "Source": "FinalProject",
   "BasePath": "_content/FinalProject",
   "Mode": "Default",
@@ -442,12 +442,12 @@
       "OriginalItemSpec": "wwwroot\\Admin\\gulp-tasks\\vendors.js"
     },
     {
-      "Identity": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\Admin\\images\\AdminImages\\Elnur.jpg",
+      "Identity": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\Admin\\images\\AdminImages\\Artic monkeys.jpg",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
-      "RelativePath": "Admin/images/AdminImages/Elnur.jpg",
+      "RelativePath": "Admin/images/AdminImages/Artic monkeys.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -456,7 +456,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Admin\\images\\AdminImages\\Elnur.jpg"
+      "OriginalItemSpec": "wwwroot\\Admin\\images\\AdminImages\\Artic monkeys.jpg"
     },
     {
       "Identity": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\wwwroot\\Admin\\images\\AdminImages\\Ilkin.jpg",
