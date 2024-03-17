@@ -27,10 +27,14 @@ namespace FinalProject.Controllers
         public async Task<IActionResult> Detail(int? id)
         {
             if (id == null) return NotFound();
-            ViewBag.UserId = null;
-            if (User.Identity.IsAuthenticated)
+            AppUser? user;
+            if (User.Identity != null && User.Identity.IsAuthenticated && User.Identity.Name != null)
             {
-                AppUser? user = await _userManager.FindByNameAsync(User.Identity.Name);
+                user = await _userManager.FindByNameAsync(User.Identity.Name);
+                if (user == null)
+                {
+                    return NotFound();
+                }
                 ViewBag.UserId = user.Id;
             }
             Event? checkEvent = await _appDbContext.Events.Where(e => !e.IsDeleted).FirstOrDefaultAsync(e=>e.Id==id);
@@ -49,11 +53,13 @@ namespace FinalProject.Controllers
                 return RedirectToAction("Detail", new { id = eventId });
             }
             AppUser? user;
-
-            if (User.Identity.IsAuthenticated)
+            if (User.Identity != null && User.Identity.IsAuthenticated && User.Identity.Name != null)
             {
                 user = await _userManager.FindByNameAsync(User.Identity.Name);
-
+                if (user == null)
+                {
+                    return NotFound();
+                }
             }
             else
             {

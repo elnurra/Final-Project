@@ -15,13 +15,19 @@ namespace FinalProject.ViewComponents
 
         public async Task<IViewComponentResult> InvokeAsync()
         {
+            AppUser? user;
             ViewBag.Fullname = string.Empty;
-            if (User.Identity.IsAuthenticated)
+            if (User.Identity != null && User.Identity.IsAuthenticated && User.Identity.Name != null)
             {
-                AppUser? user = await _userManager.FindByNameAsync(User.Identity.Name);
-                ViewBag.Fullname = user.Fullname;
+                user = await _userManager.FindByNameAsync(User.Identity.Name);
+                if (user != null)
+                {
+                    ViewBag.Fullname = user.Fullname;
+                    return View(user);
+                }
+
             }
-            return View();
+                return View();
         }
     }
 }

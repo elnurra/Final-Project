@@ -35,7 +35,7 @@ namespace FinalProject
                 options.Lockout.MaxFailedAccessAttempts = 3;
             }).AddEntityFrameworkStores<AppDbContext>().AddDefaultTokenProviders();
             //------------------------------------------------------------------------------------------------
-            services.AddScoped<GoogleCaptchaService>();
+            services.AddScoped<IGoogleCaptchaService,GoogleCaptchaService>();
         }
     }
 }

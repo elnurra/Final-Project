@@ -1,15 +1,16 @@
 ﻿using FinalProject.Models;
+using FinalProject.Services.Interfaces;
 using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
 using System.Net;
 
 namespace FinalProject.Services
 {
-    public class GoogleCaptchaService
+    public class GoogleCaptchaService: IGoogleCaptchaService
     {
-        private readonly IOptions<GoogleRecaptchaConfig> _config;
+        private readonly IConfiguration _config;
 
-        public GoogleCaptchaService(IOptions<GoogleRecaptchaConfig> config)
+        public GoogleCaptchaService(IConfiguration config)
         {
             _config = config;
         }
@@ -19,7 +20,7 @@ namespace FinalProject.Services
             try
             {
 
-                string url = $"https://www.google.com/recaptcha/api/siteverify?secret={_config.Value.SecretKey}&response={token}";
+                string url = $"https://www.google.com/recaptcha/api/siteverify?secret={_config.GetSection("GoogleRecaptcha:SecretKey").Value}&response={token}";
 
                 using (HttpClient client = new())
                 {
@@ -30,8 +31,8 @@ namespace FinalProject.Services
                     }
 
                     string responseContent = await httpResponse.Content.ReadAsStringAsync();
-                    GoogleCaptchaResponse captchaResponse =  JsonConvert.DeserializeObject<GoogleCaptchaResponse>(responseContent);
-                    return captchaResponse.Success && captchaResponse.Score >= 0.5;
+                    GoogleCaptchaResponse? captchaResponse =  JsonConvert.DeserializeObject<GoogleCaptchaResponse>(responseContent);
+                    return captchaResponse!.Success && captchaResponse.Score >= 0.5;
                 };
 
             }

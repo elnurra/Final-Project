@@ -24,12 +24,14 @@ namespace FinalProject.Areas.AdminArea.Controllers
 
         public async Task<IActionResult> Index()
         {
-
-            if (User.Identity.IsAuthenticated)
+            AppUser? user;
+            if (User.Identity != null && User.Identity.IsAuthenticated && User.Identity.Name != null)
             {
-#pragma warning disable CS8604 // Возможно, аргумент-ссылка, допускающий значение NULL.
-                AppUser? user = await _userManager.FindByNameAsync(User.Identity.Name);
-#pragma warning restore CS8604 // Возможно, аргумент-ссылка, допускающий значение NULL.
+                user = await _userManager.FindByNameAsync(User.Identity.Name);
+                if (user == null)
+                {
+                    return NotFound();
+                }
                 return View(user);
             }
             return View();
@@ -40,10 +42,14 @@ namespace FinalProject.Areas.AdminArea.Controllers
             if (id == null) return NotFound();
             AppUser? user = await _userManager.FindByIdAsync(id);
             if (user == null) return NotFound();
-            else
+            AccountUpdateVM accountUpdateVM =new()
             {
-                return View(new AccountUpdateVM() { Email = user.Email, UserName = user.UserName, ImageUrl = user.ImageUrl, Fullname = user.Fullname });
-            }
+                Email = user.Email,
+                UserName = user.UserName,
+                ImageUrl = user.ImageUrl,
+                Fullname = user.Fullname
+            };
+             return View(accountUpdateVM);
         }
         [HttpPost]
         public async Task<IActionResult> Update(string id, AccountUpdateVM accountUpdateVM)

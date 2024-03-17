@@ -73,13 +73,20 @@ namespace FinalProject.Areas.AdminArea.Controllers
         [HttpGet]
         public async Task <IActionResult> Update(string id)
         {
+            RoleUpdateVM roleUpdateVM = new();
             if (!ModelState.IsValid) return NotFound();
             IdentityRole? result = await _roleManager.FindByIdAsync(id);
             if (result == null)
             {
                 return NotFound();
             }
-            return View(new RoleUpdateVM() { Name = result.Name});
+            if (result.Name !=null)
+            {
+                
+                roleUpdateVM.Name = result.Name;
+            }
+
+            return View(roleUpdateVM);
         }
 
         [HttpPost]
@@ -104,9 +111,9 @@ namespace FinalProject.Areas.AdminArea.Controllers
             }
             return View(result);
         }
-        private int CalculatePageCount(List<IdentityRole> roles, int take)
+        private static int CalculatePageCount(List<IdentityRole> roles, int take)
         {
-            return (int)Math.Ceiling((decimal)(roles.Count()) / take);
+            return (int)Math.Ceiling((decimal)(roles.Count) / take);
         }
 
 

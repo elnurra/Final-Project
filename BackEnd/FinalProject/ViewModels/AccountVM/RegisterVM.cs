@@ -17,5 +17,6 @@ namespace FinalProject.ViewModels.AccountVM
         [Required]
         [DataType(DataType.Password), Compare(nameof(Password))]
         public string ConfirmPassword { get; set; } = null!;
+        public string Token { get; set; } = null!;
     }
 }

@@ -7,13 +7,7 @@ namespace FinalProject.ViewComponents
 {
     public class FooterViewComponent:ViewComponent
     {
-        private readonly AppDbContext _appDbContext;
-
-        public FooterViewComponent(AppDbContext appDbContext)
-        {
-            _appDbContext = appDbContext;
-        }
-        public async Task<IViewComponentResult> InvokeAsync()
+        public IViewComponentResult Invoke()
         {
             return View();
         }

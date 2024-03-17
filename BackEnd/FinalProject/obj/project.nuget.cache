@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "W0fOvjNEdp6Cxfhk+4hPBwUxjiB/4dtTjeCWS67ZkJZccyk/fJ7Ey/3/T7D9yIaoFWFMY2hNVyEsIZ2J22dkOw==",
+  "dgSpecHash": "ixe5Ez2XXKbY0JWRYVc2DqB2Oq5zZ3RYHGn3dg/97Z+Eqz9JusKpsULHUh4VNabWU7WYr+gPgCyQXn3M7rxsCg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\user\\Documents\\Code Academy\\Final Project\\BackEnd\\FinalProject\\FinalProject.csproj",
+  "projectFilePath": "C:\\Users\\user\\Documents\\Code Academy\\FinalProject\\Final-Project\\BackEnd\\FinalProject\\FinalProject.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user\\.nuget\\packages\\aspnetcore.recaptcha\\1.7.0\\aspnetcore.recaptcha.1.7.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",

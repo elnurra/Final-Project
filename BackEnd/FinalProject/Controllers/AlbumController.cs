@@ -38,9 +38,9 @@ namespace FinalProject.Controllers
 
             return View(albumVM);
         }
-        private int CalculatePageCount(List<Album> albums, int take)
+        private static int CalculatePageCount(List<Album> albums, int take)
         {
-            return (int)Math.Ceiling((decimal)(albums.Count()) / take);
+            return (int)Math.Ceiling((decimal)(albums.Count) / take);
         }
 
         public async Task<IActionResult> Detail(int? id)
@@ -48,25 +48,34 @@ namespace FinalProject.Controllers
             if (id == null) return NotFound();
             Album? checkAlbum = await _appDbContext.Albums.FirstOrDefaultAsync(a => a.Id == id);
             ViewBag.UserId = null;
-            if (User.Identity.IsAuthenticated)
+            if (User.Identity != null && User.Identity.IsAuthenticated && User.Identity.Name != null)
             {
                 AppUser? user = await _userManager.FindByNameAsync(User.Identity.Name);
+                if (user == null)
+                {
+                    return NotFound();
+                }
                 ViewBag.UserId = user.Id;
             }
             if (checkAlbum == null)
             {
                 return NotFound();
             }
+
 #pragma warning disable CS8601 // Возможно, назначение-ссылка, допускающее значение NULL.
             AlbumVM albumVM = new()
             {
                 Genres = await _appDbContext.Genres.Where(g => !g.IsDeleted).ToListAsync(),
-                Album = await _appDbContext.Albums.Where(a => !a.IsDeleted).Include(a => a.Artist).Include(bd => bd.Comments).ThenInclude(u => u.User).Include(a => a.Genre).FirstOrDefaultAsync(a => a.Id == id),
+                Album = await _appDbContext.Albums.Where(a => !a.IsDeleted)
+                    .Include(a => a.Artist)
+                    .Include(a => a.Genre)
+                    .Include(c => c.Comments)
+                    .ThenInclude(u => u.User)
+                    .FirstOrDefaultAsync(a => a.Id == id),
                 Songs = await _appDbContext.Songs.Where(a => a.AlbumId == id).ToListAsync()
 
             };
 #pragma warning restore CS8601 // Возможно, назначение-ссылка, допускающее значение NULL.
-
             return View(albumVM);
         }
         [HttpPost]
@@ -79,10 +88,13 @@ namespace FinalProject.Controllers
             }
             AppUser? user;
 
-            if (User.Identity.IsAuthenticated)
+            if (User.Identity != null && User.Identity.IsAuthenticated && User.Identity.Name != null)
             {
                 user = await _userManager.FindByNameAsync(User.Identity.Name);
-
+                if (user == null)
+                {
+                    return NotFound();
+                }
             }
             else
             {
@@ -117,27 +129,37 @@ namespace FinalProject.Controllers
 
         public async Task<IActionResult> AddSongPlaylist(int? SongId)
         {
-            if (SongId==null)
+            AppUser? user;
+            if (SongId == null)
             {
                 return NotFound();
             }
-            if (!User.Identity.IsAuthenticated)
+            if (User.Identity != null && User.Identity.IsAuthenticated && User.Identity.Name != null)
             {
-                return RedirectToAction("Login","Account");
+                user = await _userManager.FindByNameAsync(User.Identity.Name);
+                if (user == null)
+                {
+                    return NotFound();
+                }
+                ViewBag.UserId = user.Id;
             }
-            AppUser? user = await _userManager.FindByNameAsync(User.Identity.Name);
-            UserSong? songCheck = await _appDbContext.UserSongs.FirstOrDefaultAsync(s=>s.Song.Id ==SongId);
-            if (songCheck != null) {
+            else
+            {
+                return RedirectToAction("Login", nameof(AccountController));
+            }
+            UserSong? songCheck = await _appDbContext.UserSongs.FirstOrDefaultAsync(s => s.Song.Id == SongId);
+            if (songCheck != null)
+            {
                 return RedirectToAction("Index");
             }
             UserSong userSong = new()
             {
-                AppUserId = user.Id,
+                AppUserId = user!.Id,
                 SongId = (int)SongId,
             };
             await _appDbContext.UserSongs.AddAsync(userSong);
             await _appDbContext.SaveChangesAsync();
-            return RedirectToAction("Index");
+            return RedirectToAction(nameof(Index), nameof(User));
         }
 
     }

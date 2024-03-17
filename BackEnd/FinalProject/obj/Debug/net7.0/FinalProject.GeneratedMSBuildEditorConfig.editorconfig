@@ -9,261 +9,263 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = FinalProject
 build_property.RootNamespace = FinalProject
-build_property.ProjectDir = C:\Users\user\Documents\Code Academy\Final Project\BackEnd\FinalProject\
+build_property.ProjectDir = C:\Users\user\Documents\Code Academy\FinalProject\Final-Project\BackEnd\FinalProject\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\user\Documents\Code Academy\Final Project\BackEnd\FinalProject
+build_property.MSBuildProjectDirectory = C:\Users\user\Documents\Code Academy\FinalProject\Final-Project\BackEnd\FinalProject
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/user/Documents/Code Academy/Final Project/BackEnd/FinalProject/Areas/AdminArea/Views/Account/Index.cshtml]
+[C:/Users/user/Documents/Code Academy/FinalProject/Final-Project/BackEnd/FinalProject/Areas/AdminArea/Views/Account/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXEFjY291bnRcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Documents/Code Academy/Final Project/BackEnd/FinalProject/Areas/AdminArea/Views/Account/Update.cshtml]
+[C:/Users/user/Documents/Code Academy/FinalProject/Final-Project/BackEnd/FinalProject/Areas/AdminArea/Views/Account/Update.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXEFjY291bnRcVXBkYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Documents/Code Academy/Final Project/BackEnd/FinalProject/Areas/AdminArea/Views/Album/Create.cshtml]
+[C:/Users/user/Documents/Code Academy/FinalProject/Final-Project/BackEnd/FinalProject/Areas/AdminArea/Views/Album/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXEFsYnVtXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Documents/Code Academy/Final Project/BackEnd/FinalProject/Areas/AdminArea/Views/Album/Detail.cshtml]
+[C:/Users/user/Documents/Code Academy/FinalProject/Final-Project/BackEnd/FinalProject/Areas/AdminArea/Views/Album/Detail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXEFsYnVtXERldGFpbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Documents/Code Academy/Final Project/BackEnd/FinalProject/Areas/AdminArea/Views/Album/Index.cshtml]
+[C:/Users/user/Documents/Code Academy/FinalProject/Final-Project/BackEnd/FinalProject/Areas/AdminArea/Views/Album/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXEFsYnVtXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Documents/Code Academy/Final Project/BackEnd/FinalProject/Areas/AdminArea/Views/Album/Update.cshtml]
+[C:/Users/user/Documents/Code Academy/FinalProject/Final-Project/BackEnd/FinalProject/Areas/AdminArea/Views/Album/Update.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXEFsYnVtXFVwZGF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Documents/Code Academy/Final Project/BackEnd/FinalProject/Areas/AdminArea/Views/Artist/Create.cshtml]
+[C:/Users/user/Documents/Code Academy/FinalProject/Final-Project/BackEnd/FinalProject/Areas/AdminArea/Views/Artist/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXEFydGlzdFxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Documents/Code Academy/Final Project/BackEnd/FinalProject/Areas/AdminArea/Views/Artist/Detail.cshtml]
+[C:/Users/user/Documents/Code Academy/FinalProject/Final-Project/BackEnd/FinalProject/Areas/AdminArea/Views/Artist/Detail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXEFydGlzdFxEZXRhaWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Documents/Code Academy/Final Project/BackEnd/FinalProject/Areas/AdminArea/Views/Artist/Index.cshtml]
+[C:/Users/user/Documents/Code Academy/FinalProject/Final-Project/BackEnd/FinalProject/Areas/AdminArea/Views/Artist/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXEFydGlzdFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Documents/Code Academy/Final Project/BackEnd/FinalProject/Areas/AdminArea/Views/Artist/Update.cshtml]
+[C:/Users/user/Documents/Code Academy/FinalProject/Final-Project/BackEnd/FinalProject/Areas/AdminArea/Views/Artist/Update.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXEFydGlzdFxVcGRhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Documents/Code Academy/Final Project/BackEnd/FinalProject/Areas/AdminArea/Views/Contact/Detail.cshtml]
+[C:/Users/user/Documents/Code Academy/FinalProject/Final-Project/BackEnd/FinalProject/Areas/AdminArea/Views/Contact/Detail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXENvbnRhY3RcRGV0YWlsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Documents/Code Academy/Final Project/BackEnd/FinalProject/Areas/AdminArea/Views/Contact/Index.cshtml]
+[C:/Users/user/Documents/Code Academy/FinalProject/Final-Project/BackEnd/FinalProject/Areas/AdminArea/Views/Contact/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXENvbnRhY3RcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Documents/Code Academy/Final Project/BackEnd/FinalProject/Areas/AdminArea/Views/Contact/Update.cshtml]
+[C:/Users/user/Documents/Code Academy/FinalProject/Final-Project/BackEnd/FinalProject/Areas/AdminArea/Views/Contact/Update.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXENvbnRhY3RcVXBkYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Documents/Code Academy/Final Project/BackEnd/FinalProject/Areas/AdminArea/Views/Dashboard/Index.cshtml]
+[C:/Users/user/Documents/Code Academy/FinalProject/Final-Project/BackEnd/FinalProject/Areas/AdminArea/Views/Dashboard/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXERhc2hib2FyZFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Documents/Code Academy/Final Project/BackEnd/FinalProject/Areas/AdminArea/Views/Event/Create.cshtml]
+[C:/Users/user/Documents/Code Academy/FinalProject/Final-Project/BackEnd/FinalProject/Areas/AdminArea/Views/Event/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXEV2ZW50XENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Documents/Code Academy/Final Project/BackEnd/FinalProject/Areas/AdminArea/Views/Event/Detail.cshtml]
+[C:/Users/user/Documents/Code Academy/FinalProject/Final-Project/BackEnd/FinalProject/Areas/AdminArea/Views/Event/Detail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXEV2ZW50XERldGFpbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Documents/Code Academy/Final Project/BackEnd/FinalProject/Areas/AdminArea/Views/Event/Index.cshtml]
+[C:/Users/user/Documents/Code Academy/FinalProject/Final-Project/BackEnd/FinalProject/Areas/AdminArea/Views/Event/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXEV2ZW50XEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Documents/Code Academy/Final Project/BackEnd/FinalProject/Areas/AdminArea/Views/Event/Update.cshtml]
+[C:/Users/user/Documents/Code Academy/FinalProject/Final-Project/BackEnd/FinalProject/Areas/AdminArea/Views/Event/Update.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXEV2ZW50XFVwZGF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Documents/Code Academy/Final Project/BackEnd/FinalProject/Areas/AdminArea/Views/Genre/Create.cshtml]
+[C:/Users/user/Documents/Code Academy/FinalProject/Final-Project/BackEnd/FinalProject/Areas/AdminArea/Views/Genre/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXEdlbnJlXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Documents/Code Academy/Final Project/BackEnd/FinalProject/Areas/AdminArea/Views/Genre/Detail.cshtml]
+[C:/Users/user/Documents/Code Academy/FinalProject/Final-Project/BackEnd/FinalProject/Areas/AdminArea/Views/Genre/Detail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXEdlbnJlXERldGFpbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Documents/Code Academy/Final Project/BackEnd/FinalProject/Areas/AdminArea/Views/Genre/Index.cshtml]
+[C:/Users/user/Documents/Code Academy/FinalProject/Final-Project/BackEnd/FinalProject/Areas/AdminArea/Views/Genre/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXEdlbnJlXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Documents/Code Academy/Final Project/BackEnd/FinalProject/Areas/AdminArea/Views/Genre/Update.cshtml]
+[C:/Users/user/Documents/Code Academy/FinalProject/Final-Project/BackEnd/FinalProject/Areas/AdminArea/Views/Genre/Update.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXEdlbnJlXFVwZGF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Documents/Code Academy/Final Project/BackEnd/FinalProject/Areas/AdminArea/Views/Role/Create.cshtml]
+[C:/Users/user/Documents/Code Academy/FinalProject/Final-Project/BackEnd/FinalProject/Areas/AdminArea/Views/Role/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXFJvbGVcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Documents/Code Academy/Final Project/BackEnd/FinalProject/Areas/AdminArea/Views/Role/Detail.cshtml]
+[C:/Users/user/Documents/Code Academy/FinalProject/Final-Project/BackEnd/FinalProject/Areas/AdminArea/Views/Role/Detail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXFJvbGVcRGV0YWlsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Documents/Code Academy/Final Project/BackEnd/FinalProject/Areas/AdminArea/Views/Role/Index.cshtml]
+[C:/Users/user/Documents/Code Academy/FinalProject/Final-Project/BackEnd/FinalProject/Areas/AdminArea/Views/Role/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXFJvbGVcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Documents/Code Academy/Final Project/BackEnd/FinalProject/Areas/AdminArea/Views/Role/Update.cshtml]
+[C:/Users/user/Documents/Code Academy/FinalProject/Final-Project/BackEnd/FinalProject/Areas/AdminArea/Views/Role/Update.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXFJvbGVcVXBkYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Documents/Code Academy/Final Project/BackEnd/FinalProject/Areas/AdminArea/Views/Shared/Components/Header/Default.cshtml]
+[C:/Users/user/Documents/Code Academy/FinalProject/Final-Project/BackEnd/FinalProject/Areas/AdminArea/Views/Shared/Components/Header/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXFNoYXJlZFxDb21wb25lbnRzXEhlYWRlclxEZWZhdWx0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Documents/Code Academy/Final Project/BackEnd/FinalProject/Areas/AdminArea/Views/Shared/Components/SideNavbar/Default.cshtml]
+[C:/Users/user/Documents/Code Academy/FinalProject/Final-Project/BackEnd/FinalProject/Areas/AdminArea/Views/Shared/Components/SideNavbar/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXFNoYXJlZFxDb21wb25lbnRzXFNpZGVOYXZiYXJcRGVmYXVsdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Documents/Code Academy/Final Project/BackEnd/FinalProject/Areas/AdminArea/Views/Shared/_AdminLayout.cshtml]
+[C:/Users/user/Documents/Code Academy/FinalProject/Final-Project/BackEnd/FinalProject/Areas/AdminArea/Views/Shared/_AdminLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXFNoYXJlZFxfQWRtaW5MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Documents/Code Academy/Final Project/BackEnd/FinalProject/Areas/AdminArea/Views/Slider/Create.cshtml]
+[C:/Users/user/Documents/Code Academy/FinalProject/Final-Project/BackEnd/FinalProject/Areas/AdminArea/Views/Slider/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXFNsaWRlclxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Documents/Code Academy/Final Project/BackEnd/FinalProject/Areas/AdminArea/Views/Slider/Detail.cshtml]
+[C:/Users/user/Documents/Code Academy/FinalProject/Final-Project/BackEnd/FinalProject/Areas/AdminArea/Views/Slider/Detail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXFNsaWRlclxEZXRhaWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Documents/Code Academy/Final Project/BackEnd/FinalProject/Areas/AdminArea/Views/Slider/Index.cshtml]
+[C:/Users/user/Documents/Code Academy/FinalProject/Final-Project/BackEnd/FinalProject/Areas/AdminArea/Views/Slider/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXFNsaWRlclxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Documents/Code Academy/Final Project/BackEnd/FinalProject/Areas/AdminArea/Views/Slider/Update.cshtml]
+[C:/Users/user/Documents/Code Academy/FinalProject/Final-Project/BackEnd/FinalProject/Areas/AdminArea/Views/Slider/Update.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXFNsaWRlclxVcGRhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Documents/Code Academy/Final Project/BackEnd/FinalProject/Areas/AdminArea/Views/Song/Create.cshtml]
+[C:/Users/user/Documents/Code Academy/FinalProject/Final-Project/BackEnd/FinalProject/Areas/AdminArea/Views/Song/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXFNvbmdcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Documents/Code Academy/Final Project/BackEnd/FinalProject/Areas/AdminArea/Views/Song/Detail.cshtml]
+[C:/Users/user/Documents/Code Academy/FinalProject/Final-Project/BackEnd/FinalProject/Areas/AdminArea/Views/Song/Detail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXFNvbmdcRGV0YWlsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Documents/Code Academy/Final Project/BackEnd/FinalProject/Areas/AdminArea/Views/Song/Index.cshtml]
+[C:/Users/user/Documents/Code Academy/FinalProject/Final-Project/BackEnd/FinalProject/Areas/AdminArea/Views/Song/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXFNvbmdcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Documents/Code Academy/Final Project/BackEnd/FinalProject/Areas/AdminArea/Views/Song/Update.cshtml]
+[C:/Users/user/Documents/Code Academy/FinalProject/Final-Project/BackEnd/FinalProject/Areas/AdminArea/Views/Song/Update.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXFNvbmdcVXBkYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Documents/Code Academy/Final Project/BackEnd/FinalProject/Areas/AdminArea/Views/User/Create.cshtml]
+[C:/Users/user/Documents/Code Academy/FinalProject/Final-Project/BackEnd/FinalProject/Areas/AdminArea/Views/User/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXFVzZXJcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Documents/Code Academy/Final Project/BackEnd/FinalProject/Areas/AdminArea/Views/User/Detail.cshtml]
+[C:/Users/user/Documents/Code Academy/FinalProject/Final-Project/BackEnd/FinalProject/Areas/AdminArea/Views/User/Detail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXFVzZXJcRGV0YWlsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Documents/Code Academy/Final Project/BackEnd/FinalProject/Areas/AdminArea/Views/User/Index.cshtml]
+[C:/Users/user/Documents/Code Academy/FinalProject/Final-Project/BackEnd/FinalProject/Areas/AdminArea/Views/User/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXFVzZXJcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Documents/Code Academy/Final Project/BackEnd/FinalProject/Areas/AdminArea/Views/User/UpdateRole.cshtml]
+[C:/Users/user/Documents/Code Academy/FinalProject/Final-Project/BackEnd/FinalProject/Areas/AdminArea/Views/User/UpdateRole.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXFVzZXJcVXBkYXRlUm9sZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Documents/Code Academy/Final Project/BackEnd/FinalProject/Areas/AdminArea/Views/_ViewImports.cshtml]
+[C:/Users/user/Documents/Code Academy/FinalProject/Final-Project/BackEnd/FinalProject/Areas/AdminArea/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXF9WaWV3SW1wb3J0cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Documents/Code Academy/Final Project/BackEnd/FinalProject/Areas/AdminArea/Views/_ViewStart.cshtml]
+[C:/Users/user/Documents/Code Academy/FinalProject/Final-Project/BackEnd/FinalProject/Areas/AdminArea/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5BcmVhXFZpZXdzXF9WaWV3U3RhcnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Documents/Code Academy/Final Project/BackEnd/FinalProject/Views/About/Index.cshtml]
+[C:/Users/user/Documents/Code Academy/FinalProject/Final-Project/BackEnd/FinalProject/Views/About/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWJvdXRcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Documents/Code Academy/Final Project/BackEnd/FinalProject/Views/Account/ForgotPassword.cshtml]
+[C:/Users/user/Documents/Code Academy/FinalProject/Final-Project/BackEnd/FinalProject/Views/Account/ForgotPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxGb3Jnb3RQYXNzd29yZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Documents/Code Academy/Final Project/BackEnd/FinalProject/Views/Account/Login.cshtml]
+[C:/Users/user/Documents/Code Academy/FinalProject/Final-Project/BackEnd/FinalProject/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Documents/Code Academy/Final Project/BackEnd/FinalProject/Views/Account/Register.cshtml]
+[C:/Users/user/Documents/Code Academy/FinalProject/Final-Project/BackEnd/FinalProject/Views/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Documents/Code Academy/Final Project/BackEnd/FinalProject/Views/Account/ResetPassword.cshtml]
+[C:/Users/user/Documents/Code Academy/FinalProject/Final-Project/BackEnd/FinalProject/Views/Account/ResetPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZXNldFBhc3N3b3JkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Documents/Code Academy/Final Project/BackEnd/FinalProject/Views/Account/VerifyEmail.cshtml]
+[C:/Users/user/Documents/Code Academy/FinalProject/Final-Project/BackEnd/FinalProject/Views/Account/VerifyEmail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxWZXJpZnlFbWFpbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Documents/Code Academy/Final Project/BackEnd/FinalProject/Views/Album/Detail.cshtml]
+[C:/Users/user/Documents/Code Academy/FinalProject/Final-Project/BackEnd/FinalProject/Views/Album/Detail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWxidW1cRGV0YWlsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Documents/Code Academy/Final Project/BackEnd/FinalProject/Views/Album/Index.cshtml]
+[C:/Users/user/Documents/Code Academy/FinalProject/Final-Project/BackEnd/FinalProject/Views/Album/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWxidW1cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Documents/Code Academy/Final Project/BackEnd/FinalProject/Views/Contact/Index.cshtml]
+[C:/Users/user/Documents/Code Academy/FinalProject/Final-Project/BackEnd/FinalProject/Views/Contact/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Documents/Code Academy/Final Project/BackEnd/FinalProject/Views/Event/Detail.cshtml]
+[C:/Users/user/Documents/Code Academy/FinalProject/Final-Project/BackEnd/FinalProject/Views/Event/Detail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRcRGV0YWlsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Documents/Code Academy/Final Project/BackEnd/FinalProject/Views/Event/Index.cshtml]
+[C:/Users/user/Documents/Code Academy/FinalProject/Final-Project/BackEnd/FinalProject/Views/Event/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Documents/Code Academy/Final Project/BackEnd/FinalProject/Views/Home/Index.cshtml]
+[C:/Users/user/Documents/Code Academy/FinalProject/Final-Project/BackEnd/FinalProject/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Documents/Code Academy/Final Project/BackEnd/FinalProject/Views/Shared/Components/Event/Default.cshtml]
+[C:/Users/user/Documents/Code Academy/FinalProject/Final-Project/BackEnd/FinalProject/Views/Shared/Components/Event/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcRXZlbnRcRGVmYXVsdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Documents/Code Academy/Final Project/BackEnd/FinalProject/Views/Shared/Components/Footer/Default.cshtml]
+[C:/Users/user/Documents/Code Academy/FinalProject/Final-Project/BackEnd/FinalProject/Views/Shared/Components/Footer/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcRm9vdGVyXERlZmF1bHQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Documents/Code Academy/Final Project/BackEnd/FinalProject/Views/Shared/Components/Navbar/Default.cshtml]
+[C:/Users/user/Documents/Code Academy/FinalProject/Final-Project/BackEnd/FinalProject/Views/Shared/Components/Navbar/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcTmF2YmFyXERlZmF1bHQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Documents/Code Academy/Final Project/BackEnd/FinalProject/Views/Shared/_SearchPartial.cshtml]
+[C:/Users/user/Documents/Code Academy/FinalProject/Final-Project/BackEnd/FinalProject/Views/Shared/_SearchPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9TZWFyY2hQYXJ0aWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Documents/Code Academy/Final Project/BackEnd/FinalProject/Views/User/Index.cshtml]
+[C:/Users/user/Documents/Code Academy/FinalProject/Final-Project/BackEnd/FinalProject/Views/User/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Documents/Code Academy/Final Project/BackEnd/FinalProject/Views/_ViewImports.cshtml]
+[C:/Users/user/Documents/Code Academy/FinalProject/Final-Project/BackEnd/FinalProject/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Documents/Code Academy/Final Project/BackEnd/FinalProject/Views/_ViewStart.cshtml]
+[C:/Users/user/Documents/Code Academy/FinalProject/Final-Project/BackEnd/FinalProject/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Documents/Code Academy/Final Project/BackEnd/FinalProject/Views/Shared/_Layout.cshtml]
+[C:/Users/user/Documents/Code Academy/FinalProject/Final-Project/BackEnd/FinalProject/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-1iqdgs6srz

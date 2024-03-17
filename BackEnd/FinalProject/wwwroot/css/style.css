@@ -2441,6 +2441,7 @@ ul.album-details li {
 
 #page-forms .reply-to {
     background-color: #0ed02b;
+    text-align: center;
     width: 100px;
     height: 30px;
     font-size: 20px;

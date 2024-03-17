@@ -11,5 +11,8 @@ namespace FinalProject.ViewModels.AccountVM
         public string Password { get; set; } = null!;
         [Required]
         public string Token { get; set; } = null!;
+        public string SiteKey { get; set; } = null!;
+
+
     }
 }

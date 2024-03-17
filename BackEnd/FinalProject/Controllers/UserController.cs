@@ -20,22 +20,27 @@ namespace FinalProject.Controllers
 
         public async Task <IActionResult> Index()
         {
-
-            if (!User.Identity.IsAuthenticated)
+            AppUser? user;
+            List<UserSong> songs = new();
+            if (User.Identity != null && User.Identity.IsAuthenticated && User.Identity.Name != null)
             {
-                return RedirectToAction("Login", "Account");
-            }
-            AppUser user = await _userManager.FindByNameAsync(User.Identity.Name);
+                user = await _userManager.FindByNameAsync(User.Identity.Name);
+                if (user == null)
+                {
+                    return NotFound();
+                }
+                songs = await _appDbContext.UserSongs.Where(s => s.User.Id == user.Id).Include(s => s.Song).ToListAsync();
 
-          List<UserSong>  songs  = await _appDbContext.UserSongs.Where(s=>s.User.Id == user.Id).Include(s=>s.Song).ToListAsync();
+            }
+          
            return View(songs);
         }
 
         public async Task<IActionResult> RemoveSong(int? id)
         {
-            if (!User.Identity.IsAuthenticated)
+            if (User.Identity != null && !User.Identity.IsAuthenticated && User.Identity.Name == null)
             {
-                return RedirectToAction("Login","Account");
+                return RedirectToAction("Login", "Account");
             }
             if (id==null)
             {

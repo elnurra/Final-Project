@@ -7,7 +7,7 @@ namespace FinalProject.Models
     {
         public string Fullname { get; set; } = null!;
         public bool IsActive { get; set; }
-        public string? ImageUrl { get; set; }
+        public string ImageUrl { get; set; } = null!;
         public List<Song> Songs { get; set; } = null!;
 
     }

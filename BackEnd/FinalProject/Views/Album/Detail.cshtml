@@ -11,43 +11,47 @@
                     <div class="album-img">
                         <img src="~/images/@Model.Album.ImageUrl">
                     </div>
-
                 </div>
             </div>
-            <div class="col-lg-6">
-                <div class="album-data">
-                    <div class="album-title">
-                        <h1>@Model.Album.Name</h1>
-                    </div>
-                    <ul class="album-details">
-                        <li class="album-artist">
-                            <div class="album-items">
-                                <h4>Artist:</h4>
-                                <p>@Model.Album.Artist.Name</p>
-                            </div>
-                        </li>
-                        <li class="album-genre">
-                            <div class="album-items">
-                                <h4>Genre:</h4>
-                                <p>@Model.Album.Genre.Name</p>
-                            </div>
-                        </li>
-                        <li class="album-release">
-                            <div class="album-items">
-                                <h4>Release Date:</h4>
-                                <p>@Model.Album.CreatedTime.ToString(" dd, MMMM yyyy")</p>
-                            </div>
-                        </li>
-                        <li class="album-label">
-                            <div class="album-items">
-                                <h4>Label </h4>
-                                <p>@Model.Album.Label</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+            ...
         </div>
+
+    </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="album-data">
+            <div class="album-title">
+                <h1>@Model.Album.Name</h1>
+            </div>
+            <ul class="album-details">
+                <li class="album-artist">
+                    <div class="album-items">
+                        <h4>Artist:</h4>
+                        <p>@Model.Album.Artist.Name</p>
+                    </div>
+                </li>
+                <li class="album-genre">
+                    <div class="album-items">
+                        <h4>Genre:</h4>
+                        <p>@Model.Album.Genre.Name</p>
+                    </div>
+                </li>
+                <li class="album-release">
+                    <div class="album-items">
+                        <h4>Release Date:</h4>
+                        <p>@Model.Album.CreatedTime.ToString(" dd, MMMM yyyy")</p>
+                    </div>
+                </li>
+                <li class="album-label">
+                    <div class="album-items">
+                        <h4>Label </h4>
+                        <p>@Model.Album.Label</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    </div>
     </div>
 </section>
 <section id="album-songs">
@@ -79,7 +83,7 @@
                                     class="songs-item active-song">
                                     <p>@item.Name</p>
                                     <span class="heart">
-                                        <a asp-action="AddSongPlaylist" asp-route-SongId="@item.Id"><i class="fa-regular fa-heart"></i></a>                                        
+                                        <a asp-action="AddSongPlaylist" asp-route-SongId="@item.Id"><i class="fa-regular fa-heart"></i></a>
                                     </span>
                                 </li>
                             }
@@ -112,7 +116,7 @@
                                 @if (comment.AppUserId == ViewBag.UserId)
                                 {
                                     <div class="reply-form">
-                                        <a class="reply-to" style="text-decoration:none;color:white" asp-action="DeleteComment" asp-route-id="@comment.Id">Delete</a>           
+                                        <a class="reply-to" style="text-decoration:none;color:white" asp-action="DeleteComment" asp-route-id="@comment.Id">Delete</a>
                                     </div>
                                 }
                             </div>
@@ -140,6 +144,6 @@
     </div>
 </section>
 
-@section AlbumScript{
+@section AlbumScript {
     <script src="~/js/audiopure.js"></script>
 }

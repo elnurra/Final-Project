@@ -1,10 +1,9 @@
-﻿using FinalProject.Helpers;
-using FinalProject.Models;
-using FinalProject.Services;
+﻿using FinalProject.Models;
 using FinalProject.Services.Interfaces;
 using FinalProject.ViewModels.AccountVM;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
 
 namespace FinalProject.Controllers
 {
@@ -15,9 +14,10 @@ namespace FinalProject.Controllers
         private readonly RoleManager<IdentityRole> _roleManager;
         private readonly IEmailService _emailService;
         private readonly IFileService _fileService;
-        private readonly GoogleCaptchaService _googleCaptchaService;
+        private readonly IGoogleCaptchaService _googleCaptchaService;
+        private readonly IOptions<GoogleRecaptchaConfig> _config;
 
-        public AccountController(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager, IEmailService emailService, IFileService fileService, RoleManager<IdentityRole> roleManager, GoogleCaptchaService googleCaptchaService)
+        public AccountController(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager, IEmailService emailService, IFileService fileService, RoleManager<IdentityRole> roleManager, IGoogleCaptchaService googleCaptchaService, IOptions<GoogleRecaptchaConfig> config)
         {
             _userManager = userManager;
             _signInManager = signInManager;
@@ -25,6 +25,7 @@ namespace FinalProject.Controllers
             _fileService = fileService;
             _roleManager = roleManager;
             _googleCaptchaService = googleCaptchaService;
+            _config = config;
         }
 
 
@@ -47,7 +48,12 @@ namespace FinalProject.Controllers
                 UserName = registerVM.Username,
                 Email = registerVM.Email
             };
-
+            var captchaResult = await _googleCaptchaService.VerifyToken(registerVM.Token);
+            if (!captchaResult)
+            {
+                ModelState.AddModelError("Token", "Please verify captcha");
+                return View(registerVM);
+            }
             IdentityResult result = await _userManager.CreateAsync(user, registerVM.Password);
 
             if (!result.Succeeded)
@@ -63,7 +69,7 @@ namespace FinalProject.Controllers
 
             string? link = Url.Action(nameof(ConfirmEmail), "Account", new { userId = user.Id, token },
                 Request.Scheme, Request.Host.ToString());
-            if (link ==null)
+            if (link == null)
             {
                 return NotFound();
             }
@@ -106,12 +112,16 @@ namespace FinalProject.Controllers
             return View();
         }
 
-       
+
 
         [HttpGet]
         public IActionResult Login()
         {
-            return View();
+            LoginVM loginVM = new()
+            {
+                SiteKey = _config.Value.SiteKey
+            };
+            return View(loginVM);
         }
 
 
@@ -119,6 +129,7 @@ namespace FinalProject.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Login(LoginVM loginVM)
         {
+            
             if (!ModelState.IsValid)
             {
                 return View(loginVM);
@@ -144,6 +155,7 @@ namespace FinalProject.Controllers
             if (!result.Succeeded)
             {
                 ModelState.AddModelError("", "Email or password wrong!");
+                loginVM.SiteKey = _config.Value.SiteKey;
                 return View(loginVM);
             }
 
@@ -174,15 +186,10 @@ namespace FinalProject.Controllers
 
             string? link = Url.Action(nameof(ResetPassword), "Account", new { userId = exsistUser.Id, token },
                 Request.Scheme, Request.Host.ToString());
-
-
-
             string body = string.Empty;
 
             string path = "wwwroot/Template/Change.html";
             body = _fileService.ReadFile(path, body);
-
-
             body = body.Replace("{{link}}", link);
             body = body.Replace("{{Fullname}}", exsistUser.Fullname);
 
@@ -241,7 +248,7 @@ namespace FinalProject.Controllers
             return RedirectToAction(nameof(Login));
         }
 
-    
+
         public async Task<IActionResult> Logout()
         {
             await _signInManager.SignOutAsync();
