@@ -3,16 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\user\\Documents\\Code Academy\\FinalProject\\Final-Project\\BackEnd\\FinalProject\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{25FEB702-1E2C-409D-B668-E1EBE1C94B59}|FinalProject.csproj|c:\\users\\user\\documents\\code academy\\finalproject\\final-project\\backend\\finalproject\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{25FEB702-1E2C-409D-B668-E1EBE1C94B59}|FinalProject.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25FEB702-1E2C-409D-B668-E1EBE1C94B59}|FinalProject.csproj|c:\\users\\user\\documents\\code academy\\finalproject\\final-project\\backend\\finalproject\\areas\\adminarea\\controllers\\albumcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25FEB702-1E2C-409D-B668-E1EBE1C94B59}|FinalProject.csproj|solutionrelative:areas\\adminarea\\controllers\\albumcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{25FEB702-1E2C-409D-B668-E1EBE1C94B59}|FinalProject.csproj|c:\\users\\user\\documents\\code academy\\finalproject\\final-project\\backend\\finalproject\\controllers\\albumcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{25FEB702-1E2C-409D-B668-E1EBE1C94B59}|FinalProject.csproj|solutionrelative:controllers\\albumcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{25FEB702-1E2C-409D-B668-E1EBE1C94B59}|FinalProject.csproj|c:\\users\\user\\documents\\code academy\\finalproject\\final-project\\backend\\finalproject\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{25FEB702-1E2C-409D-B668-E1EBE1C94B59}|FinalProject.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{25FEB702-1E2C-409D-B668-E1EBE1C94B59}|FinalProject.csproj|c:\\users\\user\\documents\\code academy\\finalproject\\final-project\\backend\\finalproject\\serviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25FEB702-1E2C-409D-B668-E1EBE1C94B59}|FinalProject.csproj|solutionrelative:serviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{25FEB702-1E2C-409D-B668-E1EBE1C94B59}|FinalProject.csproj|c:\\users\\user\\documents\\code academy\\finalproject\\final-project\\backend\\finalproject\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{25FEB702-1E2C-409D-B668-E1EBE1C94B59}|FinalProject.csproj|solutionrelative:views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{25FEB702-1E2C-409D-B668-E1EBE1C94B59}|FinalProject.csproj|c:\\users\\user\\documents\\code academy\\finalproject\\final-project\\backend\\finalproject\\models\\album.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25FEB702-1E2C-409D-B668-E1EBE1C94B59}|FinalProject.csproj|solutionrelative:models\\album.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 61,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,42 +46,65 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Documents\\Code Academy\\FinalProject\\Final-Project\\BackEnd\\FinalProject\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "Controllers\\UserController.cs",
-              "ToolTip": "C:\\Users\\user\\Documents\\Code Academy\\FinalProject\\Final-Project\\BackEnd\\FinalProject\\Controllers\\UserController.cs",
-              "RelativeToolTip": "Controllers\\UserController.cs",
-              "ViewState": "AQIAACYAAAAAAAAAAAA3wBMAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-17T00:31:25.504Z",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\user\\Documents\\Code Academy\\FinalProject\\Final-Project\\BackEnd\\FinalProject\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\user\\Documents\\Code Academy\\FinalProject\\Final-Project\\BackEnd\\FinalProject\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-06-05T19:25:11.486Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AlbumController.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Documents\\Code Academy\\FinalProject\\Final-Project\\BackEnd\\FinalProject\\Areas\\AdminArea\\Controllers\\AlbumController.cs",
+              "RelativeDocumentMoniker": "Areas\\AdminArea\\Controllers\\AlbumController.cs",
+              "ToolTip": "C:\\Users\\user\\Documents\\Code Academy\\FinalProject\\Final-Project\\BackEnd\\FinalProject\\Areas\\AdminArea\\Controllers\\AlbumController.cs",
+              "RelativeToolTip": "Areas\\AdminArea\\Controllers\\AlbumController.cs",
+              "ViewState": "AQIAAGkAAAAAAAAAAAAowAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-04T21:11:51.952Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ServiceRegistration.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Documents\\Code Academy\\FinalProject\\Final-Project\\BackEnd\\FinalProject\\ServiceRegistration.cs",
+              "RelativeDocumentMoniker": "ServiceRegistration.cs",
+              "ToolTip": "C:\\Users\\user\\Documents\\Code Academy\\FinalProject\\Final-Project\\BackEnd\\FinalProject\\ServiceRegistration.cs",
+              "RelativeToolTip": "ServiceRegistration.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-03T08:54:35.402Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Album.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Documents\\Code Academy\\FinalProject\\Final-Project\\BackEnd\\FinalProject\\Models\\Album.cs",
+              "RelativeDocumentMoniker": "Models\\Album.cs",
+              "ToolTip": "C:\\Users\\user\\Documents\\Code Academy\\FinalProject\\Final-Project\\BackEnd\\FinalProject\\Models\\Album.cs",
+              "RelativeToolTip": "Models\\Album.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAwwAcAAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-02T16:08:06.04Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "C:\\Users\\user\\Documents\\Code Academy\\FinalProject\\Final-Project\\BackEnd\\FinalProject\\Views\\Account\\Login.cshtml",
-              "RelativeDocumentMoniker": "Views\\Account\\Login.cshtml",
-              "ToolTip": "C:\\Users\\user\\Documents\\Code Academy\\FinalProject\\Final-Project\\BackEnd\\FinalProject\\Views\\Account\\Login.cshtml",
-              "RelativeToolTip": "Views\\Account\\Login.cshtml",
-              "ViewState": "AQIAABgAAAAAAAAAAAAAAD0AAABRAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-17T00:32:52.131Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "AlbumController.cs",
               "DocumentMoniker": "C:\\Users\\user\\Documents\\Code Academy\\FinalProject\\Final-Project\\BackEnd\\FinalProject\\Controllers\\AlbumController.cs",
               "RelativeDocumentMoniker": "Controllers\\AlbumController.cs",
               "ToolTip": "C:\\Users\\user\\Documents\\Code Academy\\FinalProject\\Final-Project\\BackEnd\\FinalProject\\Controllers\\AlbumController.cs",
               "RelativeToolTip": "Controllers\\AlbumController.cs",
-              "ViewState": "AQIAAHMAAAAAAAAAAAArwHsAAAANAAAA",
+              "ViewState": "AQIAAEMAAAAAAAAAAAAkwGYAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-17T00:27:16.063Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-02T15:17:55.765Z"
             }
           ]
         }

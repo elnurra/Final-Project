@@ -19,9 +19,7 @@ namespace FinalProject.Services
         {
             try
             {
-
                 string url = $"https://www.google.com/recaptcha/api/siteverify?secret={_config.GetSection("GoogleRecaptcha:SecretKey").Value}&response={token}";
-
                 using (HttpClient client = new())
                 {
                     var httpResponse = await client.GetAsync(url);
@@ -29,7 +27,6 @@ namespace FinalProject.Services
                     {
                         return false;
                     }
-
                     string responseContent = await httpResponse.Content.ReadAsStringAsync();
                     GoogleCaptchaResponse? captchaResponse =  JsonConvert.DeserializeObject<GoogleCaptchaResponse>(responseContent);
                     return captchaResponse!.Success && captchaResponse.Score >= 0.5;
